@@ -1,0 +1,725 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>02-原型模式 · notebook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="author" content="okito">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03-生成器模式.html" />
+    
+    
+    <link rel="prev" href="01-单例模式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01-单例模式.html">
+            
+                <a href="01-单例模式.html">
+            
+                    
+                    01-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="02-原型模式.html">
+            
+                <a href="02-原型模式.html">
+            
+                    
+                    02-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-生成器模式.html">
+            
+                <a href="03-生成器模式.html">
+            
+                    
+                    03-生成器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04-工厂方法模式.html">
+            
+                <a href="04-工厂方法模式.html">
+            
+                    
+                    04-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05-抽象工厂模式.html">
+            
+                <a href="05-抽象工厂模式.html">
+            
+                    
+                    05-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06-适配器模式.html">
+            
+                <a href="06-适配器模式.html">
+            
+                    
+                    06-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07-桥接模式.html">
+            
+                <a href="07-桥接模式.html">
+            
+                    
+                    07-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08-组合模式.html">
+            
+                <a href="08-组合模式.html">
+            
+                    
+                    08-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09-装饰器模式.html">
+            
+                <a href="09-装饰器模式.html">
+            
+                    
+                    09-装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构/101-单链表.html">
+            
+                <a href="../数据结构/101-单链表.html">
+            
+                    
+                    101-单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C++</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../C++/线程/">
+            
+                <a href="../C++/线程/">
+            
+                    
+                    线程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../C++/线程/01-thread.html">
+            
+                <a href="../C++/线程/01-thread.html">
+            
+                    
+                    01-thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../C++/线程/02-mutex.html">
+            
+                <a href="../C++/线程/02-mutex.html">
+            
+                    
+                    02-mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../C++/线程/03-future.html">
+            
+                <a href="../C++/线程/03-future.html">
+            
+                    
+                    03-future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../C++/线程/04-condition_variable.html">
+            
+                <a href="../C++/线程/04-condition_variable.html">
+            
+                    
+                    04-condition_variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../C++/线程/05-时间约束.html">
+            
+                <a href="../C++/线程/05-时间约束.html">
+            
+                    
+                    05-时间约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../C++/线程/06-线程池.html">
+            
+                <a href="../C++/线程/06-线程池.html">
+            
+                    
+                    06-线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../C++/线程/07-原子操作与内存模型.html">
+            
+                <a href="../C++/线程/07-原子操作与内存模型.html">
+            
+                    
+                    07-原子操作与内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../C++/线程/">
+            
+                <a href="../C++/线程/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >02-原型模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 align="center" id="&#x76EE;&#x5F55;">&#x76EE;&#x5F55;</h1>
+
+
+
+<ul><li><a href="#1-&#x539F;&#x578B;&#x6A21;&#x5F0F;">1. &#x539F;&#x578B;&#x6A21;&#x5F0F;</a>
+</li>
+<li><a href="#2-&#x5E94;&#x7528;&#x573A;&#x666F;">2. &#x5E94;&#x7528;&#x573A;&#x666F;</a>
+</li>
+<li><a href="#3-&#x6A21;&#x5F0F;&#x7ED3;&#x6784;">3. &#x6A21;&#x5F0F;&#x7ED3;&#x6784;</a>
+</li>
+<li><a href="#4-&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;">4. &#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</a>
+</li>
+<li><a href="#5-&#x4EE3;&#x7801;&#x793A;&#x4F8B;-1">5. &#x4EE3;&#x7801;&#x793A;&#x4F8B; 1</a>
+</li>
+<li><a href="#6-&#x4EE3;&#x7801;&#x793A;&#x4F8B;-2">6. &#x4EE3;&#x7801;&#x793A;&#x4F8B; 2</a>
+</li></ul>
+<hr><h1 id="1-&#x539F;&#x578B;&#x6A21;&#x5F0F;">1. &#x539F;&#x578B;&#x6A21;&#x5F0F;</h1><p>&#x4EA6;&#x79F0;&#xFF1A;&#x514B;&#x9686;&#x3001;Clone&#x3001;Prototype&#x3002;</p><p>&#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x590D;&#x5236;&#x5DF2;&#x6709;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x53C8;&#x65E0;&#x9700;&#x4F7F;&#x4EE3;&#x7801;&#x4F9D;&#x8D56;&#x5B83;&#x4EEC;&#x6240;&#x5C5E;&#x7684;&#x7C7B;&#x3002;</p><h1 id="2-&#x5E94;&#x7528;&#x573A;&#x666F;">2. &#x5E94;&#x7528;&#x573A;&#x666F;</h1><ul><li><p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x590D;&#x5236;&#x4E00;&#x4E9B;&#x5BF9;&#x8C61;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x5E0C;&#x671B;&#x4EE3;&#x7801;<strong>&#x72EC;&#x7ACB;&#x4E8E;</strong>&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x6240;&#x5C5E;&#x7684;&#x5177;&#x4F53;&#x7C7B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x3002;</p></li>
+<li><p>&#x5982;&#x679C;&#x5B50;&#x7C7B;&#x7684;&#x533A;&#x522B;&#x4EC5;&#x5728;&#x4E8E;&#x5176;&#x5BF9;&#x8C61;&#x7684;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x5F0F;&#xFF0C; &#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8BE5;&#x6A21;&#x5F0F;&#x6765;&#x51CF;&#x5C11;&#x5B50;&#x7C7B;&#x7684;&#x6570;&#x91CF;&#x3002; &#x522B;&#x4EBA;&#x521B;&#x5EFA;&#x8FD9;&#x4E9B;&#x5B50;&#x7C7B;&#x7684;&#x76EE;&#x7684;&#x53EF;&#x80FD;&#x662F;&#x4E3A;&#x4E86;&#x521B;&#x5EFA;&#x7279;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p></li></ul>
+<h1 id="3-&#x6A21;&#x5F0F;&#x7ED3;&#x6784;">3. &#x6A21;&#x5F0F;&#x7ED3;&#x6784;</h1><p><img src="images/02-&#x539F;&#x578B;&#x6A21;&#x5F0F;.png"></p><ol><li>&#x539F;&#x578B; &#xFF08;Prototype&#xFF09; &#x63A5;&#x53E3;&#x5C06;&#x5BF9;&#x514B;&#x9686;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x58F0;&#x660E;&#x3002;<strong><font color="red">&#x5728;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5176;&#x4E2D;&#x53EA;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>clone</code> &#x514B;&#x9686;&#x7684;&#x65B9;&#x6CD5;&#x3002;</font></strong>
+</li>
+<li>&#x5177;&#x4F53;&#x539F;&#x578B; &#xFF08;Concrete Prototype&#xFF09; &#x7C7B;&#x5C06;&#x5B9E;&#x73B0;&#x514B;&#x9686;&#x65B9;&#x6CD5;&#x3002;&#x9664;&#x4E86;&#x5C06;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x590D;&#x5236;&#x5230;&#x514B;&#x9686;&#x4F53;&#x4E2D;&#x4E4B;&#x5916;&#xFF0C; &#x8BE5;&#x65B9;&#x6CD5;&#x6709;&#x65F6;&#x8FD8;&#x9700;&#x5904;&#x7406;&#x514B;&#x9686;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x6781;&#x7AEF;&#x60C5;&#x51B5;&#xFF0C;&#x4F8B;&#x5982;&#x514B;&#x9686;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x548C;&#x68B3;&#x7406;&#x9012;&#x5F52;&#x4F9D;&#x8D56;&#x7B49;&#x7B49;&#x3002;
+</li>
+<li>&#x5BA2;&#x6237;&#x7AEF; &#xFF08;Client&#xFF09; &#x53EF;&#x4EE5;&#x590D;&#x5236;&#x5B9E;&#x73B0;&#x4E86;&#x539F;&#x578B;&#x63A5;&#x53E3;&#x7684;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x3002;
+</li></ol>
+<h1 id="4-&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;">4. &#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</h1><p>&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x91CD;&#x590D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>clone</code> &#x63A5;&#x53E3;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>clone</code> &#x63A5;&#x53E3;&#x521B;&#x5EFA;&#x51FA;&#x4E0E;&#x539F;&#x6765;&#x7C7B;&#x578B;&#x76F8;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#x6240;&#x6709;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x503C;&#x590D;&#x5236;&#x5230;&#x65B0;&#x5EFA;&#x7684;&#x7C7B;&#x4E2D;&#x3002;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x590D;&#x5236;&#x79C1;&#x6709;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x90FD;&#x5141;&#x8BB8;&#x5BF9;&#x8C61;&#x8BBF;&#x95EE;&#x5176;&#x540C;&#x7C7B;&#x5BF9;&#x8C61;&#x7684;&#x79C1;&#x6709;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x3002;</p><p><strong>&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;</strong>&#xFF1A;</p><ol><li>&#x521B;&#x5EFA;&#x539F;&#x578B;&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x58F0;&#x660E; <code>clone</code> &#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x6709;&#x7C7B;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#xFF0C;&#x5219;&#x53EA;&#x9700;&#x5728;&#x5176;&#x6240;&#x6709;&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x8BE5;&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x3002;
+</li>
+<li><p>&#x539F;&#x578B;&#x7C7B;&#x5FC5;&#x987B;&#x53E6;&#x884C;<strong>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4EE5;&#x8BE5;&#x7C7B;&#x5BF9;&#x8C61;&#x4E3A;&#x53C2;&#x6570;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</strong>&#x3002;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x590D;&#x5236;&#x53C2;&#x6570;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x503C;&#x5230;&#x65B0;&#x5EFA;&#x5B9E;&#x4F53;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x5B50;&#x7C7B;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x8BA9;&#x7236;&#x7C7B;&#x590D;&#x5236;&#x5176;&#x79C1;&#x6709;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x503C;&#x3002;</p><p>&#x5982;&#x679C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E0D;&#x652F;&#x6301;&#x65B9;&#x6CD5;&#x91CD;&#x8F7D;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#x6765;&#x590D;&#x5236;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x3002;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E2D;&#x8FDB;&#x884C;&#x6B64;&#x7C7B;&#x5904;&#x7406;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5728;&#x8C03;&#x7528; <code>new</code> &#x8FD0;&#x7B97;&#x7B26;&#x540E;&#x4F1A;&#x9A6C;&#x4E0A;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5BF9;&#x8C61;&#x3002;</p></li>
+<li><p><code>clone</code> &#x65B9;&#x6CD5;&#x901A;&#x5E38;&#x53EA;&#x6709;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF1A;&#x4F7F;&#x7528; <code>new</code> &#x8FD0;&#x7B97;&#x7B26;&#x8C03;&#x7528;&#x539F;&#x578B;&#x7248;&#x672C;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x6BCF;&#x4E2A;&#x7C7B;&#x90FD;&#x5FC5;&#x987B;<strong>&#x663E;&#x5F0F;&#x91CD;&#x5199;</strong> <code>clone</code> &#x65B9;&#x6CD5;&#x5E76;&#x4F7F;&#x7528;&#x81EA;&#x8EAB;&#x7C7B;&#x540D;&#x8C03;&#x7528; <code>new</code> &#x8FD0;&#x7B97;&#x7B26;&#x3002; &#x5426;&#x5219;&#xFF0C;<code>clone</code> &#x65B9;&#x6CD5;&#x53EF;&#x80FD;&#x4F1A;&#x751F;&#x6210;&#x7236;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p></li></ol>
+<h1 id="5-&#x4EE3;&#x7801;&#x793A;&#x4F8B;-1">5. &#x4EE3;&#x7801;&#x793A;&#x4F8B; 1</h1><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unordered_map&gt;</span></span>
+
+<span class="hljs-keyword">using</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>;
+
+<span class="hljs-comment">// Prototype Design Pattern</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">// Intent: Lets you copy existing objects without making your code dependent on</span>
+<span class="hljs-comment">// their classes.</span>
+
+<span class="hljs-keyword">enum</span> Type { PROTOTYPE_1 = <span class="hljs-number">0</span>, PROTOTYPE_2 };
+
+<span class="hljs-comment">/**
+ * The example class that has cloning ability. We&apos;ll see how the values of field
+ * with different types will be cloned.
+ */</span>
+
+<span class="hljs-keyword">class</span> Prototype {
+<span class="hljs-keyword">protected</span>:
+    <span class="hljs-built_in">string</span> prototype_name_;
+    <span class="hljs-keyword">float</span>  prototype_field_;
+
+<span class="hljs-keyword">public</span>:
+    Prototype() {
+    }
+    Prototype(<span class="hljs-built_in">string</span> prototype_name)
+        : prototype_name_(prototype_name) {
+    }
+    <span class="hljs-keyword">virtual</span> ~Prototype() {
+    }
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> Prototype *<span class="hljs-title">Clone</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span>       <span class="hljs-title">Method</span><span class="hljs-params">(<span class="hljs-keyword">float</span> prototype_field)</span> </span>{
+        <span class="hljs-keyword">this</span>-&gt;prototype_field_ = prototype_field;
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Call Method from &quot;</span> &lt;&lt; prototype_name_ &lt;&lt; <span class="hljs-string">&quot; with field : &quot;</span> &lt;&lt; prototype_field &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+
+<span class="hljs-comment">/**
+ * ConcretePrototype1 is a Sub-Class of Prototype and implement the Clone Method
+ * In this example all data members of Prototype Class are in the Stack. If you
+ * have pointers in your properties for ex: String* name_ ,you will need to
+ * implement the Copy-Constructor to make sure you have a deep copy from the
+ * clone method
+ */</span>
+
+<span class="hljs-keyword">class</span> ConcretePrototype1 : <span class="hljs-keyword">public</span> Prototype {
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">float</span> concrete_prototype_field1_;
+
+<span class="hljs-keyword">public</span>:
+    ConcretePrototype1(<span class="hljs-built_in">string</span> prototype_name, <span class="hljs-keyword">float</span> concrete_prototype_field)
+        : Prototype(prototype_name)
+        , concrete_prototype_field1_(concrete_prototype_field) {
+    }
+
+    <span class="hljs-comment">/**
+     * Notice that Clone method return a Pointer to a new ConcretePrototype1
+     * replica. so, the client (who call the clone method) has the responsability
+     * to free that memory. I you have smart pointer knowledge you may prefer to
+     * use unique_pointer here.
+     */</span>
+    <span class="hljs-function">Prototype *<span class="hljs-title">Clone</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConcretePrototype1(*<span class="hljs-keyword">this</span>);
+    }
+};
+
+<span class="hljs-keyword">class</span> ConcretePrototype2 : <span class="hljs-keyword">public</span> Prototype {
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">float</span> concrete_prototype_field2_;
+
+<span class="hljs-keyword">public</span>:
+    ConcretePrototype2(<span class="hljs-built_in">string</span> prototype_name, <span class="hljs-keyword">float</span> concrete_prototype_field)
+        : Prototype(prototype_name)
+        , concrete_prototype_field2_(concrete_prototype_field) {
+    }
+    <span class="hljs-function">Prototype *<span class="hljs-title">Clone</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConcretePrototype2(*<span class="hljs-keyword">this</span>);
+    }
+};
+
+<span class="hljs-comment">/**
+ * In PrototypeFactory you have two concrete prototypes, one for each concrete
+ * prototype class, so each time you want to create a bullet , you can use the
+ * existing ones and clone those.
+ */</span>
+
+<span class="hljs-keyword">class</span> PrototypeFactory {
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">unordered_map</span>&lt;Type, Prototype *, <span class="hljs-built_in">std</span>::hash&lt;<span class="hljs-keyword">int</span>&gt;&gt; prototypes_;
+
+<span class="hljs-keyword">public</span>:
+    PrototypeFactory() {
+        prototypes_[ Type::PROTOTYPE_1 ] = <span class="hljs-keyword">new</span> ConcretePrototype1(<span class="hljs-string">&quot;PROTOTYPE_1 &quot;</span>, <span class="hljs-number">50.f</span>);
+        prototypes_[ Type::PROTOTYPE_2 ] = <span class="hljs-keyword">new</span> ConcretePrototype2(<span class="hljs-string">&quot;PROTOTYPE_2 &quot;</span>, <span class="hljs-number">60.f</span>);
+    }
+
+    <span class="hljs-comment">/**
+     * Be carefull of free all memory allocated. Again, if you have smart pointers
+     * knowelege will be better to use it here.
+     */</span>
+
+    ~PrototypeFactory() {
+        <span class="hljs-keyword">delete</span> prototypes_[ Type::PROTOTYPE_1 ];
+        <span class="hljs-keyword">delete</span> prototypes_[ Type::PROTOTYPE_2 ];
+    }
+
+    <span class="hljs-comment">/**
+     * Notice here that you just need to specify the type of the prototype you
+     * want and the method will create from the object with this type.
+     */</span>
+    <span class="hljs-function">Prototype *<span class="hljs-title">CreatePrototype</span><span class="hljs-params">(Type type)</span> </span>{
+        <span class="hljs-keyword">return</span> prototypes_[ type ]-&gt;Clone();
+    }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Client</span><span class="hljs-params">(PrototypeFactory &amp;prototype_factory)</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Let&apos;s create a Prototype 1\n&quot;</span>;
+
+    Prototype *prototype = prototype_factory.CreatePrototype(Type::PROTOTYPE_1);
+    prototype-&gt;Method(<span class="hljs-number">90</span>);
+    <span class="hljs-keyword">delete</span> prototype;
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Let&apos;s create a Prototype 2 \n&quot;</span>;
+
+    prototype = prototype_factory.CreatePrototype(Type::PROTOTYPE_2);
+    prototype-&gt;Method(<span class="hljs-number">10</span>);
+
+    <span class="hljs-keyword">delete</span> prototype;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    PrototypeFactory *prototype_factory = <span class="hljs-keyword">new</span> PrototypeFactory();
+    Client(*prototype_factory);
+    <span class="hljs-keyword">delete</span> prototype_factory;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<pre><code>Let&apos;s create a Prototype 1
+Call Method from PROTOTYPE_1  with field : 90
+
+Let&apos;s create a Prototype 2 
+Call Method from PROTOTYPE_2  with field : 10</code></pre>
+<h1 id="6-&#x4EE3;&#x7801;&#x793A;&#x4F8B;-2">6. &#x4EE3;&#x7801;&#x793A;&#x4F8B; 2</h1><p>&#x5355;&#x7EAF;&#x770B; <code>game</code> &#x4E0D;&#x77E5;&#x9053;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x662F;&#x7BEE;&#x7403;&#x6E38;&#x620F;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x8DB3;&#x7403;&#x6E38;&#x620F;&#x7B49;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0E;&#x5B83;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A; <code>clone</code> &#x63A5;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x800C;&#x81EA;&#x5DF1;&#x4E0D;&#x60F3;&#x4F7F;&#x7528;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x539F;&#x578B;&#x6A21;&#x5F0F;&#x3002;</p><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">class</span> Game {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> Game *<span class="hljs-title">clone</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span>  <span class="hljs-title">Play</span><span class="hljs-params">()</span>  </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">virtual</span> ~Game(){};
+};
+
+<span class="hljs-keyword">class</span> BasketBall : <span class="hljs-keyword">public</span> Game {
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> Game *<span class="hljs-title">clone</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> BasketBall();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Play</span><span class="hljs-params">()</span> override </span>{
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;basketball&quot;</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    }
+};
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    Game *game = <span class="hljs-keyword">new</span> BasketBall();
+    game-&gt;Play();
+    Game *new_game = game-&gt;clone();
+    new_game-&gt;Play();
+
+    <span class="hljs-keyword">delete</span> game;
+    <span class="hljs-keyword">delete</span> new_game;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<pre><code>basketball
+basketball</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-单例模式.html" class="navigation navigation-prev " aria-label="Previous page: 01-单例模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03-生成器模式.html" class="navigation navigation-next " aria-label="Next page: 03-生成器模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02-原型模式","level":"2.2","depth":1,"next":{"title":"03-生成器模式","level":"2.3","depth":1,"path":"设计模式/03-生成器模式.md","ref":"设计模式/03-生成器模式.md","articles":[]},"previous":{"title":"01-单例模式","level":"2.1","depth":1,"path":"设计模式/01-单例模式.md","ref":"设计模式/01-单例模式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"okito","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"KaiTi, Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notebook","language":"zh-hans","gitbook":"3.2.1","description":""},"file":{"path":"设计模式/02-原型模式.md","mtime":"2022-03-15T09:35:38.918Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2022-03-17T15:46:41.634Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
