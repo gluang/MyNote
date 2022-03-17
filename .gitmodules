@@ -1,0 +1,3 @@
+[submodule "project/MyCPPTemplate"]
+	path = project/MyCPPTemplate
+	url = git@github.com:gluang/MyCPPTemplate.git
