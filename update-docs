@@ -1,0 +1,19 @@
+# 🔥 获取 master 最新一次的 id
+
+
+
+$ git checkout docs
+# 拉取 master 最新一次的提交
+$ git cherry-pick [id]
+$ make server
+
+$ git add .
+$ git commit -m "xxx"
+$ git push origin docs
+
+# 切回 master 
+$ git checkout master
+
+
+# 🔥 备份
+zip 
