@@ -3,7 +3,7 @@
 
 
 $ git checkout docs
-# 拉取 master 最新一次的提交
+# 拉取 main 最新一次的提交
 $ git cherry-pick [id]
 $ make server
 
@@ -11,8 +11,8 @@ $ git add .
 $ git commit -m "xxx"
 $ git push origin docs
 
-# 切回 master 
-$ git checkout master
+# 切回 main 
+$ git checkout main
 
 
 # 🔥 备份

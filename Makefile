@@ -16,6 +16,7 @@ container:
 		-v ${PWD}/.bookignore:/srv/gitbook/.bookignore \
 		-v ${PWD}/设计模式:/srv/gitbook/设计模式 \
 		-v ${PWD}/数据结构:/srv/gitbook/数据结构 \
+		-v ${PWD}/算法:/srv/gitbook/算法 \
 		-v ${PWD}/C++:/srv/gitbook/C++ \
 		-v ${PWD}/assets:/srv/gitbook/assets \
 		-v ${PWD}/docs:/srv/gitbook/_book \
@@ -65,7 +66,7 @@ rm-container:
 ## gen-toc: 生成目录
 .PHONY: gen-toc
 gen-toc:
-	@/bin/bash script.sh generate_toc 设计模式 数据结构 C++
+	@/bin/bash script.sh generate_toc 设计模式 数据结构 C++ 算法
 
 ## help: 打印命令帮助信息
 .PHONY: help
