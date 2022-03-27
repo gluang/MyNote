@@ -1,0 +1,1349 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05-抽象工厂模式 · notebook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="author" content="okito">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="06-适配器模式.html" />
+    
+    
+    <link rel="prev" href="04-工厂方法模式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01-单例模式.html">
+            
+                <a href="01-单例模式.html">
+            
+                    
+                    01-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-原型模式.html">
+            
+                <a href="02-原型模式.html">
+            
+                    
+                    02-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-生成器模式.html">
+            
+                <a href="03-生成器模式.html">
+            
+                    
+                    03-生成器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04-工厂方法模式.html">
+            
+                <a href="04-工厂方法模式.html">
+            
+                    
+                    04-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="05-抽象工厂模式.html">
+            
+                <a href="05-抽象工厂模式.html">
+            
+                    
+                    05-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06-适配器模式.html">
+            
+                <a href="06-适配器模式.html">
+            
+                    
+                    06-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07-桥接模式.html">
+            
+                <a href="07-桥接模式.html">
+            
+                    
+                    07-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08-组合模式.html">
+            
+                <a href="08-组合模式.html">
+            
+                    
+                    08-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09-装饰器模式.html">
+            
+                <a href="09-装饰器模式.html">
+            
+                    
+                    09-装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构/01-数组和链表/">
+            
+                <a href="../数据结构/01-数组和链表/">
+            
+                    
+                    01-数组和链表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构/01-数组和链表/01-单链表.html">
+            
+                <a href="../数据结构/01-数组和链表/01-单链表.html">
+            
+                    
+                    01-单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构/01-数组和链表/02-循环链表.html">
+            
+                <a href="../数据结构/01-数组和链表/02-循环链表.html">
+            
+                    
+                    02-循环链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../数据结构/01-数组和链表/03-双链表.html">
+            
+                <a href="../数据结构/01-数组和链表/03-双链表.html">
+            
+                    
+                    03-双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../数据结构/01-数组和链表/04-跳表.html">
+            
+                <a href="../数据结构/01-数组和链表/04-跳表.html">
+            
+                    
+                    04-跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../数据结构/01-数组和链表/">
+            
+                <a href="../数据结构/01-数组和链表/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../数据结构/01-数组和链表/leetcode-01-数组类型.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-01-数组类型.html">
+            
+                    
+                    leetcode-01-数组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../数据结构/01-数组和链表/leetcode-02-数组实现.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-02-数组实现.html">
+            
+                    
+                    leetcode-02-数组实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../数据结构/01-数组和链表/leetcode-03-数组-LeetCode.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-03-数组-LeetCode.html">
+            
+                    
+                    leetcode-03-数组-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="../数据结构/01-数组和链表/leetcode-04-链表类型.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-04-链表类型.html">
+            
+                    
+                    leetcode-04-链表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="../数据结构/01-数组和链表/leetcode-05-链表-LeetCode.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-05-链表-LeetCode.html">
+            
+                    
+                    leetcode-05-链表-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="../数据结构/01-数组和链表/leetcode-06-循环链表题目.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-06-循环链表题目.html">
+            
+                    
+                    leetcode-06-循环链表题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../数据结构/03-树/">
+            
+                <a href="../数据结构/03-树/">
+            
+                    
+                    03-树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../数据结构/03-树/01-二叉树.html">
+            
+                <a href="../数据结构/03-树/01-二叉树.html">
+            
+                    
+                    01-二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../数据结构/03-树/02-二叉查找树.html">
+            
+                <a href="../数据结构/03-树/02-二叉查找树.html">
+            
+                    
+                    02-二叉查找树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../数据结构/03-树/03-平衡二叉树.html">
+            
+                <a href="../数据结构/03-树/03-平衡二叉树.html">
+            
+                    
+                    03-平衡二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../数据结构/03-树/04-红黑树.html">
+            
+                <a href="../数据结构/03-树/04-红黑树.html">
+            
+                    
+                    04-红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../数据结构/03-树/05-线索二叉树.html">
+            
+                <a href="../数据结构/03-树/05-线索二叉树.html">
+            
+                    
+                    05-线索二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../数据结构/03-树/06-B树.html">
+            
+                <a href="../数据结构/03-树/06-B树.html">
+            
+                    
+                    06-B树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../数据结构/03-树/">
+            
+                <a href="../数据结构/03-树/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../数据结构/03-树/leetcode-01-树的遍历.html">
+            
+                <a href="../数据结构/03-树/leetcode-01-树的遍历.html">
+            
+                    
+                    leetcode-01-树的遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../数据结构/03-树/leetcode-02-树类型.html">
+            
+                <a href="../数据结构/03-树/leetcode-02-树类型.html">
+            
+                    
+                    leetcode-02-树类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../数据结构/03-树/leetcode-03-树类型实现.html">
+            
+                <a href="../数据结构/03-树/leetcode-03-树类型实现.html">
+            
+                    
+                    leetcode-03-树类型实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="../数据结构/03-树/leetcode-04-二叉树高频面试题.html">
+            
+                <a href="../数据结构/03-树/leetcode-04-二叉树高频面试题.html">
+            
+                    
+                    leetcode-04-二叉树高频面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="../数据结构/03-树/leetcode-05-二叉搜索树题目.html">
+            
+                <a href="../数据结构/03-树/leetcode-05-二叉搜索树题目.html">
+            
+                    
+                    leetcode-05-二叉搜索树题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.13" data-path="../数据结构/03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                <a href="../数据结构/03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                    
+                    leetcode-06-LeetCode（未整理）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../算法/排序/">
+            
+                <a href="../算法/排序/">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../算法/排序/01-冒泡排序.html">
+            
+                <a href="../算法/排序/01-冒泡排序.html">
+            
+                    
+                    01-冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../算法/排序/02-选择排序.html">
+            
+                <a href="../算法/排序/02-选择排序.html">
+            
+                    
+                    02-选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../算法/排序/03-插入排序.html">
+            
+                <a href="../算法/排序/03-插入排序.html">
+            
+                    
+                    03-插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../算法/排序/04-希尔排序.html">
+            
+                <a href="../算法/排序/04-希尔排序.html">
+            
+                    
+                    04-希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../算法/排序/05-归并排序.html">
+            
+                <a href="../算法/排序/05-归并排序.html">
+            
+                    
+                    05-归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../算法/排序/06-快速排序.html">
+            
+                <a href="../算法/排序/06-快速排序.html">
+            
+                    
+                    06-快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../算法/排序/07-堆排序.html">
+            
+                <a href="../算法/排序/07-堆排序.html">
+            
+                    
+                    07-堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../算法/排序/08-基数排序.html">
+            
+                <a href="../算法/排序/08-基数排序.html">
+            
+                    
+                    08-基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../算法/排序/09-计数排序.html">
+            
+                <a href="../算法/排序/09-计数排序.html">
+            
+                    
+                    09-计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../算法/排序/10-桶排序.html">
+            
+                <a href="../算法/排序/10-桶排序.html">
+            
+                    
+                    10-桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../算法/排序/">
+            
+                <a href="../算法/排序/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../算法/排序/leetcode-01.html">
+            
+                <a href="../算法/排序/leetcode-01.html">
+            
+                    
+                    leetcode-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C++</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../C++/01-线程/">
+            
+                <a href="../C++/01-线程/">
+            
+                    
+                    01-线程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../C++/01-线程/01-thread.html">
+            
+                <a href="../C++/01-线程/01-thread.html">
+            
+                    
+                    01-thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../C++/01-线程/02-mutex.html">
+            
+                <a href="../C++/01-线程/02-mutex.html">
+            
+                    
+                    02-mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../C++/01-线程/03-future.html">
+            
+                <a href="../C++/01-线程/03-future.html">
+            
+                    
+                    03-future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../C++/01-线程/04-condition_variable.html">
+            
+                <a href="../C++/01-线程/04-condition_variable.html">
+            
+                    
+                    04-condition_variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../C++/01-线程/05-时间约束.html">
+            
+                <a href="../C++/01-线程/05-时间约束.html">
+            
+                    
+                    05-时间约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../C++/01-线程/06-线程池.html">
+            
+                <a href="../C++/01-线程/06-线程池.html">
+            
+                    
+                    06-线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../C++/01-线程/07-原子操作与内存模型.html">
+            
+                <a href="../C++/01-线程/07-原子操作与内存模型.html">
+            
+                    
+                    07-原子操作与内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../C++/01-线程/">
+            
+                <a href="../C++/01-线程/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../C++/02-新特性/">
+            
+                <a href="../C++/02-新特性/">
+            
+                    
+                    02-新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../C++/02-新特性/01-1-智能指针.html">
+            
+                <a href="../C++/02-新特性/01-1-智能指针.html">
+            
+                    
+                    01-1-智能指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../C++/02-新特性/01-2-普通指针.html">
+            
+                <a href="../C++/02-新特性/01-2-普通指针.html">
+            
+                    
+                    01-2-普通指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                <a href="../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                    
+                    02-右值引用和移动语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../C++/02-新特性/03-语言可用性的强化.html">
+            
+                <a href="../C++/02-新特性/03-语言可用性的强化.html">
+            
+                    
+                    03-语言可用性的强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../C++/02-新特性/04-新的类型.html">
+            
+                <a href="../C++/02-新特性/04-新的类型.html">
+            
+                    
+                    04-新的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../C++/02-新特性/">
+            
+                <a href="../C++/02-新特性/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../C++/02-新特性/常见技巧.html">
+            
+                <a href="../C++/02-新特性/常见技巧.html">
+            
+                    
+                    常见技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Go</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Go/01-grpc/">
+            
+                <a href="../Go/01-grpc/">
+            
+                    
+                    01-grpc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../Go/01-grpc/4种调节模式.html">
+            
+                <a href="../Go/01-grpc/4种调节模式.html">
+            
+                    
+                    4种调节模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >05-抽象工厂模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x77E9;&#x9635;&#x642D;&#x914D;</p><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-comment">/**
+ * Each distinct product of a product family should have a base interface. All
+ * variants of the product must implement this interface.
+ */</span>
+<span class="hljs-keyword">class</span> AbstractProductA {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> ~AbstractProductA(){};
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">UsefulFunctionA</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">/**
+ * Concrete Products are created by corresponding Concrete Factories.
+ */</span>
+<span class="hljs-keyword">class</span> ConcreteProductA1 : <span class="hljs-keyword">public</span> AbstractProductA {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">UsefulFunctionA</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The result of the product A1.&quot;</span>;
+    }
+};
+
+<span class="hljs-keyword">class</span> ConcreteProductA2 : <span class="hljs-keyword">public</span> AbstractProductA {
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">UsefulFunctionA</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The result of the product A2.&quot;</span>;
+    }
+};
+
+<span class="hljs-comment">/**
+ * Here&apos;s the the base interface of another product. All products can interact
+ * with each other, but proper interaction is possible only between products of
+ * the same concrete variant.
+ */</span>
+<span class="hljs-keyword">class</span> AbstractProductB {
+    <span class="hljs-comment">/**
+     * Product B is able to do its own thing...
+     */</span>
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> ~AbstractProductB(){};
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">UsefulFunctionB</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-comment">/**
+     * ...but it also can collaborate with the ProductA.
+     *
+     * The Abstract Factory makes sure that all products it creates are of the
+     * same variant and thus, compatible.
+     */</span>
+    <span class="hljs-keyword">virtual</span> <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">AnotherUsefulFunctionB</span><span class="hljs-params">(<span class="hljs-keyword">const</span> AbstractProductA &amp;collaborator)</span> <span class="hljs-keyword">const</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">/**
+ * Concrete Products are created by corresponding Concrete Factories.
+ */</span>
+<span class="hljs-keyword">class</span> ConcreteProductB1 : <span class="hljs-keyword">public</span> AbstractProductB {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">UsefulFunctionB</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The result of the product B1.&quot;</span>;
+    }
+    <span class="hljs-comment">/**
+     * The variant, Product B1, is only able to work correctly with the variant,
+     * Product A1. Nevertheless, it accepts any instance of AbstractProductA as an
+     * argument.
+     */</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">AnotherUsefulFunctionB</span><span class="hljs-params">(<span class="hljs-keyword">const</span> AbstractProductA &amp;collaborator)</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> result = collaborator.UsefulFunctionA();
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The result of the B1 collaborating with ( &quot;</span> + result + <span class="hljs-string">&quot; )&quot;</span>;
+    }
+};
+
+<span class="hljs-keyword">class</span> ConcreteProductB2 : <span class="hljs-keyword">public</span> AbstractProductB {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">UsefulFunctionB</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The result of the product B2.&quot;</span>;
+    }
+    <span class="hljs-comment">/**
+     * The variant, Product B2, is only able to work correctly with the variant,
+     * Product A2. Nevertheless, it accepts any instance of AbstractProductA as an
+     * argument.
+     */</span>
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">AnotherUsefulFunctionB</span><span class="hljs-params">(<span class="hljs-keyword">const</span> AbstractProductA &amp;collaborator)</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> result = collaborator.UsefulFunctionA();
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;The result of the B2 collaborating with ( &quot;</span> + result + <span class="hljs-string">&quot; )&quot;</span>;
+    }
+};
+
+<span class="hljs-comment">/**
+ * The Abstract Factory interface declares a set of methods that return
+ * different abstract products. These products are called a family and are
+ * related by a high-level theme or concept. Products of one family are usually
+ * able to collaborate among themselves. A family of products may have several
+ * variants, but the products of one variant are incompatible with products of
+ * another.
+ */</span>
+<span class="hljs-keyword">class</span> AbstractFactory {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-keyword">virtual</span> ~AbstractFactory(){};
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> AbstractProductA *<span class="hljs-title">CreateProductA</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>= <span class="hljs-number">0</span>;
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> AbstractProductB *<span class="hljs-title">CreateProductB</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>= <span class="hljs-number">0</span>;
+};
+
+<span class="hljs-comment">/**
+ * Concrete Factories produce a family of products that belong to a single
+ * variant. The factory guarantees that resulting products are compatible. Note
+ * that signatures of the Concrete Factory&apos;s methods return an abstract product,
+ * while inside the method a concrete product is instantiated.
+ */</span>
+<span class="hljs-keyword">class</span> ConcreteFactory1 : <span class="hljs-keyword">public</span> AbstractFactory {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function">AbstractProductA *<span class="hljs-title">CreateProductA</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConcreteProductA1();
+    }
+    <span class="hljs-function">AbstractProductB *<span class="hljs-title">CreateProductB</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConcreteProductB1();
+    }
+};
+
+<span class="hljs-comment">/**
+ * Each Concrete Factory has a corresponding product variant.
+ */</span>
+<span class="hljs-keyword">class</span> ConcreteFactory2 : <span class="hljs-keyword">public</span> AbstractFactory {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function">AbstractProductA *<span class="hljs-title">CreateProductA</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConcreteProductA2();
+    }
+    <span class="hljs-function">AbstractProductB *<span class="hljs-title">CreateProductB</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> override </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> ConcreteProductB2();
+    }
+};
+
+<span class="hljs-comment">/**
+ * The client code works with factories and products only through abstract
+ * types: AbstractFactory and AbstractProduct. This lets you pass any factory or
+ * product subclass to the client code without breaking it.
+ */</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ClientCode</span><span class="hljs-params">(<span class="hljs-keyword">const</span> AbstractFactory &amp;factory)</span> </span>{
+    <span class="hljs-keyword">const</span> AbstractProductA *product_a = factory.CreateProductA();
+    <span class="hljs-keyword">const</span> AbstractProductB *product_b = factory.CreateProductB();
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; product_b-&gt;UsefulFunctionB() &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; product_b-&gt;AnotherUsefulFunctionB(*product_a) &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+    <span class="hljs-keyword">delete</span> product_a;
+    <span class="hljs-keyword">delete</span> product_b;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Client: Testing client code with the first factory type:\n&quot;</span>;
+    ConcreteFactory1 *f1 = <span class="hljs-keyword">new</span> ConcreteFactory1();
+    ClientCode(*f1);
+    <span class="hljs-keyword">delete</span> f1;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;Client: Testing the same client code with the second factory type:\n&quot;</span>;
+    ConcreteFactory2 *f2 = <span class="hljs-keyword">new</span> ConcreteFactory2();
+    ClientCode(*f2);
+    <span class="hljs-keyword">delete</span> f2;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<pre><code>Client: Testing client code with the first factory type:
+The result of the product B1.
+The result of the B1 collaborating with ( The result of the product A1. )
+
+Client: Testing the same client code with the second factory type:
+The result of the product B2.
+The result of the B2 collaborating with ( The result of the product A2. )</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="04-工厂方法模式.html" class="navigation navigation-prev " aria-label="Previous page: 04-工厂方法模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="06-适配器模式.html" class="navigation navigation-next " aria-label="Next page: 06-适配器模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05-抽象工厂模式","level":"2.5","depth":1,"next":{"title":"06-适配器模式","level":"2.6","depth":1,"path":"设计模式/06-适配器模式.md","ref":"设计模式/06-适配器模式.md","articles":[]},"previous":{"title":"04-工厂方法模式","level":"2.4","depth":1,"path":"设计模式/04-工厂方法模式.md","ref":"设计模式/04-工厂方法模式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"okito","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"KaiTi, Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notebook","language":"zh-hans","gitbook":"3.2.1","description":""},"file":{"path":"设计模式/05-抽象工厂模式.md","mtime":"2022-03-15T11:12:08.831Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2022-03-27T16:48:51.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

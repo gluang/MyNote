@@ -1,0 +1,2570 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>leetcode-01-数组类型 · notebook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="author" content="okito">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="leetcode-02-数组实现.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../设计模式/01-单例模式.html">
+            
+                <a href="../../设计模式/01-单例模式.html">
+            
+                    
+                    01-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../设计模式/02-原型模式.html">
+            
+                <a href="../../设计模式/02-原型模式.html">
+            
+                    
+                    02-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../设计模式/03-生成器模式.html">
+            
+                <a href="../../设计模式/03-生成器模式.html">
+            
+                    
+                    03-生成器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../设计模式/04-工厂方法模式.html">
+            
+                <a href="../../设计模式/04-工厂方法模式.html">
+            
+                    
+                    04-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../设计模式/05-抽象工厂模式.html">
+            
+                <a href="../../设计模式/05-抽象工厂模式.html">
+            
+                    
+                    05-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../设计模式/06-适配器模式.html">
+            
+                <a href="../../设计模式/06-适配器模式.html">
+            
+                    
+                    06-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../设计模式/07-桥接模式.html">
+            
+                <a href="../../设计模式/07-桥接模式.html">
+            
+                    
+                    07-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../../设计模式/08-组合模式.html">
+            
+                <a href="../../设计模式/08-组合模式.html">
+            
+                    
+                    08-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../../设计模式/09-装饰器模式.html">
+            
+                <a href="../../设计模式/09-装饰器模式.html">
+            
+                    
+                    09-装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../../设计模式/">
+            
+                <a href="../../设计模式/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    01-数组和链表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="01-单链表.html">
+            
+                <a href="01-单链表.html">
+            
+                    
+                    01-单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="02-循环链表.html">
+            
+                <a href="02-循环链表.html">
+            
+                    
+                    02-循环链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="03-双链表.html">
+            
+                <a href="03-双链表.html">
+            
+                    
+                    03-双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="04-跳表.html">
+            
+                <a href="04-跳表.html">
+            
+                    
+                    04-跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.6" data-path="leetcode-01-数组类型.html">
+            
+                <a href="leetcode-01-数组类型.html">
+            
+                    
+                    leetcode-01-数组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="leetcode-02-数组实现.html">
+            
+                <a href="leetcode-02-数组实现.html">
+            
+                    
+                    leetcode-02-数组实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="leetcode-03-数组-LeetCode.html">
+            
+                <a href="leetcode-03-数组-LeetCode.html">
+            
+                    
+                    leetcode-03-数组-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="leetcode-04-链表类型.html">
+            
+                <a href="leetcode-04-链表类型.html">
+            
+                    
+                    leetcode-04-链表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="leetcode-05-链表-LeetCode.html">
+            
+                <a href="leetcode-05-链表-LeetCode.html">
+            
+                    
+                    leetcode-05-链表-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="leetcode-06-循环链表题目.html">
+            
+                <a href="leetcode-06-循环链表题目.html">
+            
+                    
+                    leetcode-06-循环链表题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../03-树/">
+            
+                <a href="../03-树/">
+            
+                    
+                    03-树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../03-树/01-二叉树.html">
+            
+                <a href="../03-树/01-二叉树.html">
+            
+                    
+                    01-二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../03-树/02-二叉查找树.html">
+            
+                <a href="../03-树/02-二叉查找树.html">
+            
+                    
+                    02-二叉查找树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../03-树/03-平衡二叉树.html">
+            
+                <a href="../03-树/03-平衡二叉树.html">
+            
+                    
+                    03-平衡二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../03-树/04-红黑树.html">
+            
+                <a href="../03-树/04-红黑树.html">
+            
+                    
+                    04-红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../03-树/05-线索二叉树.html">
+            
+                <a href="../03-树/05-线索二叉树.html">
+            
+                    
+                    05-线索二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../03-树/06-B树.html">
+            
+                <a href="../03-树/06-B树.html">
+            
+                    
+                    06-B树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../03-树/">
+            
+                <a href="../03-树/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../03-树/leetcode-01-树的遍历.html">
+            
+                <a href="../03-树/leetcode-01-树的遍历.html">
+            
+                    
+                    leetcode-01-树的遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../03-树/leetcode-02-树类型.html">
+            
+                <a href="../03-树/leetcode-02-树类型.html">
+            
+                    
+                    leetcode-02-树类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../03-树/leetcode-03-树类型实现.html">
+            
+                <a href="../03-树/leetcode-03-树类型实现.html">
+            
+                    
+                    leetcode-03-树类型实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="../03-树/leetcode-04-二叉树高频面试题.html">
+            
+                <a href="../03-树/leetcode-04-二叉树高频面试题.html">
+            
+                    
+                    leetcode-04-二叉树高频面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="../03-树/leetcode-05-二叉搜索树题目.html">
+            
+                <a href="../03-树/leetcode-05-二叉搜索树题目.html">
+            
+                    
+                    leetcode-05-二叉搜索树题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.13" data-path="../03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                <a href="../03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                    
+                    leetcode-06-LeetCode（未整理）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../算法/排序/">
+            
+                <a href="../../算法/排序/">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../算法/排序/01-冒泡排序.html">
+            
+                <a href="../../算法/排序/01-冒泡排序.html">
+            
+                    
+                    01-冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../算法/排序/02-选择排序.html">
+            
+                <a href="../../算法/排序/02-选择排序.html">
+            
+                    
+                    02-选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../算法/排序/03-插入排序.html">
+            
+                <a href="../../算法/排序/03-插入排序.html">
+            
+                    
+                    03-插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../算法/排序/04-希尔排序.html">
+            
+                <a href="../../算法/排序/04-希尔排序.html">
+            
+                    
+                    04-希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../算法/排序/05-归并排序.html">
+            
+                <a href="../../算法/排序/05-归并排序.html">
+            
+                    
+                    05-归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../算法/排序/06-快速排序.html">
+            
+                <a href="../../算法/排序/06-快速排序.html">
+            
+                    
+                    06-快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../算法/排序/07-堆排序.html">
+            
+                <a href="../../算法/排序/07-堆排序.html">
+            
+                    
+                    07-堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../算法/排序/08-基数排序.html">
+            
+                <a href="../../算法/排序/08-基数排序.html">
+            
+                    
+                    08-基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../算法/排序/09-计数排序.html">
+            
+                <a href="../../算法/排序/09-计数排序.html">
+            
+                    
+                    09-计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../../算法/排序/10-桶排序.html">
+            
+                <a href="../../算法/排序/10-桶排序.html">
+            
+                    
+                    10-桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../../算法/排序/">
+            
+                <a href="../../算法/排序/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../../算法/排序/leetcode-01.html">
+            
+                <a href="../../算法/排序/leetcode-01.html">
+            
+                    
+                    leetcode-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C++</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../C++/01-线程/">
+            
+                <a href="../../C++/01-线程/">
+            
+                    
+                    01-线程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../C++/01-线程/01-thread.html">
+            
+                <a href="../../C++/01-线程/01-thread.html">
+            
+                    
+                    01-thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../C++/01-线程/02-mutex.html">
+            
+                <a href="../../C++/01-线程/02-mutex.html">
+            
+                    
+                    02-mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../C++/01-线程/03-future.html">
+            
+                <a href="../../C++/01-线程/03-future.html">
+            
+                    
+                    03-future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../C++/01-线程/04-condition_variable.html">
+            
+                <a href="../../C++/01-线程/04-condition_variable.html">
+            
+                    
+                    04-condition_variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../C++/01-线程/05-时间约束.html">
+            
+                <a href="../../C++/01-线程/05-时间约束.html">
+            
+                    
+                    05-时间约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../C++/01-线程/06-线程池.html">
+            
+                <a href="../../C++/01-线程/06-线程池.html">
+            
+                    
+                    06-线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../C++/01-线程/07-原子操作与内存模型.html">
+            
+                <a href="../../C++/01-线程/07-原子操作与内存模型.html">
+            
+                    
+                    07-原子操作与内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../C++/01-线程/">
+            
+                <a href="../../C++/01-线程/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../C++/02-新特性/">
+            
+                <a href="../../C++/02-新特性/">
+            
+                    
+                    02-新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../C++/02-新特性/01-1-智能指针.html">
+            
+                <a href="../../C++/02-新特性/01-1-智能指针.html">
+            
+                    
+                    01-1-智能指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../C++/02-新特性/01-2-普通指针.html">
+            
+                <a href="../../C++/02-新特性/01-2-普通指针.html">
+            
+                    
+                    01-2-普通指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                <a href="../../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                    
+                    02-右值引用和移动语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../C++/02-新特性/03-语言可用性的强化.html">
+            
+                <a href="../../C++/02-新特性/03-语言可用性的强化.html">
+            
+                    
+                    03-语言可用性的强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../../C++/02-新特性/04-新的类型.html">
+            
+                <a href="../../C++/02-新特性/04-新的类型.html">
+            
+                    
+                    04-新的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../../C++/02-新特性/">
+            
+                <a href="../../C++/02-新特性/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../../C++/02-新特性/常见技巧.html">
+            
+                <a href="../../C++/02-新特性/常见技巧.html">
+            
+                    
+                    常见技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Go</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Go/01-grpc/">
+            
+                <a href="../../Go/01-grpc/">
+            
+                    
+                    01-grpc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../Go/01-grpc/4种调节模式.html">
+            
+                <a href="../../Go/01-grpc/4种调节模式.html">
+            
+                    
+                    4种调节模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >leetcode-01-数组类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x9898;&#x5206;&#x7C7B;">&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x9898;&#x5206;&#x7C7B;</h1><p>&#x5212;&#x5206;&#x4E3A; 4 &#x4E2A;&#x5E38;&#x8003;&#x95EE;&#x9898;&#xFF1A;</p><ol><li>&#x5B50;&#x6570;&#x7EC4;&#x95EE;&#x9898;&#xFF1A;&#x5C31;&#x662F;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x56F4;&#x7ED5;&#x8BE5;&#x6570;&#x7EC4;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x5217;&#x51FA;&#x8BF8;&#x591A;&#x96BE;&#x9898;&#xFF0C;&#x7B49;&#x5F85;&#x6211;&#x4EEC;&#x6765;&#x89E3;&#x7B54;
+</li>
+<li>&#x77E9;&#x9635;&#x95EE;&#x9898;&#xFF1A;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#xFF08;&#x6216;&#x8005;&#x79F0;&#x4E3A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF09;&#xFF0C;&#x56F4;&#x7ED5;&#x8BE5;&#x77E9;&#x9635;&#x5217;&#x51FA;&#x4E0D;&#x540C;&#x65B9;&#x5F0F;&#x904D;&#x5386;&#x77E9;&#x9635;&#x4E2D;&#x5143;&#x7D20;&#x7B49;&#x96BE;&#x9898;&#xFF0C;&#x7B49;&#x5F85;&#x6211;&#x4EEC;&#x6765;&#x89E3;&#x7B54;
+</li>
+<li>O(n) &#x7C7B;&#x578B;&#x95EE;&#x9898;&#xFF1A;O(n)&#x662F;&#x6307;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#xFF0C;&#x7ED9;&#x5B9A;&#x7684;&#x9898;&#x76EE;&#x9898;&#x610F;&#x4E00;&#x822C;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x5176;&#x4E00;&#x822C;&#x89E3;&#x6CD5;&#xFF08;&#x4FD7;&#x79F0;&#x66B4;&#x529B;&#x89E3;&#x6CD5;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E00;&#x822C;&#x4E3A;O(n^2)&#xFF0C;&#x751A;&#x81F3;&#x66F4;&#x9AD8;&#xFF09;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x4F60;&#x7684;&#x89E3;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x3002;&#x770B;&#x5230;&#x8FD9;&#x4E9B;&#x9898;&#x76EE;&#x7684;&#x67D0;&#x4E9B;&#x89E3;&#x7B54;&#x540E;&#xFF0C;&#x4F1A;&#x8BA9;&#x6211;&#x4EEC;&#x5FCD;&#x4E0D;&#x4F4F;&#x5938;&#x8D5E;&#xFF1A;&#x771F;&#x4E43;&#x795E;&#x4EBA;&#x3001;&#x597D;&#x5389;&#x5BB3;&#x3001;&#x5947;&#x5F02;&#x7279;&#x89E3;&#x3001;&#x5DE7;&#x5999;&#x3001;&#x5F3A;&#x3001;&#x4F18;&#x96C5;
+</li>
+<li>&#x601D;&#x7EF4;&#x8F6C;&#x6362;&#x7C7B;&#x578B;&#x95EE;&#x9898;&#xFF1A;&#x5176;&#x89E3;&#x7B54;&#x4E0D;&#x5C5E;&#x4E8E;&#x4E0A;&#x8FF0;&#x4E09;&#x79CD;&#x7C7B;&#x578B;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x89E3;&#x7B54;&#x65B9;&#x5F0F;&#x6709;&#x70B9;&#x5DE7;&#x5999;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x8BE5;&#x7C7B;&#x578B;&#x9898;&#x76EE;&#x8F83;&#x4E3A;&#x57FA;&#x7840;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x8003;&#x5BDF;&#x4F60;&#x7684;&#x5FEB;&#x901F;&#x5E94;&#x7528;&#x4EE3;&#x7801;&#x80FD;&#x529B;&#x7684;&#x9898;&#x76EE;
+</li></ol>
+<h1 id="&#x5B50;&#x6570;&#x7EC4;&#x95EE;&#x9898;">&#x5B50;&#x6570;&#x7EC4;&#x95EE;&#x9898;</h1><p>&#x9898;&#x76EE;&#x6570;&#x91CF;&#x5171; 17 &#x9898;&#xFF0C;&#x5176;&#x4E2D;&#x96BE;&#x5EA6;&#x4E3A;&#x7B80;&#x5355;&#x6709; 1 &#x9898;&#xFF0C;&#x96BE;&#x5EA6;&#x4E3A;&#x4E2D;&#x7B49;&#x7684;&#x6709; 12 &#x9898;&#xFF0C;&#x96BE;&#x5EA6;&#x4E3A;&#x56F0;&#x96BE;&#x7684;&#x6709; 4 &#x9898;</p><ol><li>&#x6700;&#x5927;&#x5B50;&#x5E8F;&#x548C;
+</li>
+<li>&#x4E58;&#x79EF;&#x6700;&#x5927;&#x5B50;&#x5E8F;&#x5217;
+</li>
+<li>&#x5B50;&#x96C6;
+</li>
+<li>&#x6700;&#x957F;&#x8FDE;&#x7EED;&#x5E8F;&#x5217;
+</li>
+<li>&#x4E58;&#x79EF;&#x5C0F;&#x4E8E;K&#x7684;&#x5B50;&#x6570;&#x7EC4;
+</li>
+<li>&#x548C;&#x4E3A;K&#x7684;&#x5B50;&#x6570;&#x7EC4;
+</li>
+<li>&#x53EF;&#x88AB;K&#x6574;&#x9664;&#x7684;&#x5B50;&#x6570;&#x7EC4;
+</li>
+<li>&#x4E09;&#x4E2A;&#x65E0;&#x91CD;&#x53E0;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;
+</li>
+<li>&#x6700;&#x957F;&#x91CD;&#x590D;&#x5B50;&#x6570;&#x7EC4;
+</li>
+<li>&#x5339;&#x914D;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x5355;&#x8BCD;&#x6570;
+</li>
+<li>&#x533A;&#x95F4;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570;
+</li>
+<li>&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x4E4B;&#x548C;
+</li>
+<li>&#x5B50;&#x5E8F;&#x5217;&#x5BBD;&#x5EA6;&#x4E4B;&#x548C;
+</li>
+<li>&#x73AF;&#x5F62;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;
+</li>
+<li>&#x6700;&#x957F;&#x6E4D;&#x6D41;&#x5B50;&#x6570;&#x7EC4;
+</li>
+<li>&#x4E24;&#x4E2A;&#x975E;&#x91CD;&#x53E0;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;
+</li>
+<li>&#x5B50;&#x6570;&#x7EC4;&#x4E2D;&#x5360;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7684;&#x5143;&#x7D20;
+</li></ol>
+<h2 id="&#x4F8B;4-&#x6700;&#x957F;&#x8FDE;&#x7EED;&#x5E8F;&#x5217;">&#x4F8B;4 &#x6700;&#x957F;&#x8FDE;&#x7EED;&#x5E8F;&#x5217;</h2><p>&#x9898;&#x53F7;&#xFF1A;128&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-4.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x54C8;&#x5E0C;&#x8868;&#x5B58;&#x50A8;&#x6570;&#x7EC4;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x5E94;&#x7528;&#x54C8;&#x5E0C;&#x8868;&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x5DE6;&#x53F3;&#x4E24;&#x8FB9;&#x5E8F;&#x5217;&#x6570;&#x5B57;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(1)&#xFF0C;&#x6240;&#x4EE5;&#x6574;&#x4F53;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n)&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">longestConsecutive</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
+        <span class="hljs-keyword">for</span>(Integer n: nums)
+            set.add(n);
+        <span class="hljs-keyword">for</span>(Integer n: nums) {
+            <span class="hljs-keyword">if</span>(set.contains(n)) {
+                <span class="hljs-keyword">int</span> len = <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">int</span> temp = n;
+                <span class="hljs-keyword">while</span>(set.contains(--temp)) {
+                    len++;
+                    set.remove(temp);
+                }
+                temp = n;
+                <span class="hljs-keyword">while</span>(set.contains(++temp)) {
+                    len++;
+                    set.remove(temp);
+                }
+                result = Math.max(result, len);
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;7-&#x53EF;&#x88AB;k&#x6574;&#x9664;&#x7684;&#x5B50;&#x6570;&#x7EC4;">&#x4F8B;7 &#x53EF;&#x88AB;K&#x6574;&#x9664;&#x7684;&#x5B50;&#x6570;&#x7EC4;</h2><p>&#x9898;&#x53F7;&#xFF1A;974&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-7.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#xFF0C;&#x6C42;&#x53D6;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x4F59;&#x6570;&#xFF08;sum % k&#xFF09;&#xFF0C;&#x91C7;&#x7528;Map&#x5B58;&#x50A8;&#x6BCF;&#x4E2A;&#x4F59;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x3002;</p><p>&#x76F8;&#x540C;&#x4F59;&#x6570;&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;2&#x65F6;&#xFF0C;&#x4EFB;&#x610F;&#x9009;&#x53D6;&#x5176;&#x4E2D;&#x4E24;&#x4E2A;&#x5B50;&#x6570;&#x7EC4;&#x4F59;&#x6570;&#x76F8;&#x51CF;&#xFF0C;&#x5373;&#x4F59;&#x6570;&#x62B5;&#x6D88;&#xFF0C;&#x53EF;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x7684;sum&#x3002;&#xFF08;&#x6B64;&#x5904;&#x7684;&#x4E2A;&#x6570;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x4E3A;&#xFF1A;n*(n-1) / 2&#xFF09;</p><p>&#x4F46;&#x662F;&#xFF0C;&#x6B64;&#x5904;&#x6709;&#x4E24;&#x4E2A;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;:</p><p>(1) &#x5982;&#x679C;&#x4F59;&#x6570;&#x4E3A;0&#xFF0C;&#x6700;&#x7EC8;0&#x7684;&#x4F59;&#x6570;&#x4E2A;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65F6;&#xFF08;1*&#xFF08;1-1&#xFF09;/2 = 0&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x8BA1;&#x7B97;&#x4F1A;&#x6F0F;&#x6389;&#xFF08;&#x5982;&#x679C;&#x4E3A;&#x591A;&#x4E2A;&#xFF0C;&#x4E5F;&#x4F1A;&#x6709;&#x9057;&#x6F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x8BA1;&#x7B97;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x7A0D;&#x5FAE;&#x7422;&#x78E8;&#xFF09;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x521D;&#x59CB;&#x5316;Map&#x65F6;&#xFF0C;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p><pre><code class="lang-java">map.put(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);</code></pre>
+<p>(2) &#x5982;&#x679C;&#x4F59;&#x6570;&#x4E3A;&#x8D1F;&#x6570;&#xFF0C;&#x5C31;&#x4E0D;&#x80FD;&#x6267;&#x884C;&#x76F8;&#x540C;&#x4F59;&#x6570;&#x76F8;&#x51CF;&#x62B5;&#x6D88;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x4EE5;&#x4E0B;&#x5904;&#x7406;&#xFF1A;</p><pre><code class="lang-java"><span class="hljs-comment">// sum % K &#x6B63;&#x5E38;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;</span>
+
+((sum % K) + K) % K   <span class="hljs-comment">// &#x5982;&#x679C;&#x4E3A;&#x8D1F;&#x6570;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8F6C;&#x6362;&#x4E3A;&#x6B63;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x8F6C;&#x6362;&#x539F;</span></code></pre>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">subarraysDivByK</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span> K)</span> </span>{
+        Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        map.put(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">for</span>(Integer a: A) {
+            sum += a;
+            map.put(((sum % K) + K) % K , map.getOrDefault(((sum % K) + K) % K, <span class="hljs-number">0</span>)+<span class="hljs-number">1</span>);
+        }
+        <span class="hljs-comment">// System.out.println(&quot;map = &quot;+map);</span>
+        <span class="hljs-keyword">for</span>(Integer key: map.keySet())
+            result += map.get(key) * (map.get(key) - <span class="hljs-number">1</span>) / <span class="hljs-number">2</span>;
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;8-&#x4E09;&#x4E2A;&#x65E0;&#x91CD;&#x53E0;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;">&#x4F8B;8 &#x4E09;&#x4E2A;&#x65E0;&#x91CD;&#x53E0;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;</h2><p>&#x9898;&#x53F7;&#xFF1A;689&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-8.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x6C42;&#x89E3;&#xFF0C;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B;&#xFF1A;dp[2][n] = max(dp[2][n-1], dp[1][n-k] + sumRange(n, n -k+1))&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x7EF4;&#x957F;&#x5EA6;&#x4E3A; 3&#xFF0C;&#x8868;&#x793A;&#x4E09;&#x4E2A;&#x5B50;&#x6570;&#x7EC4;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] maxSumOfThreeSubarrays(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> k) {
+        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>][nums.length];
+        <span class="hljs-keyword">int</span>[] cummulative = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[nums.length];
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
+            sum += nums[i];
+            cummulative[i] = sum;
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; nums.length; j++) {
+                <span class="hljs-keyword">if</span> (j &lt; (i + <span class="hljs-number">1</span>) * k - <span class="hljs-number">1</span>) {
+                    dp[i][j] = <span class="hljs-number">0</span>;
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span>) {
+                        <span class="hljs-comment">// &#x6613;&#x9519;&#x70B9;: &#x5F53;k=1&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#x9700;&#x8981;&#x5904;&#x7406;&#x4E00;&#x4E0B;&#x3002;</span>
+                        dp[i][j] = Math.max(j &gt; <span class="hljs-number">0</span> ? dp[i][j - <span class="hljs-number">1</span>] : <span class="hljs-number">0</span>, rangeSum(cummulative, j - k + <span class="hljs-number">1</span>, j));
+                    } <span class="hljs-keyword">else</span> {
+                        dp[i][j] = Math.max(j &gt; <span class="hljs-number">0</span> ? dp[i][j - <span class="hljs-number">1</span>]: <span class="hljs-number">0</span>, rangeSum(cummulative, j - k + <span class="hljs-number">1</span>, j) + dp[i - <span class="hljs-number">1</span>][j - k]);
+                    }
+                }
+
+            }
+        }
+        <span class="hljs-keyword">int</span>[] ans = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>];
+        <span class="hljs-keyword">int</span> length = dp[<span class="hljs-number">2</span>].length - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+            <span class="hljs-keyword">int</span>[] row = dp[i];
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = length - <span class="hljs-number">1</span>; j &gt;= <span class="hljs-number">0</span>; j--) {
+                <span class="hljs-keyword">if</span> (row[j] != row[length]) {
+                    ans[i] = j - k + <span class="hljs-number">2</span>;
+                    length = j - k + <span class="hljs-number">1</span>;
+                    <span class="hljs-keyword">break</span>;
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> ans;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">rangeSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] cummulative, <span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> right)</span> </span>{
+        <span class="hljs-keyword">if</span> (left == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> cummulative[right];
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> cummulative[right] - cummulative[left - <span class="hljs-number">1</span>];
+        }
+    }
+
+}</code></pre>
+<h2 id="&#x4F8B;9-&#x6700;&#x957F;&#x91CD;&#x590D;&#x5B50;&#x6570;&#x7EC4;">&#x4F8B;9 &#x6700;&#x957F;&#x91CD;&#x590D;&#x5B50;&#x6570;&#x7EC4;</h2><p>&#x9898;&#x53F7;&#xFF1A;718&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-9.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x672C;&#x9898;&#x65E2;&#x53EF;&#x4EE5;&#x7528;&#x54C8;&#x5E0C;&#x8868;&#x6765;&#x89E3;&#x7B54;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x60F3;&#x6765;&#x89E3;&#x7B54;&#x3002;&#x5E94;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x8DEF;&#x89E3;&#x7B54;&#x7684;&#x65F6;&#x95F4;&#x6548;&#x7387;&#x6700;&#x9AD8;&#x3002;&#x6B64;&#x5904;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x89E3;&#x9898;&#x601D;&#x8DEF;&#x3002;dp[i][j] &#x8868;&#x793A; A [i-1]&#x4E3A;&#x7EC8;&#x70B9;,B[j-1]&#x4E3A;&#x7EC8;&#x70B9;&#x65F6;&#x4E24;&#x8005;&#x7684;&#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x6570;&#x7EC4;&#x3002;&#x5177;&#x4F53;&#x66F4;&#x65B0;&#x7B56;&#x7565;&#x89C1;&#x4EE3;&#x7801;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+      <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findLength</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span>[] B)</span> </span>{
+
+        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[A.length + <span class="hljs-number">1</span>][B.length + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= A.length; i++)
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= B.length; j++) {
+
+                <span class="hljs-keyword">if</span> (A[i - <span class="hljs-number">1</span>] == B[j - <span class="hljs-number">1</span>])
+                    dp[i][j] = dp[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;
+
+                res = Math.max(res, dp[i][j]);
+            }
+
+        <span class="hljs-keyword">return</span> res;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;10-&#x5339;&#x914D;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x5355;&#x8BCD;&#x6570;">&#x4F8B;10 &#x5339;&#x914D;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x5355;&#x8BCD;&#x6570;</h2><p>&#x9898;&#x53F7;&#xFF1A;792&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-10.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x542B;&#x4E49;&#xFF0C;&#x5B50;&#x5E8F;&#x5217;&#x662F;&#x6309;&#x7167;&#x4ECE;&#x524D;&#x5F80;&#x540E;&#x7684;&#x987A;&#x5E8F;&#x4EFB;&#x610F;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x5E8F;&#x5217;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E0D;&#x80FD;&#x5E94;&#x7528;&#x54C8;&#x5E0C;&#x8868;&#x7EDF;&#x8BA1;&#x5B57;&#x6BCD;&#x7684;&#x4E2A;&#x6570;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5305;&#x542B;&#x67D0;&#x4E2A;&#x5355;&#x8BCD;&#x3002;&#x6B64;&#x5904;&#x53EF;&#x91C7;&#x7528;&#x66B4;&#x529B;&#x6CD5;&#x76F4;&#x63A5;&#x5339;&#x914D;&#x67E5;&#x627E;&#xFF0C;&#x65F6;&#x95F4;&#x6548;&#x7387;&#x8F83;&#x4F4E;&#x3002;&#x6B64;&#x5904;&#x53EF;&#x91C7;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x6765;&#x4F18;&#x5316;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF0C;&#x80FD;&#x63D0;&#x9AD8;&#x65F6;&#x95F4;&#x6548;&#x7387;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    List&lt;Integer&gt; index[]=<span class="hljs-keyword">new</span> ArrayList[<span class="hljs-number">26</span>];
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numMatchingSubseq</span><span class="hljs-params">(String S, String[] words)</span> </span>{
+         <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;S.length();i++){
+            <span class="hljs-keyword">char</span> ch=S.charAt(i);
+            <span class="hljs-keyword">if</span>(index[ch-<span class="hljs-string">&apos;a&apos;</span>]==<span class="hljs-keyword">null</span>)
+                index[ch-<span class="hljs-string">&apos;a&apos;</span>]=<span class="hljs-keyword">new</span> ArrayList();
+            index[ch-<span class="hljs-string">&apos;a&apos;</span>].add(i);
+         }
+         <span class="hljs-keyword">int</span> res=<span class="hljs-number">0</span>,pre;
+         <span class="hljs-keyword">for</span>(String str:words){
+            pre=-<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;str.length();i++){
+                pre=helper(str.charAt(i)-<span class="hljs-string">&apos;a&apos;</span>,pre);
+                <span class="hljs-keyword">if</span>(pre==-<span class="hljs-number">1</span>)
+                    <span class="hljs-keyword">break</span>;
+            }
+            <span class="hljs-keyword">if</span>(pre!=-<span class="hljs-number">1</span>)
+                res++;
+         }
+         <span class="hljs-keyword">return</span> res;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">helper</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i,<span class="hljs-keyword">int</span> pre)</span></span>{
+        <span class="hljs-keyword">if</span>(index[i]==<span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=index[i].size()-<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span>(pre==-<span class="hljs-number">1</span>)
+            <span class="hljs-keyword">return</span> index[i].get(<span class="hljs-number">0</span>);
+        <span class="hljs-keyword">if</span>(index[i].get(r)&lt;=pre)
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">while</span>(l&lt;r){
+            <span class="hljs-keyword">int</span> mid=(l+r)/<span class="hljs-number">2</span>;
+            <span class="hljs-keyword">if</span>(index[i].get(mid)&lt;=pre)
+                l=mid+<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">else</span>
+                r=mid;
+        }
+
+        <span class="hljs-keyword">return</span> index[i].get(l);
+   }
+}</code></pre>
+<h2 id="&#x4F8B;11-&#x533A;&#x95F4;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570;">&#x4F8B;11 &#x533A;&#x95F4;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570;</h2><p>&#x9898;&#x53F7;&#xFF1A;795&#xFF0C; &#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-11.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6700;&#x5927;&#x5143;&#x7D20;&#x6EE1;&#x8DB3;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;L&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;R&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570; = &#x6700;&#x5927;&#x5143;&#x7D20;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;R&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570; - &#x6700;&#x5927;&#x5143;&#x7D20;&#x5C0F;&#x4E8E;L&#x7684;&#x5B50;&#x6570;&#x7EC4;&#x4E2A;&#x6570;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numSubarrayBoundedMax</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span> L, <span class="hljs-keyword">int</span> R)</span> </span>{
+        <span class="hljs-keyword">return</span> numSubarrayBoundedMax(A, R) - numSubarrayBoundedMax(A, L - <span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numSubarrayBoundedMax</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span> Max)</span> </span>{
+        <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> numSubarry = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> num : A) {
+            <span class="hljs-keyword">if</span> (num &lt;= Max) {
+                numSubarry++;
+                res += numSubarry;
+            } <span class="hljs-keyword">else</span> {
+                numSubarry = <span class="hljs-number">0</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;12-&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x4E4B;&#x548C;">&#x4F8B;12 &#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x4E4B;&#x548C;</h2><p>&#x9898;&#x53F7;&#xFF1A;907&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-12.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x53C2;&#x8003;&#x81EA;LeetCode&#x7684;&#x8BC4;&#x8BBA;&#x89E3;&#x7B54;&#xFF1A;&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x6570;&#x5728;&#x5B50;&#x6570;&#x7EC4;&#x4E2D;&#x6700;&#x5C0F;&#x7684;&#x6B21;&#x6570;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumSubarrayMins</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">long</span> res = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">long</span> mod = <span class="hljs-number">1000000007</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i&lt;A.length; i++) {
+            <span class="hljs-keyword">int</span> l = i-<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">for</span> (; l&gt;=<span class="hljs-number">0</span> &amp;&amp; A[i] &lt; A[l]; l--) ;
+            <span class="hljs-keyword">int</span> r = i+<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">for</span> (; r&lt;A.length &amp;&amp; A[i] &lt;= A[r]; r++) ;
+
+            res += (i-l)*(r-i)*A[i];
+        }
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(res % mod);
+    }
+}</code></pre>
+<h2 id="&#x4F8B;13-&#x5B50;&#x5E8F;&#x5217;&#x5BBD;&#x5EA6;&#x4E4B;&#x548C;">&#x4F8B;13 &#x5B50;&#x5E8F;&#x5217;&#x5BBD;&#x5EA6;&#x4E4B;&#x548C;</h2><p>&#x9898;&#x53F7;&#xFF1A;891&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-13.png"></p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumSubseqWidths</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MOD = (<span class="hljs-keyword">int</span>) (<span class="hljs-number">1e9</span> + <span class="hljs-number">7</span>);
+        Arrays.sort(A);
+        <span class="hljs-keyword">int</span> n = A.length;
+        <span class="hljs-keyword">long</span> res = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">long</span> p = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; ++i) {
+            res = (res + (A[i] - A[n - <span class="hljs-number">1</span> - i]) * p) % MOD;
+            p = (p &lt;&lt; <span class="hljs-number">1</span>) % MOD;
+        }
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>) ((res + MOD) % MOD);
+    }
+}</code></pre>
+<h2 id="&#x4F8B;14-&#x73AF;&#x5F62;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;">&#x4F8B;14 &#x73AF;&#x5F62;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;</h2><p>&#x9898;&#x53F7;&#xFF1A;918&#xFF0C; &#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-14.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x56E0;&#x4E3A;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x6709;&#x73AF;&#x5F62;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x3002;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x65E0;&#x73AF;&#x5F62;&#x662F;&#x7684;&#x8FDE;&#x7EED;&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;&#xFF0C;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x65E0;&#x73AF;&#x5F62;&#x8FDE;&#x7EED;&#x6700;&#x5C0F;&#x5B50;&#x6570;&#x7EC4;&#x548C;&#x3002;&#x6700;&#x540E;&#x91C7;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x603B;&#x548C;&#x51CF;&#x53BB;&#x6700;&#x5C0F;&#x548C;&#xFF0C;&#x548C;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x7684;&#x6700;&#x5927;&#x548C;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x70B9;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x5168;&#x90E8;&#x4E3A;&#x8D1F;&#x6570;&#x65F6;&#xFF0C;&#x6B64;&#x65F6;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF08;&#x56E0;&#x4E3A;&#x6B64;&#x65F6;&#xFF0C;&#x6700;&#x5C0F;&#x5B50;&#x6570;&#x7EC4;&#x548C;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x548C;&#xFF09;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxSubarraySumCircular</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span> max = A[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> min = A[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> maxSoFar = A[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> minSoFar = A[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> sum = A[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;A.length;i++) {
+          sum += A[i];
+          maxSoFar = Math.max(A[i],maxSoFar+A[i]);
+          minSoFar = Math.min(A[i],minSoFar+A[i]);
+          max = Math.max(max,maxSoFar);
+          min = Math.min(min,minSoFar);
+        }
+        <span class="hljs-keyword">if</span> (max &lt; <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> max;
+        <span class="hljs-keyword">return</span> Math.max(max,sum-min);
+    }
+}</code></pre>
+<h2 id="&#x4F8B;15-&#x6700;&#x957F;&#x6E4D;&#x6D41;&#x5B50;&#x6570;&#x7EC4;">&#x4F8B;15 &#x6700;&#x957F;&#x6E4D;&#x6D41;&#x5B50;&#x6570;&#x7EC4;</h2><p>&#x9898;&#x53F7;&#xFF1A;978&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-15.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x8FDE;&#x7EED;&#x4E09;&#x4E2A;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x662F;&#x5426;&#x7B26;&#x5408;&#x6E4D;&#x6D41;&#x7279;&#x5F81;&#x6765;&#x5224;&#x65AD;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n)&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxTurbulenceSize</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span> N = A.length;
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> anchor = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; N; ++i) {
+            <span class="hljs-keyword">int</span> c = Integer.compare(A[i-<span class="hljs-number">1</span>], A[i]);
+            <span class="hljs-keyword">if</span> (i == N-<span class="hljs-number">1</span> || c * Integer.compare(A[i], A[i+<span class="hljs-number">1</span>]) != -<span class="hljs-number">1</span>) {
+                <span class="hljs-keyword">if</span> (c != <span class="hljs-number">0</span>) ans = Math.max(ans, i - anchor + <span class="hljs-number">1</span>);
+                anchor = i;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> ans;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;16-&#x4E24;&#x4E2A;&#x975E;&#x91CD;&#x53E0;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;">&#x4F8B;16 &#x4E24;&#x4E2A;&#x975E;&#x91CD;&#x53E0;&#x5B50;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x548C;</h2><p>&#x9898;&#x53F7;&#xFF1A;1031&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-16.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x6ED1;&#x52A8;&#x7A97;&#x53E3;&#x7684;&#x601D;&#x8DEF;&#x6765;&#x89E3;&#x7B54;&#xFF0C;&#x5BF9;&#x957F;&#x5EA6;&#x4E3A;L&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x91C7;&#x7528;&#x5927;&#x5C0F;&#x4E3A; L &#x7684;&#x6ED1;&#x52A8;&#x7A97;&#x53E3;&#xFF0C;&#x5BF9;&#x4E8E;&#x957F;&#x5EA6;&#x4E3A;M&#x7684;&#x6570;&#x7EC4;&#x91C7;&#x7528;&#x5927;&#x5C0F;&#x4E3A; M &#x7684;&#x7A97;&#x53E3;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x7A97;&#x53E3;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x6765;&#x904D;&#x5386;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span>  <span class="hljs-keyword">int</span> <span class="hljs-title">maxSumTwoNoOverlap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span> L, <span class="hljs-keyword">int</span> M)</span> </span>{
+        <span class="hljs-keyword">int</span> len = A.length, dpL[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[len - L + <span class="hljs-number">1</span>], dpM[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[len - M + <span class="hljs-number">1</span>], max = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; L; i++)
+            dpL[<span class="hljs-number">0</span>] += A[i];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; M; i++)
+            dpM[<span class="hljs-number">0</span>] += A[i];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; len - L + <span class="hljs-number">1</span>; i++)
+            dpL[i] = dpL[i - <span class="hljs-number">1</span>] + A[i + L - <span class="hljs-number">1</span>] - A[i - <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; len - M + <span class="hljs-number">1</span>; i++)
+            dpM[i] = dpM[i - <span class="hljs-number">1</span>] + A[i + M - <span class="hljs-number">1</span>] - A[i - <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len - L - M + <span class="hljs-number">1</span>; i++) {
+            <span class="hljs-keyword">int</span> count = len - i - L - M;
+            <span class="hljs-keyword">while</span> (count &gt;= <span class="hljs-number">0</span>) {
+                max = Math.max(max, Math.max(dpL[i] + dpM[i + L + count], dpM[i] + dpL[i + M + count]));
+                count--;
+            }
+        }
+        <span class="hljs-keyword">return</span> max;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;17-&#x5B50;&#x6570;&#x7EC4;&#x4E2D;&#x5360;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7684;&#x5143;&#x7D20;">&#x4F8B;17 &#x5B50;&#x6570;&#x7EC4;&#x4E2D;&#x5360;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7684;&#x5143;&#x7D20;</h2><p>&#x9898;&#x53F7;&#xFF1A;1157&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-1-17.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x54C8;&#x5E0C;&#x6570;&#x7EC4;&#x6765;&#x89E3;&#x7B54;&#xFF0C;&#x4E00;&#x65E6;&#x54C8;&#x5E0C;&#x6570;&#x7EC4;&#x4E2D;&#x76EE;&#x6807;&#x5143;&#x7D20;&#x503C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E; threshold&#xFF0C;&#x5C31;&#x8FD4;&#x56DE;&#x76EE;&#x6807;&#x6570;&#x5B57;&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; -1&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MajorityChecker</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] nums;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] ans;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> max;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MajorityChecker</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>{
+        nums = arr;
+        max = arr[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> x : arr)
+            <span class="hljs-keyword">if</span>(x &gt; max)
+                max = x;
+
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">query</span><span class="hljs-params">(<span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> right, <span class="hljs-keyword">int</span> threshold)</span> </span>{
+        ans = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[max + <span class="hljs-number">5</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = left;i &lt;= right;i++){
+            <span class="hljs-keyword">if</span>(++ans[nums[i]] &gt;= threshold)
+                <span class="hljs-keyword">return</span> nums[i];
+        }
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+}</code></pre>
+<h1 id="&#x77E9;&#x9635;&#x95EE;&#x9898;">&#x77E9;&#x9635;&#x95EE;&#x9898;</h1><p>&#x77E9;&#x9635;&#x4E5F;&#x53EF;&#x4EE5;&#x79F0;&#x4E3A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x3002;&#x8003;&#x70B9;&#x6709;&#xFF1A;</p><ul><li>&#x77E9;&#x9635;&#x5143;&#x7D20;&#x7684;&#x904D;&#x5386;
+</li>
+<li>&#x77E9;&#x9635;&#x4F4D;&#x7F6E;&#x7684;&#x65CB;&#x8F6C;
+</li>
+<li>&#x77E9;&#x9635;&#x884C;&#x6216;&#x5217;&#x6B21;&#x5E8F;&#x7684;&#x4EA4;&#x6362;
+</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(1) &#x7B49;
+</li></ul>
+<p>&#x672C;&#x671F;&#x5171; 12 &#x9053;&#x9898;&#xFF0C;2 &#x9053;&#x7B80;&#x5355;&#x9898;&#xFF0C;8 &#x9053;&#x4E2D;&#x7B49;&#x9898;&#xFF0C;2 &#x9053;&#x56F0;&#x96BE;&#x9898;&#x3002;</p><ul><li>&#x4F8B; 1 &#x662F;&#x6768;&#x8F89;&#x4E09;&#x89D2;&#x7684;&#x4E00;&#x4E2A;&#x5EF6;&#x7533;&#x9898;&#xFF0C;&#x662F;&#x4E00;&#x9053;&#x975E;&#x5E38;&#x7ECF;&#x5178;&#x7684;&#x77E9;&#x9635;&#x4E60;&#x9898;&#xFF0C;&#x672C;&#x9898;&#x7406;&#x60F3;&#x89E3;&#x6CD5;&#x662F;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x9012;&#x5F52;&#x6765;&#x6C42;&#x89E3;&#x3002;
+</li>
+<li>&#x4F8B; 2 &#x662F;&#x4E00;&#x9053;&#x987A;&#x65F6;&#x9488;&#x8BBF;&#x95EE;&#x77E9;&#x9635;&#x5143;&#x7D20;&#x7684;&#x4E60;&#x9898;&#xFF0C;&#x5728;&#x4E0D;&#x5C11;&#x9762;&#x8BD5;&#x9898;&#x4E2D;&#x6709;&#x89C1;&#x5230;&#x3002;
+</li>
+<li>&#x4F8B; 3&#x3001;&#x4F8B; 4 &#x548C;&#x4F8B; 5 &#x5219;&#x5F3A;&#x8C03;&#x5982;&#x4F55;&#x5229;&#x7528;&#x77E9;&#x9635;&#x672C;&#x8EAB;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x6765;&#x53D8;&#x6362;&#x77E9;&#x9635;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5373;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(1)&#x3002;&#x7528;&#x5230;&#x4E86;&#x5143;&#x7D20;&#x95F4;&#x4EA4;&#x6362;&#x548C;&#x4F4D;&#x8FD0;&#x7B97;&#x7B56;&#x7565;&#xFF0C;&#x5176;&#x4E2D;&#x76F8;&#x5173;&#x89E3;&#x6CD5;&#x5F88;&#x5DE7;&#x5999;&#x3002;
+</li>
+<li>&#x4F8B;6 &#x662F;&#x4E00;&#x9053;&#x5982;&#x4F55;&#x79FB;&#x52A8;&#x77E9;&#x9635;&#x7684;&#x95EE;&#x9898;&#x3002;
+</li>
+<li>&#x4F8B; 7 &#x548C;&#x4F8B; 8 &#x5219;&#x662F;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x7406;&#x89E3;&#x9898;&#x610F;&#xFF0C;&#x5E76;&#x5728;&#x8F83;&#x77ED;&#x65F6;&#x95F4;&#x5185;&#x5B8C;&#x6210;&#x8F83;&#x9AD8;&#x8D28;&#x91CF;&#x4EE3;&#x7801;&#x7684;&#x80FD;&#x529B;&#x3002;&#x5373;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x4E89;&#x53D6;&#x4E00;&#x6B21;&#x6027;&#x901A;&#x8FC7;&#x3002;
+</li>
+<li>&#x4F8B; 9 &#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x628A;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x7531;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x5230;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x3002;
+</li>
+<li>&#x4F8B; 10 &#x662F;&#x4E00;&#x9053;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7ED3;&#x5408;&#x77E9;&#x9635;&#x7684;&#x7ECF;&#x5178;&#x4E60;&#x9898;&#xFF0C;&#x5E76;&#x4E14;&#x8FD8;&#x53EF;&#x4EE5;&#x5EF6;&#x7533;&#x51FA;&#x6C42;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x95EE;&#x9898;&#x3002;
+</li>
+<li>&#x4F8B; 11 &#x5219;&#x5F88;&#x6709;&#x610F;&#x601D;&#xFF0C;&#x8BE5;&#x9898;&#x662F;&#x4E0A;&#x7BC7;&#x4F8B; 6 &#x4E2D;&#x300A;&#x548C;&#x4E3A; K &#x7684;&#x5B50;&#x6570;&#x7EC4;&#x300B;&#x7684;&#x4E00;&#x4E2A;&#x5347;&#x7EA7;&#x7248;&#xFF0C;&#x628A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x573A;&#x666F;&#x53D8;&#x6362;&#x6210;&#x4E86;&#x4E8C;&#x7EF4;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x5E76;&#x7ED3;&#x5408;&#x4E86;&#x52A8;&#x6001;&#x601D;&#x60F3;&#xFF0C;&#x56E0;&#x6B64;&#x9898;&#x76EE;&#x96BE;&#x5EA6;&#x7531;&#x4E2D;&#x7B49;&#x53D8;&#x6210;&#x4E86;&#x56F0;&#x96BE;&#x3002;
+</li>
+<li><p>&#x4F8B; 12 &#x662F;&#x4E00;&#x9053;&#x56F0;&#x96BE;&#x7EA7;&#x522B;&#x7684;&#x4E60;&#x9898;&#xFF0C;&#x8BE5;&#x9898;&#x4E3B;&#x8981;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x5B66;&#x5206;&#x6790;&#x80FD;&#x529B;&#xFF0C;&#x5982;&#x4F55;&#x7075;&#x6D3B;&#x53D8;&#x6362;&#x77E9;&#x9635;&#x7684;&#x884C;&#x548C;&#x5217;&#xFF0C;&#x4EE5;&#x53CA;&#x7EC6;&#x8282;&#x7684;&#x5904;&#x7406;&#x80FD;&#x529B;&#x3002;</p></li>
+<li><p>&#x6768;&#x8F89;&#x4E09;&#x89D2; II</p></li>
+<li><p>&#x87BA;&#x65CB;&#x77E9;&#x9635;</p></li>
+<li>&#x65CB;&#x8F6C;&#x56FE;&#x50CF;
+</li>
+<li>&#x77E9;&#x9635;&#x7F6E;&#x96F6;
+</li>
+<li>&#x751F;&#x547D;&#x6E38;&#x620F;
+</li>
+<li>&#x56FE;&#x50CF;&#x91CD;&#x53E0;
+</li>
+<li>&#x8F66;&#x7684;&#x53EF;&#x7528;&#x6355;&#x83B7;&#x91CF;
+</li>
+<li>&#x53EF;&#x4EE5;&#x653B;&#x51FB;&#x56FD;&#x738B;&#x7684;&#x7687;&#x540E;
+</li>
+<li>&#x641C;&#x7D22;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;&#xFF08;&#x5BF9;&#x5E94; 7.3&#xFF09;
+</li>
+<li>&#x6700;&#x5C0F;&#x8DEF;&#x5F84;&#x548C;
+</li>
+<li>&#x5143;&#x7D20;&#x548C;&#x4E3A;&#x76EE;&#x6807;&#x503C;&#x7684;&#x5B50;&#x77E9;&#x9635;&#x6570;&#x91CF;
+</li>
+<li>&#x53D8;&#x4E3A;&#x68CB;&#x76D8;
+</li></ul>
+<h2 id="&#x4F8B;4-&#x77E9;&#x9635;&#x7F6E;&#x96F6;">&#x4F8B;4 &#x77E9;&#x9635;&#x7F6E;&#x96F6;</h2><p>&#x9898;&#x53F7;&#xFF1A;73&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-4.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x5148;&#x8BF4;&#x4E00;&#x4E0B;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(m+n)&#x7684;&#x601D;&#x8DEF;&#xFF08;PS&#xFF1A;&#x8BE5;&#x601D;&#x8DEF;&#x4E0D;&#x7B26;&#x5408;&#x9898;&#x610F;&#x7684;&#x539F;&#x5730;&#x7B97;&#x6CD5;&#x8981;&#x6C42;&#xFF09;&#x3002;&#x7533;&#x8BF7;&#x4E24;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x77E9;&#x9635;&#x884C;&#xFF0C;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x77E9;&#x9635;&#x5217;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x904D;&#x5386;&#x77E9;&#x9635;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF0C;&#x4E00;&#x65E6;&#x51FA;&#x73B0;&#x96F6;&#xFF0C;&#x628A;&#x8BE5;&#x96F6;&#x5BF9;&#x5E94;&#x884C;&#x548C;&#x5BF9;&#x5E94;&#x5217;&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x7684;&#x503C;&#x6807;&#x8BB0;&#x4E3A;&#x5E38;&#x6570;1&#x3002;&#x6700;&#x540E;&#xFF0C;&#x5206;&#x522B;&#x6309;&#x884C;&#x548C;&#x6309;&#x5217;&#x7ED9;&#x539F;&#x59CB;&#x77E9;&#x9635;&#x8D4B;&#x503C;&#x96F6;&#x3002;</p><p>&#x73B0;&#x5728;&#x53C2;&#x8003;LeetCode&#x4E0A;&#x4E00;&#x4E2A;&#x8BC4;&#x8BBA;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(2)&#x3002;&#x7533;&#x8BF7;&#x4E24;&#x4E2A;&#x5E03;&#x5C14;&#x53D8;&#x91CF;cow&#x548C;col&#xFF0C;&#x5206;&#x522B;&#x8BB0;&#x5F55;&#x539F;&#x77E9;&#x9635;&#x7B2C;0&#x884C;&#x548C;&#x7B2C;0&#x5217;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x96F6;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x6807;&#x8BB0;&#x4E3A;True&#xFF0C;&#x5426;&#x5219;&#x6807;&#x8BB0;&#x4E3A;False&#x3002;&#x7136;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x601D;&#x8DEF;&#x5C31;&#x662F;&#x4E0A;&#x9762;O(m+n)&#x7684;&#x89E3;&#x51B3;&#x601D;&#x8DEF;&#xFF0C;&#x552F;&#x4E00;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x6B64;&#x65F6;&#x7684;&#x7A7A;&#x95F4;&#x662F;&#x91C7;&#x7528;&#x539F;&#x59CB;&#x77E9;&#x9635;&#x7684;&#x7A7A;&#x95F4;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setZeroes</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>{
+        <span class="hljs-keyword">boolean</span> row = <span class="hljs-keyword">false</span>, col = <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; matrix.length;i++) {
+            <span class="hljs-keyword">if</span>(matrix[i][<span class="hljs-number">0</span>] == <span class="hljs-number">0</span>) {
+                row = <span class="hljs-keyword">true</span>;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; matrix[<span class="hljs-number">0</span>].length;j++) {
+            <span class="hljs-keyword">if</span>(matrix[<span class="hljs-number">0</span>][j] == <span class="hljs-number">0</span>) {
+                col = <span class="hljs-keyword">true</span>;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i &lt; matrix.length;i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; matrix[<span class="hljs-number">0</span>].length;j++) {
+                <span class="hljs-keyword">if</span>(matrix[i][j] == <span class="hljs-number">0</span>) {
+                    matrix[i][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+                    matrix[<span class="hljs-number">0</span>][j] = <span class="hljs-number">0</span>;
+                }
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i &lt; matrix.length;i++) {
+            <span class="hljs-keyword">if</span>(matrix[i][<span class="hljs-number">0</span>] == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; matrix[<span class="hljs-number">0</span>].length;j++)
+                    matrix[i][j] = <span class="hljs-number">0</span>;
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; matrix[<span class="hljs-number">0</span>].length;j++) {
+            <span class="hljs-keyword">if</span>(matrix[<span class="hljs-number">0</span>][j] == <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i &lt; matrix.length;i++)
+                    matrix[i][j] = <span class="hljs-number">0</span>;
+            }
+        }
+
+        <span class="hljs-keyword">if</span>(row) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; matrix.length;i++)
+                matrix[i][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+        }
+
+        <span class="hljs-keyword">if</span>(col) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; matrix[<span class="hljs-number">0</span>].length;j++)
+                matrix[<span class="hljs-number">0</span>][j] = <span class="hljs-number">0</span>;
+        }
+
+    }
+}</code></pre>
+<h2 id="&#x4F8B;5-&#x751F;&#x547D;&#x6E38;&#x620F;">&#x4F8B;5 &#x751F;&#x547D;&#x6E38;&#x620F;</h2><p>&#x9898;&#x53F7;&#xFF1A;289&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-5.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x5728;&#x8981;&#x6C42;&#x91C7;&#x7528;&#x539F;&#x5730;&#x7B97;&#x6CD5;&#xFF0C;&#x5373;&#x4E0D;&#x80FD;&#x5E94;&#x7528;&#x989D;&#x5916;&#x7684;&#x7A7A;&#x95F4;&#x6765;&#x66F4;&#x65B0;&#x539F;&#x59CB;&#x7684;&#x77E9;&#x9635;&#x5143;&#x7D20;&#x3002;&#x6B64;&#x9898;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4F4D;&#x8FD0;&#x7B97;&#x6765;&#x89E3;&#x51B3;&#x3002;</p><p>&#x5148;&#x89C2;&#x5BDF;&#x9898;&#x76EE;&#x5BF9;&#x6D3B;&#x7EC6;&#x80DE;&#x548C;&#x6B7B;&#x7EC6;&#x80DE;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x5B83;&#x4EEC;&#x8F6C;&#x5316;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x3002;</p><p>&#x6D3B;&#x7EC6;&#x80DE;&#xFF1A;1&#x53D8;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;01&#xFF0C;&#x5982;&#x679C;&#x6D3B;&#x7EC6;&#x80DE;&#x53D8;&#x4E3A;&#x6B7B;&#x7EC6;&#x80DE;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;01&#x53D8;&#x4E3A;11&#xFF0C;&#x5373;1&#x53D8;&#x4E3A;3&#xFF0C;&#x5176;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x4E3A;&#x6D3B;&#x7EC6;&#x80DE;&#x3002;</p><p>&#x6B7B;&#x7EC6;&#x80DE;&#xFF1A;0&#x53D8;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;00&#xFF0C;&#x5982;&#x679C;&#x6B7B;&#x7EC6;&#x80DE;&#x53D8;&#x4E3A;&#x6D3B;&#x7EC6;&#x80DE;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;00&#x53D8;&#x4E3A;10&#xFF0C;&#x5373;0&#x53D8;&#x4E3A;2&#xFF0C;&#x5176;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x8BC6;&#x522B;&#x4E3A;&#x6B7B;&#x7EC6;&#x80DE;&#x3002;</p><p>&#x6700;&#x540E;&#xFF0C;&#x91C7;&#x7528;board[i][j]&amp;1&#x8FDB;&#x884C;&#x4F4D;&#x8FD0;&#x7B97;&#x7684;&#x6CD5;&#x5219;&#x6765;&#x6C42;&#x53D6;&#x4E00;&#x4E2A;&#x7EC6;&#x80DE;&#x5468;&#x56F4;&#x7684;&#x6D3B;&#x7EC6;&#x80DE;&#x6570;&#x91CF;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x5F53;&#x524D;&#x7EC6;&#x80DE;&#x7684;&#x72B6;&#x6001;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">gameOfLife</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] board)</span> </span>{
+       <span class="hljs-comment">// 01&#x8868;&#x793A;&#x6D3B;&#x7EC6;&#x80DE;&#xFF0C;01&#x2014;&#x2014;&gt;11&#x53D8;&#x4E3A;&#x6B7B;&#x7EC6;&#x80DE;&#xFF0C;&#x5373;&#x7531;1&#x53D8;&#x4E3A;3</span>
+       <span class="hljs-comment">// 00&#x8868;&#x793A;&#x6B7B;&#x7EC6;&#x80DE;&#xFF0C;00&#x2014;&#x2014;&gt;10&#x53D8;&#x4E3A;&#x6D3B;&#x7EC6;&#x80DE;&#xFF0C;&#x5373;&#x7531;0&#x53D8;&#x4E3A;2</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; board.length;i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; board[<span class="hljs-number">0</span>].length;j++) {
+                <span class="hljs-keyword">int</span> count = countLive(board, i, j);
+                <span class="hljs-keyword">if</span>((board[i][j] &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>) {
+                    <span class="hljs-keyword">if</span>(count &lt; <span class="hljs-number">2</span> || count &gt; <span class="hljs-number">3</span>)
+                        board[i][j] = <span class="hljs-number">3</span>;
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-keyword">if</span>(count == <span class="hljs-number">3</span>)
+                        board[i][j] = <span class="hljs-number">2</span>;
+                }
+            }
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; board.length;i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; board[<span class="hljs-number">0</span>].length;j++) {
+                <span class="hljs-keyword">if</span>(board[i][j] == <span class="hljs-number">3</span>)
+                    board[i][j] = <span class="hljs-number">0</span>;
+                <span class="hljs-keyword">if</span>(board[i][j] == <span class="hljs-number">2</span>)
+                    board[i][j] = <span class="hljs-number">1</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">countLive</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] board, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+        <span class="hljs-keyword">int</span>[][] step = {{-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>}, {-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}};
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; step.length;i++) {
+            <span class="hljs-keyword">int</span> temp_x = x + step[i][<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">int</span> temp_y = y + step[i][<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span>(temp_x &gt;= <span class="hljs-number">0</span> &amp;&amp; temp_x &lt; board.length &amp;&amp; temp_y &gt;= <span class="hljs-number">0</span> &amp;&amp; temp_y &lt; board[<span class="hljs-number">0</span>].length) {
+                <span class="hljs-keyword">if</span>((board[temp_x][temp_y] &amp; <span class="hljs-number">1</span>) == <span class="hljs-number">1</span>)
+                    count++;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> count;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;6-&#x56FE;&#x50CF;&#x91CD;&#x53E0;">&#x4F8B;6 &#x56FE;&#x50CF;&#x91CD;&#x53E0;</h2><p>&#x9898;&#x53F7;&#xFF1A;835&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-6.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x6CE8;&#x610F;&#x5982;&#x4F55;&#x5904;&#x7406;&#x77E9;&#x9635;&#x7684;&#x79FB;&#x52A8;&#xFF0C;&#x4F7F;&#x5F97;&#x79FB;&#x52A8;&#x540E;&#x4E24;&#x4E2A;&#x77E9;&#x9635;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x3002;&#x76F4;&#x63A5;&#x91C7;&#x7528;&#x4E24;&#x4E2A;for&#x5FAA;&#x73AF;&#x8868;&#x793A;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x79FB;&#x52A8;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5177;&#x4F53;&#x53D8;&#x6362;&#x5F62;&#x5F0F;&#x53C2;&#x8003;&#x4EE3;&#x7801;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">largestOverlap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] A, <span class="hljs-keyword">int</span>[][] B)</span> </span>{
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>, len = A.length;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; len;i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; len;j++) {
+                <span class="hljs-keyword">int</span> count1 = <span class="hljs-number">0</span>, count2 = <span class="hljs-number">0</span>;
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> m = <span class="hljs-number">0</span>;m &lt; len - i;m++) {
+                    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> n = <span class="hljs-number">0</span>;n &lt; len - j;n++) {
+                        count1 += (A[m][n] &amp; B[m+i][n+j]);
+                        count2 += (B[m][n] &amp; A[m+i][n+j]);
+                    }
+                }
+                result = Math.max(result, count1);
+                result = Math.max(result, count2);
+            }
+        }
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;7-&#x8F66;&#x7684;&#x53EF;&#x7528;&#x6355;&#x83B7;&#x91CF;">&#x4F8B;7 &#x8F66;&#x7684;&#x53EF;&#x7528;&#x6355;&#x83B7;&#x91CF;</h2><p>&#x9898;&#x53F7;&#xFF1A;999&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-7.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x672C;&#x9898;&#x8F83;&#x4E3A;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x904D;&#x5386;&#x77E9;&#x9635;&#x627E;&#x5230;&#x8F66;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8F66;&#x80FD;&#x884C;&#x8D70;&#x7684;&#x56DB;&#x4E2A;&#x65B9;&#x5411;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#x5373;&#x53EF;&#x3002;&#xFF08;&#x653E;&#x5165;&#x6B64;&#x9898;&#x7684;&#x610F;&#x56FE;&#xFF0C;&#x9898;&#x76EE;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x8BFB;&#x61C2;&#x9898;&#x610F;&#x9700;&#x8981;&#x8017;&#x8D39;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#xFF0C;&#x53E6;&#x5916;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x8FB9;&#x754C;&#x95EE;&#x9898;&#xFF09;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numRookCaptures</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board)</span> </span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; board.length;i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j &lt; board[<span class="hljs-number">0</span>].length;j++) {
+                <span class="hljs-keyword">if</span>(board[i][j] == <span class="hljs-string">&apos;R&apos;</span>)
+                    <span class="hljs-keyword">return</span> getResult(board, i, j);
+            }
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getResult</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board, <span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> tempX = x, tempY = y;
+        <span class="hljs-comment">//&#x5411;&#x4E0A;</span>
+        <span class="hljs-keyword">while</span>(--tempX &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span>(board[tempX][y] == <span class="hljs-string">&apos;B&apos;</span>)
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(board[tempX][y] == <span class="hljs-string">&apos;p&apos;</span>) {
+                count++;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+        tempX = x;
+        <span class="hljs-comment">//&#x5411;&#x4E0B;</span>
+        <span class="hljs-keyword">while</span>(++tempX &lt; board.length) {
+            <span class="hljs-keyword">if</span>(board[tempX][y] == <span class="hljs-string">&apos;B&apos;</span>)
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(board[tempX][y] == <span class="hljs-string">&apos;p&apos;</span>) {
+                count++;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+        <span class="hljs-comment">//&#x5411;&#x5DE6;</span>
+        <span class="hljs-keyword">while</span>(--tempY &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span>(board[x][tempY] == <span class="hljs-string">&apos;B&apos;</span>)
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(board[x][tempY] == <span class="hljs-string">&apos;p&apos;</span>) {
+                count++;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+        tempY = y;
+        <span class="hljs-comment">//&#x5411;&#x53F3;</span>
+        <span class="hljs-keyword">while</span>(++tempY &lt; board[<span class="hljs-number">0</span>].length) {
+            <span class="hljs-keyword">if</span>(board[x][tempY] == <span class="hljs-string">&apos;B&apos;</span>)
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(board[x][tempY] == <span class="hljs-string">&apos;p&apos;</span>) {
+                count++;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> count;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;8-&#x53EF;&#x4EE5;&#x653B;&#x51FB;&#x56FD;&#x738B;&#x7684;&#x7687;&#x540E;">&#x4F8B;8 &#x53EF;&#x4EE5;&#x653B;&#x51FB;&#x56FD;&#x738B;&#x7684;&#x7687;&#x540E;</h2><p>&#x9898;&#x53F7;&#xFF1A;1222&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-8.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x662F;&#x4F8B;7&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x5C0F;&#x7684;&#x5347;&#x7EA7;&#x7248;&#xFF0C;&#x91CD;&#x70B9;&#x8FD8;&#x662F;&#x5904;&#x7406;&#x8FB9;&#x754C;&#x95EE;&#x9898;&#xFF0C;&#x4EE5;&#x53CA;&#x5FEB;&#x901F;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x548C;&#x4E00;&#x6B21;&#x901A;&#x8FC7;&#x7684;&#x80FD;&#x529B;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] used;
+
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; queensAttacktheKing(<span class="hljs-keyword">int</span>[][] queens, <span class="hljs-keyword">int</span>[] king) {
+        used = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">8</span>][<span class="hljs-number">8</span>];
+        used[king[<span class="hljs-number">0</span>]][king[<span class="hljs-number">1</span>]] = <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; queens.length;i++)
+            used[queens[i][<span class="hljs-number">0</span>]][queens[i][<span class="hljs-number">1</span>]] = <span class="hljs-number">1</span>;
+        List&lt;List&lt;Integer&gt;&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; queens.length;i++) {
+            <span class="hljs-keyword">if</span>(judgeQ(queens[i][<span class="hljs-number">0</span>], queens[i][<span class="hljs-number">1</span>])) {
+                List&lt;Integer&gt; temp = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+                temp.add(queens[i][<span class="hljs-number">0</span>]);
+                temp.add(queens[i][<span class="hljs-number">1</span>]);
+                result.add(temp);
+            }
+        }
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">judgeQ</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+        <span class="hljs-keyword">int</span> x1 = x;
+        <span class="hljs-keyword">while</span>(--x1 &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span>(used[x1][y] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x1][y] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> x2 = x;
+        <span class="hljs-keyword">while</span>(++x2 &lt; <span class="hljs-number">8</span>) {
+            <span class="hljs-keyword">if</span>(used[x2][y] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x2][y] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> y1 = y;
+        <span class="hljs-keyword">while</span>(--y1 &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span>(used[x][y1] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x][y1] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> y2 = y;
+        <span class="hljs-keyword">while</span>(++y2 &lt; <span class="hljs-number">8</span>) {
+            <span class="hljs-keyword">if</span>(used[x][y2] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x][y2] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> x3 = x, y3 = y;
+        <span class="hljs-keyword">while</span>(--x3 &gt;= <span class="hljs-number">0</span> &amp;&amp; --y3 &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span>(used[x3][y3] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x3][y3] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> x4 = x, y4 = y;
+        <span class="hljs-keyword">while</span>(++x4 &lt; <span class="hljs-number">8</span> &amp;&amp; ++y4 &lt; <span class="hljs-number">8</span>) {
+            <span class="hljs-keyword">if</span>(used[x4][y4] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x4][y4] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> x5 = x, y5 = y;
+        <span class="hljs-keyword">while</span>(--x5 &gt;= <span class="hljs-number">0</span> &amp;&amp; ++y5 &lt; <span class="hljs-number">8</span>) {
+            <span class="hljs-keyword">if</span>(used[x5][y5] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x5][y5] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">int</span> x6 = x, y6 = y;
+        <span class="hljs-keyword">while</span>(++x6 &lt; <span class="hljs-number">8</span> &amp;&amp; --y6 &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span>(used[x6][y6] == <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">if</span>(used[x6][y6] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;9-&#x641C;&#x7D22;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;">&#x4F8B;9 &#x641C;&#x7D22;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;</h2><p>&#x9898;&#x53F7;&#xFF1A;74&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-9.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B63;&#x5E38;&#x7684;&#x60F3;&#x6CD5;&#x662F;&#x628A;&#x77E9;&#x9635;&#x60F3;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x91C7;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x601D;&#x8DEF;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5904;&#x7406;&#xFF08;1&#xFF0C;m&#xFF09;&#x548C;&#xFF08;m&#xFF0C;1&#xFF09;&#x8FD9;&#x4E24;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x4E8C;&#x7EF4;&#x77E9;&#x9635;&#x8FB9;&#x754C;&#x95EE;&#x9898;&#xFF08;PS&#xFF1A;&#x5728;LeetCode&#x4E0A;&#x770B;&#x5230;&#x8FC7;&#x76F4;&#x63A5;&#x5E94;&#x7528;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x5F88;&#x5FEB;&#x89E3;&#x51B3;&#x7684;&#x4EE3;&#x7801;&#xFF09;&#x3002;&#x56E0;&#x4E3A;&#x77E9;&#x9635;&#x6309;&#x7167;&#x884C;&#x662F;&#x6709;&#x5E8F;&#x7684;&#xFF0C;&#x4E0D;&#x59A8;&#x91C7;&#x7528;&#x6BCF;&#x884C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x4F5C;&#x4E3A;&#x8FB9;&#x754C;&#x4E0E;&#x76EE;&#x6807;&#x503C;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x5927;&#x5C0F;&#xFF0C;&#x6BCF;&#x6B21;&#x589E;&#x52A0;&#x4E00;&#x884C;&#x6216;&#x8005;&#x51CF;&#x5C11;&#x4E00;&#x5217;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x53C2;&#x8003;&#x4EE3;&#x7801;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-comment">/* &#x4E8C;&#x5206;&#x67E5;&#x627E;&#x7684;&#x4EE3;&#x7801;
+      public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix.length == 0 || matrix[0].length == 0)
+            return false;
+        int begin, mid, end;
+        begin = mid = 0;
+        int len1 = matrix.length, len2 = matrix[0].length;
+        end = len1 * len2 - 1;
+        while (begin &lt; end) {
+            mid = (begin + end) / 2;
+            if (matrix[mid / len2][mid % len2] &lt; target)
+                begin = mid + 1;
+            else
+                end = mid;
+        }
+        return matrix[begin / len2][begin % len2] == target;
+    } */</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">searchMatrix</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix, <span class="hljs-keyword">int</span> target)</span> </span>{
+        <span class="hljs-keyword">if</span>(matrix.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">int</span> row = <span class="hljs-number">0</span>, col = matrix[<span class="hljs-number">0</span>].length-<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span>(row &lt; matrix.length &amp;&amp; col &gt;= <span class="hljs-number">0</span>){
+            <span class="hljs-keyword">if</span>(matrix[row][col] &lt; target)
+                row++;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(matrix[row][col] &gt; target)
+                col--;
+            <span class="hljs-keyword">else</span>
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+}</code></pre>
+<p>LeetCode-cpp &#x7684;&#x89E3;&#x6CD5;&#xFF1A;</p><p>&#x5199;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x641C;&#x7D22;&#x4E00;&#x4E2A;&#x503C;&#x5728;&#x4E00;&#x4E2A; <strong>mxn</strong>&#x77E9;&#x9635;&#x3002;&#x8BE5;&#x77E9;&#x9635;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x6027;&#x8D28;:</p><ul><li>&#x6BCF;&#x884C;&#x7684;&#x6574;&#x6570;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x6392;&#x5E8F;&#x3002;
+</li>
+<li>&#x6BCF;&#x4E00;&#x884C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5927;&#x4E8E;&#x524D;&#x4E00;&#x884C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x3002;
+</li></ul>
+<p><strong>&#x5206;&#x6790;</strong>&#xFF1A;</p><p>&#x4E8C;&#x5206;&#x67E5;&#x627E;</p><p><strong>&#x4EE3;&#x7801;</strong>&#xFF1A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(log n)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(1)</p><pre><code class="lang-cpp"><span class="hljs-keyword">class</span> Solution
+{
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">bool</span> <span class="hljs-title">searchMatrix</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-built_in">vector</span>&lt;<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&gt; &amp;matrix, <span class="hljs-keyword">int</span> target)</span>
+    </span>{
+        <span class="hljs-keyword">if</span> (matrix.empty())
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">const</span> <span class="hljs-keyword">size_t</span> m = matrix.size();
+        <span class="hljs-keyword">const</span> <span class="hljs-keyword">size_t</span> n = matrix.front().size();
+        <span class="hljs-keyword">int</span> first = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> last = m * n;
+        <span class="hljs-keyword">while</span> (first &lt; last)
+        {
+            <span class="hljs-keyword">int</span> mid = first + (last - first) / <span class="hljs-number">2</span>;
+            <span class="hljs-keyword">int</span> value = matrix[mid / n][mid % n];
+            <span class="hljs-keyword">if</span> (value == target)
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (value &lt; target)
+                first = mid + <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">else</span>
+                last = mid;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+};</code></pre>
+<h2 id="&#x4F8B;10-&#x6700;&#x5C0F;&#x8DEF;&#x5F84;&#x548C;">&#x4F8B;10 &#x6700;&#x5C0F;&#x8DEF;&#x5F84;&#x548C;</h2><p>&#x9898;&#x53F7;&#xFF1A;64&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-10.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x6700;&#x76F4;&#x63A5;&#x7684;&#x601D;&#x8DEF;&#x662F;&#x91C7;&#x7528;&#x9012;&#x5F52;&#x8FDB;&#x884C;&#x6DF1;&#x5EA6;&#x641C;&#x7D22;&#x904D;&#x5386;&#x6765;&#x89E3;&#x51B3;&#xFF0C;&#x4F46;&#x662F;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x540E;&#x53D1;&#x73B0;&#x4F1A;&#x51FA;&#x73B0;&#x8D85;&#x65F6;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x5E94;&#x7528;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x60F3;&#x6765;&#x89E3;&#x9898;&#x3002;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x8F6C;&#x6362;&#x65B9;&#x7A0B;&#xFF1A;dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j]&#xFF0C;&#x53E6;&#x5916;&#x9700;&#x8981;&#x8003;&#x8651;&#x77E9;&#x9635;&#x8FB9;&#x754C;&#x7684;&#x95EE;&#x9898;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minPathSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid)</span> </span>{
+        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[grid.length + <span class="hljs-number">1</span>][grid[<span class="hljs-number">0</span>].length + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i &lt; dp.length;i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; dp[<span class="hljs-number">0</span>].length;j++) {
+                <span class="hljs-keyword">if</span>(i == <span class="hljs-number">1</span>)
+                    dp[i][j] = dp[i][j-<span class="hljs-number">1</span>] + grid[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];
+                <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(j == <span class="hljs-number">1</span>)
+                    dp[i][j] = dp[i-<span class="hljs-number">1</span>][j] + grid[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];
+                <span class="hljs-keyword">else</span>
+                    dp[i][j] = Math.min(dp[i-<span class="hljs-number">1</span>][j], dp[i][j-<span class="hljs-number">1</span>]) + grid[i-<span class="hljs-number">1</span>][j-<span class="hljs-number">1</span>];
+            }
+        }
+
+        <span class="hljs-keyword">return</span> dp[grid.length][grid[<span class="hljs-number">0</span>].length];
+    }
+
+}</code></pre>
+<h2 id="&#x4F8B;11-&#x5143;&#x7D20;&#x548C;&#x4E3A;&#x76EE;&#x6807;&#x503C;&#x7684;&#x5B50;&#x77E9;&#x9635;&#x6570;&#x91CF;">&#x4F8B;11 &#x5143;&#x7D20;&#x548C;&#x4E3A;&#x76EE;&#x6807;&#x503C;&#x7684;&#x5B50;&#x77E9;&#x9635;&#x6570;&#x91CF;</h2><p>&#x9898;&#x53F7;&#xFF1A;1074&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-11.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x8FD9;&#x9053;&#x9898;&#x5176;&#x5B9E;&#x662F;&#x300A;&#x548C;&#x4E3A;K&#x7684;&#x5B50;&#x6570;&#x7EC4;&#xFF0C;&#x9898;&#x53F7;&#xFF1A;560&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;&#x300B;&#x7684;&#x4E00;&#x4E2A;&#x5347;&#x7EA7;&#x7248;&#xFF0C;560&#x9898;&#x662F;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x672C;&#x9898;&#x662F;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x548C;&#x53D8;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x5B50;&#x77E9;&#x9635;&#x7684;&#x5F62;&#x5F0F;&#x3002;&#x6B64;&#x5904;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x628A;&#x77E9;&#x9635;&#x6BCF;&#x884C;&#x7684;&#x5143;&#x7D20;&#x53D8;&#x6362;&#x6210;&#x4ECE;&#x8BE5;&#x884C;&#x5F00;&#x59CB;&#x9053;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x548C;&#xFF0C;&#x53E6;&#x5916;&#x5355;&#x72EC;&#x9009;&#x4E24;&#x5217;&#x6C42;&#x77E9;&#x9635;&#x548C;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x628A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x53D8;&#x6210;&#x4E86;&#x5217;&#x5F62;&#x5F0F;&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x6C42;&#x548C;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x89E3;&#x9898;&#x601D;&#x8DEF;&#x5C31;&#x548C;560&#x9898;&#x4E00;&#x6837;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numSubmatrixSumTarget</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix, <span class="hljs-keyword">int</span> target)</span> </span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; matrix.length;i++)
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; matrix[<span class="hljs-number">0</span>].length;j++)
+                matrix[i][j] += matrix[i][j-<span class="hljs-number">1</span>];
+
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j1 = <span class="hljs-number">0</span>;j1 &lt; matrix[<span class="hljs-number">0</span>].length;j1++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j2 = j1;j2 &lt; matrix[<span class="hljs-number">0</span>].length;j2++) {
+                Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+                map.put(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>);
+                <span class="hljs-keyword">int</span> pre = <span class="hljs-number">0</span>;
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; matrix.length;i++) {
+                    <span class="hljs-keyword">int</span> val = pre + (j1 == <span class="hljs-number">0</span> ? matrix[i][j2] : matrix[i][j2] - matrix[i][j1-<span class="hljs-number">1</span>]);
+                    result += map.getOrDefault(val - target, <span class="hljs-number">0</span>);
+                    map.put(val, map.getOrDefault(val, <span class="hljs-number">0</span>)+<span class="hljs-number">1</span>);
+                    pre = val;
+                }
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;12-&#x53D8;&#x4E3A;&#x68CB;&#x76D8;">&#x4F8B;12 &#x53D8;&#x4E3A;&#x68CB;&#x76D8;</h2><p>&#x9898;&#x53F7;&#xFF1A;782&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-2-12.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x672C;&#x9898;&#x5206;&#x6790;&#x4E00;&#x4E0B;01&#x51FA;&#x73B0;&#x7684;&#x89C4;&#x5F8B;&#xFF0C;&#x53EF;&#x77E5;&#x5982;&#x679C;n&#x4E3A;&#x5076;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x884C;&#x6BCF;&#x5217;&#x4E2D;0&#x548C;1&#x7684;&#x4E2A;&#x6570;&#x5FC5;&#x7136;&#x76F8;&#x7B49;&#xFF1B;&#x5982;&#x679C;n&#x4E3A;&#x5947;&#x6570;&#xFF0C;&#x90A3;&#x4E48;0&#x548C;1&#x4E2A;&#x6570;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x4E3A;1&#x3002;&#x7531;&#x4E8E;&#x77E9;&#x9635;&#x53EA;&#x80FD;&#x4EA4;&#x6362;&#x884C;&#x548C;&#x5217;&#xFF0C;&#x7ED3;&#x679C;&#x8981;&#x51FA;&#x73B0;0&#x548C;1&#x4E0D;&#x65AD;&#x76F8;&#x95F4;&#x6392;&#x5217;&#xFF0C;&#x90A3;&#x4E48;&#x6240;&#x6709;&#x884C;&#x4E2D;&#x53EA;&#x80FD;&#x51FA;&#x73B0;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#x7684;01&#x6392;&#x5217;&#x65B9;&#x5F0F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E24;&#x79CD;&#x6392;&#x5217;&#x65B9;&#x5F0F;&#x4E92;&#x8865;&#x3002;&#x4F8B;&#x5982;&#xFF0C;n=4, &#x7B2C;&#x4E00;&#x884C;&#x6392;&#x5E8F;&#xFF1A;1001&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x4ED6;&#x884C;&#x8981;&#x4E0D;&#x7B49;&#x4E8E;1001&#xFF0C;&#x8981;&#x4E48;&#x7B49;&#x4E8E;0110&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x4E0D;&#x53EF;&#x80FD;&#x8F6C;&#x6362;&#x4E3A;&#x68CB;&#x76D8;&#xFF0C;&#x76F4;&#x63A5;&#x8F93;&#x51FA;-1&#x5373;&#x53EF;&#x3002;&#x5BF9;&#x4E8E;&#x5217;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x548C;&#x884C;&#x4E00;&#x6837;&#x3002;&#xFF08;PS&#xFF1A;&#x6B64;&#x9898;&#x9700;&#x8981;&#x5904;&#x7406;&#x6700;&#x5C0F;&#x53D8;&#x6362;&#x6B21;&#x6570;&#x7684;&#x8FB9;&#x754C;&#x95EE;&#x9898;&#xFF0C;&#x5206;&#x5947;&#x5076;&#x8BA8;&#x8BBA;&#x884C;&#x6216;&#x8005;&#x5217;&#x7684;&#x6700;&#x5C0F;&#x4EA4;&#x6362;&#x6B21;&#x6570;&#xFF09;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">movesToChessboard</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] board)</span> </span>{
+        <span class="hljs-keyword">if</span>(check(board)) {
+            <span class="hljs-keyword">int</span> row = <span class="hljs-number">0</span>, start = board[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;i &lt; board.length;i++) {
+                <span class="hljs-keyword">if</span>(board[i][<span class="hljs-number">0</span>] == start)
+                    row++;
+                start = <span class="hljs-number">1</span> - start;
+            }
+            <span class="hljs-keyword">int</span> col = <span class="hljs-number">0</span>;
+            start = board[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; board[<span class="hljs-number">0</span>].length;j++) {
+                <span class="hljs-keyword">if</span>(board[<span class="hljs-number">0</span>][j] == start)
+                    col++;
+                start = <span class="hljs-number">1</span> - start;
+            }
+            <span class="hljs-keyword">if</span>(board.length % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>) { <span class="hljs-comment">// &#x5206;&#x5947;&#x6570;&#x5076;&#x6570;&#x8BA8;&#x8BBA;&#x884C;&#x548C;&#x5217;&#x6700;&#x5C0F;&#x4EA4;&#x6362;&#x6B21;&#x6570;</span>
+                row = Math.min(board.length-row, row);
+                col = Math.min(board.length-col, col);
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">if</span>(row % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)
+                    row = board.length-row;
+                <span class="hljs-keyword">if</span>(col % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>)
+                    col =  board.length-col;
+            }
+            <span class="hljs-keyword">return</span> row / <span class="hljs-number">2</span> + col / <span class="hljs-number">2</span>;
+        }
+
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">judgeEqual</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] board, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>;k &lt; board[<span class="hljs-number">0</span>].length;k++) {
+            <span class="hljs-keyword">if</span>(board[i][k] != board[j][k])
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">judgeNotEqual</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] board, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> k = <span class="hljs-number">0</span>;k &lt; board[<span class="hljs-number">0</span>].length;k++) {
+            <span class="hljs-keyword">if</span>(board[i][k] == board[j][k])
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] board)</span> </span>{
+        <span class="hljs-keyword">int</span> row_0 = <span class="hljs-number">0</span>, row_1 = <span class="hljs-number">0</span>, col_0 = <span class="hljs-number">0</span>, col_1 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; board[<span class="hljs-number">0</span>].length;i++) {
+            <span class="hljs-keyword">if</span>(board[<span class="hljs-number">0</span>][i] == <span class="hljs-number">0</span>)
+                row_0++;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(board[<span class="hljs-number">0</span>][i] == <span class="hljs-number">1</span>)
+                row_1++;
+            <span class="hljs-keyword">if</span>(board[i][<span class="hljs-number">0</span>] == <span class="hljs-number">0</span>)
+                col_0++;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(board[i][<span class="hljs-number">0</span>] == <span class="hljs-number">1</span>)
+                col_1++;
+        }
+
+        <span class="hljs-keyword">if</span>(Math.abs(row_0 - row_1) &gt; <span class="hljs-number">1</span> || row_0+row_1 != board[<span class="hljs-number">0</span>].length)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">if</span>(Math.abs(col_0 - col_1) &gt; <span class="hljs-number">1</span> || col_0+col_1 != board.length)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+
+        row_0 = <span class="hljs-number">0</span>;
+        row_1 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>;j &lt; board[<span class="hljs-number">0</span>].length;j++) {
+            <span class="hljs-keyword">if</span>(judgeEqual(board, <span class="hljs-number">0</span>, j))
+                row_0++;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(judgeNotEqual(board, <span class="hljs-number">0</span>, j))
+                row_1++;
+            <span class="hljs-keyword">else</span>
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+}</code></pre>
+<h1 id="&#x601D;&#x7EF4;&#x8F6C;&#x6362;&#x7C7B;&#x578B;&#x95EE;&#x9898;">&#x601D;&#x7EF4;&#x8F6C;&#x6362;&#x7C7B;&#x578B;&#x95EE;&#x9898;</h1><p>&#x5171; 7 &#x9053;&#x9898;&#xFF0C;&#x4E09;&#x9053;&#x7B80;&#x5355;&#x9898;&#xFF0C;&#x56DB;&#x9053;&#x4E2D;&#x7B49;&#x9898;&#x3002;</p><p>&#x6B64;&#x90E8;&#x5206;&#x9898;&#x76EE;&#x662F;&#x4F5C;&#x8005;&#x8BA4;&#x4E3A;&#x6709;&#x4EF7;&#x503C;&#x53BB;&#x505A;&#x7684;&#x4E00;&#x4E9B;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x8003;&#x5BDF;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#x4E0D;&#x5728;&#x524D;&#x4E09;&#x7BC7;&#x603B;&#x7ED3;&#x7CFB;&#x5217;&#x91CC;&#x9762;&#x3002;</p><ul><li>&#x4F8B;1&#x89E3;&#x6CD5;&#xFF1A;&#x91C7;&#x7528;&#x6570;&#x7EC4;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x6392;&#x5E8F;&#x7684;&#x601D;&#x60F3;&#x3002;
+</li>
+<li>&#x4F8B;2&#x89E3;&#x6CD5;&#xFF1A;&#x8003;&#x5BDF;&#x4E86;&#x7EC4;&#x5408;&#x6570;&#x5B66;&#x7684;&#x7EC4;&#x5408;&#x516C;&#x5F0F;&#x5E94;&#x7528;&#x3002;&#x6709;&#x70B9;&#x7C7B;&#x4F3C;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x60F3;&#x3002;
+</li>
+<li>&#x4F8B;3&#x89E3;&#x6CD5;:  &#x8003;&#x5BDF;&#x7075;&#x6D3B;&#x8FD0;&#x7528;&#x4E8C;&#x8FDB;&#x5236;&#x548C;&#x6574;&#x9664;&#x4F59;&#x6570;&#x7684;&#x6570;&#x5B66;&#x77E5;&#x8BC6;&#x3002;
+</li>
+<li>&#x4F8B;4&#x89E3;&#x6CD5;&#xFF1A;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x601D;&#x60F3;&#x7684;&#x5E94;&#x7528;&#x3002;
+</li>
+<li>&#x4F8B;5&#x89E3;&#x6CD5;&#xFF1A;&#x5206;&#x7C7B;&#x8BA8;&#x8BBA;&#x7684;&#x6570;&#x5B66;&#x601D;&#x60F3;&#x3002;
+</li>
+<li>&#x4F8B;6&#x89E3;&#x6CD5;&#xFF1A;&#x8003;&#x5BDF;&#x7075;&#x6D3B;&#x8FD0;&#x7528;&#x54C8;&#x5E0C;&#x5B57;&#x5178;&#x3002;
+</li>
+<li>&#x4F8B;7&#x89E3;&#x6CD5;&#xFF1A;&#x8003;&#x5BDF;&#x95F0;&#x5E74;&#x7684;&#x6570;&#x5B66;&#x5224;&#x65AD;&#x516C;&#x5F0F;&#xFF0C;&#x8BA1;&#x7B97;&#x5468;&#x51E0;&#x7684;&#x7EC6;&#x8282;&#x5904;&#x7406;&#x80FD;&#x529B;&#x3002;
+</li></ul>
+<h2 id="&#x4F8B;1-&#x6700;&#x5927;&#x5BBD;&#x5EA6;&#x5761;">&#x4F8B;1 &#x6700;&#x5927;&#x5BBD;&#x5EA6;&#x5761;</h2><p>&#x9898;&#x53F7;&#xFF1A;962&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-1.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x7D22;&#x5F15;&#x6392;&#x5E8F;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x4F7F;&#x5F97;&#x4ECE;&#x524D;&#x5F80;&#x540E;&#x904D;&#x5386;&#x65F6;&#xFF0C;A[i] &lt; A[j]&#x3002;&#x7136;&#x540E;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;i&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x5F53;&#x524D;&#x904D;&#x5386;&#x7684;&#x7D22;&#x5F15;&#x5373;&#x4E3A;j&#x3002;&#x5373;&#x53EF;&#x6C42;&#x53D6;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxWidthRamp</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span> N = A.length;
+        Integer[] B = <span class="hljs-keyword">new</span> Integer[N];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; ++i)
+            B[i] = i;
+
+        Arrays.sort(B, (i, j) -&gt; ((Integer) A[i]).compareTo(A[j]));
+
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> i = N;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j: B) {
+            result = Math.max(result, j - i);
+            i = Math.min(i, j);
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;2-&#x603B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x53EF;&#x88AB;60&#x6574;&#x9664;&#x7684;&#x6B4C;&#x66F2;">&#x4F8B;2 &#x603B;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x53EF;&#x88AB;60&#x6574;&#x9664;&#x7684;&#x6B4C;&#x66F2;</h2><p>&#x9898;&#x53F7;:1010&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-2.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x672C;&#x9898;&#x8003;&#x5BDF;&#x4E86;&#x7EC4;&#x5408;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4EE5;&#x53CA;&#x6570;&#x5B66;&#x77E5;&#x8BC6;&#x7684;&#x8F6C;&#x6362;&#x548C;&#x8FC1;&#x79FB;&#x5E94;&#x7528;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numPairsDivisibleBy60</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] time)</span> </span>{
+        <span class="hljs-keyword">int</span>[] temp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">60</span>];
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(Integer t: time) {
+            <span class="hljs-keyword">if</span>(t % <span class="hljs-number">60</span> == <span class="hljs-number">0</span>)
+                result += temp[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">else</span>
+                result += temp[<span class="hljs-number">60</span> - (t % <span class="hljs-number">60</span>)];
+            temp[t % <span class="hljs-number">60</span>]++;
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;3-&#x53EF;&#x88AB;5&#x6574;&#x9664;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x524D;&#x7F00;">&#x4F8B;3 &#x53EF;&#x88AB;5&#x6574;&#x9664;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x524D;&#x7F00;</h2><p>&#x9898;&#x53F7;&#xFF1A;1018&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-3.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x9700;&#x8981;&#x6293;&#x4F4F;&#x6574;&#x9664;&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5373;&#x4E2A;&#x4F4D;&#x6570;&#x662F;5&#x7684;&#x500D;&#x6570;&#x65F6;&#xFF0C;&#x5373;&#x53EF;&#x6574;&#x9664;5&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x7EDF;&#x8BA1;&#x5F53;&#x524D;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7684;&#x4E2A;&#x4F4D;&#x6570;&#x5373;&#x53EF;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Boolean&gt; <span class="hljs-title">prefixesDivBy5</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        List&lt;Boolean&gt; ans = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+
+        <span class="hljs-keyword">int</span> num = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; A.length;i++) {
+            num &lt;&lt;= <span class="hljs-number">1</span>;
+            num += A[i];
+            num %= <span class="hljs-number">10</span>;
+            ans.add(num % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>);
+        }
+
+        <span class="hljs-keyword">return</span> ans;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;4-&#x4E0D;&#x76F8;&#x4EA4;&#x7684;&#x7EBF;">&#x4F8B;4 &#x4E0D;&#x76F8;&#x4EA4;&#x7684;&#x7EBF;</h2><p>&#x9898;&#x53F7;&#xFF1A;1035&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-4.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x601D;&#x60F3;&#x7684;&#x5E94;&#x7528;&#x3002;&#x52A8;&#x6001;&#x9012;&#x63A8;&#x65B9;&#x7A0B;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxUncrossedLines</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span>[] B)</span> </span>{
+
+        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[A.length + <span class="hljs-number">1</span>][B.length + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; dp.length; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt; dp[<span class="hljs-number">0</span>].length; j++) {
+                <span class="hljs-keyword">if</span> (A[i - <span class="hljs-number">1</span>] == B[j - <span class="hljs-number">1</span>])
+                    dp[i][j] = dp[i - <span class="hljs-number">1</span>][ j - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">else</span>
+                    dp[i][j] = Math.max(dp[i][j - <span class="hljs-number">1</span>], dp[i - <span class="hljs-number">1</span>][j]);
+            }
+        }
+        <span class="hljs-keyword">return</span> dp[A.length][B.length];
+    }
+}</code></pre>
+<h2 id="&#x4F8B;5-&#x9012;&#x51CF;&#x5143;&#x7D20;&#x4F7F;&#x6570;&#x7EC4;&#x5448;&#x952F;&#x9F7F;&#x72B6;">&#x4F8B;5 &#x9012;&#x51CF;&#x5143;&#x7D20;&#x4F7F;&#x6570;&#x7EC4;&#x5448;&#x952F;&#x9F7F;&#x72B6;</h2><p>&#x9898;&#x53F7;&#xFF1A;1144&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-5.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x5206;&#x7C7B;&#x8BA8;&#x8BBA;&#x3002;&#x6309;&#x7167;&#x9898;&#x76EE;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x5206;&#x5947;&#x6570;&#x5076;&#x6570;&#x8BA8;&#x8BBA;&#x6C42;&#x89E3;&#x6700;&#x7EC8;&#x7684;&#x6700;&#x5C0F;&#x64CD;&#x4F5C;&#x6B21;&#x6570;&#x5373;&#x53EF;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">movesToMakeZigzag</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">int</span> odd = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> eve = <span class="hljs-number">0</span>;
+        <span class="hljs-comment">//&#x5076;&#x6570;&#x6700;&#x9AD8;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i+=<span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">int</span> temp = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">if</span>(i ==<span class="hljs-number">0</span>){
+               temp = nums [<span class="hljs-number">1</span>];
+            }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (i==nums.length -<span class="hljs-number">1</span>){
+                temp= nums[nums.length -<span class="hljs-number">2</span>];
+            }<span class="hljs-keyword">else</span> {
+                temp = nums [i-<span class="hljs-number">1</span>]&gt;nums[i+<span class="hljs-number">1</span>]?nums[i+<span class="hljs-number">1</span>]:nums [i-<span class="hljs-number">1</span>];
+            }
+            <span class="hljs-keyword">if</span>(temp&lt;=nums[i]){
+                eve+=nums[i]-temp+<span class="hljs-number">1</span>;
+            }
+        }
+
+        <span class="hljs-comment">//&#x5947;&#x6570;&#x6700;&#x9AD8;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length; i+=<span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">int</span> temp = <span class="hljs-number">0</span>;
+           <span class="hljs-keyword">if</span> (i==nums.length -<span class="hljs-number">1</span>){
+                temp= nums[nums.length -<span class="hljs-number">2</span>];
+            }<span class="hljs-keyword">else</span> {
+                temp = nums [i-<span class="hljs-number">1</span>]&gt;nums[i+<span class="hljs-number">1</span>]?nums[i+<span class="hljs-number">1</span>]:nums [i-<span class="hljs-number">1</span>];
+            }
+            <span class="hljs-keyword">if</span>(temp&lt;=nums[i]){
+                odd+=nums[i]-temp+<span class="hljs-number">1</span>;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> eve&gt;odd?odd:eve;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;6-&#x5FEB;&#x7167;&#x6570;&#x7EC4;">&#x4F8B;6 &#x5FEB;&#x7167;&#x6570;&#x7EC4;</h2><p>&#x9898;&#x53F7;&#xFF1A;1146&#xFF0C; &#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-6.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x8003;&#x5BDF;&#x54C8;&#x5E0C;&#x5B57;&#x5178;&#x7684;&#x5E94;&#x7528;&#x3002;</p><pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Map.Entry;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SnapshotArray</span> </span>{
+    <span class="hljs-keyword">int</span> snap_id;
+    ArrayList&lt;TreeMap&lt;Integer,Integer&gt;&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;TreeMap&lt;Integer,Integer&gt;&gt;();
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SnapshotArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> length)</span> </span>{
+        list.clear();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; length;i++) {
+            list.add(<span class="hljs-keyword">new</span> TreeMap&lt;Integer,Integer&gt;());
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">set</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> val)</span> </span>{
+        TreeMap&lt;Integer, Integer&gt; pairMap = list.get(index);
+        Integer value = pairMap.getOrDefault(snap_id, val);
+        pairMap.put(snap_id, val);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">snap</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> snap_id++;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">get</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> snap_id)</span> </span>{
+        Entry&lt;Integer, Integer&gt; entry = list.get(index).floorEntry(snap_id);
+        <span class="hljs-keyword">return</span> entry == <span class="hljs-keyword">null</span> ? <span class="hljs-number">0</span> : entry.getValue();
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your SnapshotArray object will be instantiated and called as such:
+ * SnapshotArray obj = new SnapshotArray(length);
+ * obj.set(index,val);
+ * int param_2 = obj.snap();
+ * int param_3 = obj.get(index,snap_id);
+ */</span></code></pre>
+<h2 id="&#x4F8B;7-&#x4E00;&#x5468;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;">&#x4F8B;7 &#x4E00;&#x5468;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929;</h2><p>&#x9898;&#x53F7;&#xFF1A;1185&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-3-7.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x8003;&#x5BDF;&#x95F0;&#x5E74;&#x7684;&#x6570;&#x5B66;&#x5224;&#x5B9A;&#x516C;&#x5F0F;&#xFF0C;&#x4EE5;&#x53CA;&#x5BF9;&#x4E8E;&#x6708;&#x4EFD;&#x7684;&#x8FB9;&#x754C;&#x5904;&#x7406;&#xFF0C;&#x5BF9;&#x4E8E;&#x7EC6;&#x8282;&#x7684;&#x5904;&#x7406;&#x8003;&#x5BDF;&#x6BD4;&#x8F83;&#x591A;&#x3002;&#x4E5F;&#x662F;&#x4E00;&#x9053;&#x953B;&#x70BC;&#x6211;&#x4EEC;&#x4EE3;&#x7801;&#x80FD;&#x529B;&#x7684;&#x7ECF;&#x5178;&#x7B97;&#x6CD5;&#x9898;&#x3002;&#xFF08;PS&#xFF1A;&#x4E0D;&#x80FD;&#x8C03;&#x7528;&#x5E93;&#x51FD;&#x6570;&#xFF09;&#x5F53;&#x7136;&#xFF0C;&#x6B64;&#x9898;&#x8FD8;&#x53EF;&#x4EE5;&#x53C2;&#x8003;LeetCode&#x7684;&#x8BC4;&#x8BBA;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;&#x8521;&#x4E50;&#x516C;&#x5F0F;&#x7684;&#x89E3;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x662F;&#x8BB0;&#x4E0D;&#x4F4F;&#x7684;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">dayOfTheWeek</span><span class="hljs-params">(<span class="hljs-keyword">int</span> day, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> year)</span> </span>{
+        <span class="hljs-keyword">int</span>[] months = {<span class="hljs-number">31</span>, <span class="hljs-number">28</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>, <span class="hljs-number">30</span>, <span class="hljs-number">31</span>};
+        String[] result = {<span class="hljs-string">&quot;Sunday&quot;</span>, <span class="hljs-string">&quot;Monday&quot;</span>, <span class="hljs-string">&quot;Tuesday&quot;</span>, <span class="hljs-string">&quot;Wednesday&quot;</span>, <span class="hljs-string">&quot;Thursday&quot;</span>, <span class="hljs-string">&quot;Friday&quot;</span>, <span class="hljs-string">&quot;Saturday&quot;</span>};
+        <span class="hljs-keyword">int</span> init_y = <span class="hljs-number">1999</span>, init_m = <span class="hljs-number">7</span>, init_d = <span class="hljs-number">18</span>;
+        <span class="hljs-keyword">int</span> all_days = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span>(year &gt; init_y) {
+            all_days += <span class="hljs-number">13</span>;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">7</span>;i &lt; <span class="hljs-number">12</span>;i++)
+                all_days += months[i];
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">2000</span>;j &lt; year;j++) {
+                <span class="hljs-keyword">if</span>((j % <span class="hljs-number">4</span> == <span class="hljs-number">0</span> &amp;&amp; j % <span class="hljs-number">100</span> != <span class="hljs-number">0</span>) || j % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>)
+                    all_days += <span class="hljs-number">366</span>;
+                <span class="hljs-keyword">else</span>
+                    all_days += <span class="hljs-number">365</span>;
+            }
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; month - <span class="hljs-number">1</span>;i++)
+                all_days += months[i];
+            all_days += day;
+            <span class="hljs-keyword">if</span>((year % <span class="hljs-number">4</span> == <span class="hljs-number">0</span> &amp;&amp; year % <span class="hljs-number">100</span> != <span class="hljs-number">0</span>) || year % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>)
+                <span class="hljs-keyword">if</span>(month &gt; <span class="hljs-number">2</span>)
+                    all_days++;
+            <span class="hljs-keyword">return</span> result[all_days % <span class="hljs-number">7</span>];
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(year == init_y) {
+            <span class="hljs-keyword">if</span>(month &gt; init_m) {
+                all_days += <span class="hljs-number">13</span>;
+                <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">7</span>;i &lt; month - <span class="hljs-number">1</span>;i++)
+                    all_days += months[i];
+                all_days += day;
+                <span class="hljs-keyword">return</span> result[all_days % <span class="hljs-number">7</span>];
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(month == init_m) {
+                <span class="hljs-keyword">if</span>(day &gt;= init_d)
+                    all_days += (day - init_d);
+                <span class="hljs-keyword">int</span> k = all_days % <span class="hljs-number">7</span>;
+                <span class="hljs-keyword">if</span>(day &lt; init_d) {
+                    all_days += (init_d - day);
+                    k = (<span class="hljs-number">7</span> - all_days % <span class="hljs-number">7</span>) % <span class="hljs-number">7</span>;
+                }
+                <span class="hljs-keyword">return</span> result[k];
+            }
+        } <span class="hljs-keyword">else</span> {
+            all_days += <span class="hljs-number">18</span>;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">6</span>;i++)
+                all_days += months[i];
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1998</span>;j &gt; year;j--) {
+                <span class="hljs-keyword">if</span>((j % <span class="hljs-number">4</span> == <span class="hljs-number">0</span> &amp;&amp; j % <span class="hljs-number">100</span> != <span class="hljs-number">0</span>) || j % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>)
+                    all_days += <span class="hljs-number">366</span>;
+                <span class="hljs-keyword">else</span>
+                    all_days += <span class="hljs-number">365</span>;
+            }
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = month;i &lt; <span class="hljs-number">12</span>;i++)
+                all_days += months[i];
+            all_days += months[month - <span class="hljs-number">1</span>] - day;
+            <span class="hljs-keyword">if</span>((year % <span class="hljs-number">4</span> == <span class="hljs-number">0</span> &amp;&amp; year % <span class="hljs-number">100</span> != <span class="hljs-number">0</span>) || year % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>)
+                <span class="hljs-keyword">if</span>(month &lt; <span class="hljs-number">2</span>)
+                    all_days++;
+            all_days = (<span class="hljs-number">7</span> - all_days % <span class="hljs-number">7</span>) % <span class="hljs-number">7</span>;
+            <span class="hljs-keyword">return</span> result[all_days];
+        }
+        <span class="hljs-keyword">return</span> result[<span class="hljs-number">0</span>];
+    }
+}</code></pre>
+<h1 id="on&#x7C7B;&#x578B;&#x95EE;&#x9898;">O(n)&#x7C7B;&#x578B;&#x95EE;&#x9898;</h1><p>&#x5171; 14 &#x9898;&#x3002;3 &#x9053;&#x7B80;&#x5355;&#x9898;&#xFF0C;9 &#x9053;&#x4E2D;&#x7B49;&#x9898;&#xFF0C;2 &#x9053;&#x56F0;&#x96BE;&#x9898;</p><p>O(n)&#x7C7B;&#x578B;&#x95EE;&#x9898;&#xFF0C;&#x662F;&#x6307;&#x8981;&#x6C42;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x3002;&#x8FD9;&#x7C7B;&#x9898;&#x76EE;&#x7684;&#x7279;&#x70B9;&#x662F;&#x9898;&#x610F;&#x4E00;&#x822C;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x800C;&#x4E14;&#x5176;&#x66B4;&#x529B;&#x6C42;&#x89E3;&#x7684;&#x65B9;&#x6848;&#x4E5F;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x9898;&#x76EE;&#x786E;&#x8981;&#x6C42;&#x4F60;&#x4E0D;&#x80FD;&#x91C7;&#x7528;&#x66B4;&#x529B;&#x6CD5;&#x6C42;&#x89E3;&#xFF0C;&#x8FD9;&#x5F80;&#x5F80;&#x662F;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x5BF9;&#x53CC;&#x6307;&#x9488;&#x3001;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x3001;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x3001;&#x54C8;&#x5E0C;&#x6570;&#x7EC4;&#x548C;&#x7279;&#x5B9A;&#x6570;&#x5B66;&#x601D;&#x60F3;&#x7684;&#x5E94;&#x7528;&#x3002;</p><p>&#x5728;&#x53CC;&#x6307;&#x9488;&#x65B9;&#x9762;&#xFF0C;&#x4E00;&#x822C;&#x57FA;&#x7840;&#x7684;&#x7B56;&#x7565;&#x662F;&#x91C7;&#x7528;&#x7A7A;&#x95F4;&#x6362;&#x53D6;&#x65F6;&#x95F4;&#x7684;&#x7B56;&#x7565;&#x3002;&#x5373;&#x5148;&#x91C7;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4ECE;&#x539F;&#x6570;&#x7EC4;&#x53F3;&#x8FB9;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x66F4;&#x65B0;&#x7684;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x7684;&#x5DE6;&#x8FB9;&#x5F00;&#x59CB;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;&#x6700;&#x7EC8;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6B64;&#x601D;&#x8DEF;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4F8B;9&#x3001;&#x4F8B;10&#x548C;&#x4F8B;11&#x3002;</p><p>&#x53E6;&#x5916;&#xFF0C;&#x53CC;&#x6307;&#x9488;&#x7684;&#x5E94;&#x7528;&#x89E3;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; O(1) &#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x91CC;&#x9762;&#x5B9E;&#x73B0;&#xFF0C;&#x91C7;&#x7528;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x968F;&#x7740;&#x904D;&#x5386;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x5939;&#x6742;&#x7740;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x60F3;&#x3002;&#x8FD9;&#x7C7B;&#x8003;&#x70B9;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4F8B;5&#x548C;&#x4F8B;12&#x3002;</p><p>&#x5728;&#x6570;&#x5B66;&#x601D;&#x7EF4;&#x8003;&#x5BDF;&#x65B9;&#x9762;&#xFF0C;&#x7EC4;&#x5408;&#x6570;&#x5B66;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x7528;&#x4E5F;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x3002;&#x6BD4;&#x5982;&#x8003;&#x5BDF;&#x5BF9;&#x7EC4;&#x5408;&#x6570;&#x5B66;&#x4E2D;&#x5B57;&#x5178;&#x5E8F;&#x6C42;&#x89E3;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4F8B;1&#x3002;&#x6570;&#x5B66;&#x4E2D;&#x6B63;&#x8D1F;&#x6570;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4F8B;2&#x3001;&#x4F8B;6&#x3002;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x5F53;&#x524D;&#x793A;&#x4F8B;&#x7684;&#x6570;&#x5B66;&#x89C4;&#x5F8B;&#xFF0C;&#x5F52;&#x7EB3;&#x51FA;&#x9012;&#x63A8;&#x516C;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4F8B;8&#x3001;&#x4F8B;13&#x3002;</p><p>&#x4F8B;3&#x662F;&#x4E00;&#x9053;&#x975E;&#x5E38;&#x7ECF;&#x5178;&#x7684;&#x9762;&#x8BD5;&#x9898;&#xFF0C;&#x9898;&#x76EE;&#x6709;&#x591A;&#x79CD;&#x89E3;&#x6CD5;&#xFF0C;&#x672C;&#x6587;&#x4E2D;&#x7ED9;&#x51FA;&#x662F;&#x91C7;&#x7528;&#x4E09;&#x6B21;&#x7FFB;&#x8F6C;&#x6C42;&#x5F97;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x7684;&#x89E3;&#x6CD5;&#x3002;&#x5728;&#x77E9;&#x9635;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x5229;&#x7528;&#x7FFB;&#x8F6C;&#x64CD;&#x4F5C;&#x4E00;&#x822C;&#x4E5F;&#x53EF;&#x4EE5;&#x53D6;&#x5F97;&#x4EE4;&#x4EBA;&#x60CA;&#x5947;&#x7684;&#x6548;&#x679C;&#x3002;&#x6D3B;&#x7528;&#x7FFB;&#x8F6C;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x6280;&#x5DE7;&#x3002;</p><p>&#x4F8B;4&#x5219;&#x662F;&#x8BA9;&#x4EBA;&#x611F;&#x53F9;&#x7684;&#x89E3;&#x6CD5;&#x3002;&#x91C7;&#x7528;&#x6469;&#x5C14;&#x6295;&#x7968;&#x6CD5;&#x5BFB;&#x627E;&#x6570;&#x7EC4;&#x4E2D;&#x6700;&#x591A;&#x7684;&#x5143;&#x7D20;&#x3002;&#x8BE5;&#x601D;&#x7EF4;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x5F52;&#x7EB3;&#x4E3A;&#x5BFB;&#x627E;&#x6700;&#x591A;&#x5143;&#x7D20;&#x7684;&#x4E00;&#x79CD;&#x7279;&#x89E3;&#x601D;&#x8DEF;&#x3002;</p><p>&#x5728;&#x6570;&#x7EC4;&#x54C8;&#x5E0C;&#x601D;&#x8DEF;&#x7684;&#x5E94;&#x7528;&#x65B9;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4F8B;7&#x548C;&#x4F8B;14&#xFF0C;&#x662F;&#x5F88;&#x5178;&#x578B;&#x7684;&#x4EE5;&#x7A7A;&#x95F4;&#x6362;&#x53D6;&#x65F6;&#x95F4;&#x7684;&#x4F8B;&#x9898;&#x3002;</p><h2 id="&#x4F8B;1-&#x4E0B;&#x4E00;&#x4E2A;&#x6392;&#x5217;">&#x4F8B;1 &#x4E0B;&#x4E00;&#x4E2A;&#x6392;&#x5217;</h2><p>&#x9898;&#x53F7;&#xFF1A;31&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-1.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x672C;&#x9898;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5173;&#x952E;&#x70B9;&#xFF1A;&#x539F;&#x5730;&#x4FEE;&#x6539;&#xFF0C;&#x5B57;&#x5178;&#x5E8F;&#x3002;&#x6B64;&#x9898;&#x7684;&#x89E3;&#x7B54;&#x7528;&#x5230;&#x4E86;&#x7EC4;&#x5408;&#x6570;&#x5B66;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x5BFB;&#x627E;&#x6BD4;&#x5F53;&#x524D;&#x5E8F;&#x5217;&#x5927;&#x7684;&#x6700;&#x5C0F;&#x5B57;&#x5178;&#x5E8F;&#x3002;&#x5373;&#x4ECE;&#x8BE5;&#x5E8F;&#x5217;&#x5C3E;&#x90E8;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x76F4;&#x5230;&#x5F53;&#x524D;&#x5143;&#x7D20;&#xFF08;&#x5047;&#x8BBE;&#x4F4D;&#x7F6E;&#x4E3A;i&#xFF09;&#x6BD4;&#x8BE5;&#x5143;&#x7D20;&#x524D;&#x9762;&#x7684;&#x5143;&#x7D20;&#x5927;&#x7684;&#x65F6;&#x5019;&#x505C;&#x6B62;&#x3002;&#x7136;&#x540E;&#x4ECE;i&#x9053;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5E8F;&#x5217;&#x4E2D;&#x627E;&#x5230;&#x6BD4;&#x7B2C;i-1&#x4E2A;&#x5143;&#x7D20;&#x5927;&#x7684;&#x6700;&#x5C0F;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4EA4;&#x6362;&#xFF0C;&#x6700;&#x540E;&#x628A;&#x6700;&#x540E;i&#x4E2A;&#x5143;&#x7D20;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#x5373;&#x53EF;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">nextPermutation</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">int</span> i = nums.length - <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">while</span>(i &gt;= <span class="hljs-number">0</span> &amp;&amp; nums[i] &gt;= nums[i+<span class="hljs-number">1</span>])
+            i--;
+        <span class="hljs-keyword">if</span>(i &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">int</span> j = nums.length - <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">while</span>(nums[j] &lt;= nums[i])
+                j--;
+            <span class="hljs-keyword">int</span> temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+            reverse(nums, i+<span class="hljs-number">1</span>, nums.length - <span class="hljs-number">1</span>);
+        } <span class="hljs-keyword">else</span> {
+            reverse(nums, <span class="hljs-number">0</span>, nums.length-<span class="hljs-number">1</span>);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reverse</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">while</span>(i &lt; j) {
+            <span class="hljs-keyword">int</span> temp = nums[i];
+            nums[i++] = nums[j];
+            nums[j--] = temp;
+        }
+    }
+}</code></pre>
+<h2 id="&#x4F8B;2-&#x7F3A;&#x5931;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6B63;&#x6570;">&#x4F8B;2 &#x7F3A;&#x5931;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6B63;&#x6570;</h2><p>&#x9898;&#x53F7;&#xFF1A;41&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-2.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x867D;&#x7136;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x56F0;&#x96BE;&#x9898;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x3002;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x662F;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x7684;&#x6700;&#x5C0F;&#x6B63;&#x6574;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x6700;&#x5927;&#x503C;&#x53EA;&#x80FD;&#x662F;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x52A0;1&#xFF0C;&#x6700;&#x5C0F;&#x503C;&#x662F;1&#x3002;&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x5229;&#x7528;&#x539F;&#x6709;&#x6570;&#x7EC4;&#xFF0C;&#x628A;&#x5176;&#x4E2D;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;0&#x7684;&#x6570;&#x5B57;&#x6807;&#x8BB0;&#x4E3A;&#x5927;&#x4E8E;&#x6570;&#x7EC4;&#x957F;&#x5EA6;*2&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x628A;&#x5728;1&#x5230;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;&#x91C7;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;&#x5143;&#x7D20;&#x53D6;&#x8D1F;&#x6570;&#x8868;&#x793A;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x4E00;&#x65E6;&#x51FA;&#x73B0;&#x5927;&#x4E8E;0&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x5143;&#x7D20;&#x4E0B;&#x6807;&#x5373;&#x4E3A;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">firstMissingPositive</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">int</span> len = nums.length * <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.length;i++) {
+            <span class="hljs-keyword">if</span>(nums[i] &lt;= <span class="hljs-number">0</span>)
+                nums[i] = len++;
+        }
+
+        <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(;j &lt; nums.length;j++) {
+            <span class="hljs-keyword">if</span>(Math.abs(nums[j]) &lt;= nums.length &amp;&amp; nums[Math.abs(nums[j]) - <span class="hljs-number">1</span>] &gt; <span class="hljs-number">0</span>)
+                nums[Math.abs(nums[j]) - <span class="hljs-number">1</span>]  *= -<span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">for</span>(j = <span class="hljs-number">0</span>;j &lt; nums.length;j++) {
+            <span class="hljs-keyword">if</span>(nums[j] &gt; <span class="hljs-number">0</span>)
+                <span class="hljs-keyword">break</span>;
+        }
+
+        <span class="hljs-keyword">return</span> j + <span class="hljs-number">1</span>;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;3-&#x65CB;&#x8F6C;&#x6570;&#x7EC4;">&#x4F8B;3 &#x65CB;&#x8F6C;&#x6570;&#x7EC4;</h2><p>&#x9898;&#x53F7;&#xFF1A;189&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-3.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x4E09;&#x6B21;&#x7FFB;&#x8F6C;&#x64CD;&#x4F5C;&#x3002;&#x7B2C;&#x4E00;&#x6B21;&#x5C06;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x7FFB;&#x8F6C;&#x4E00;&#x6B21;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x5C06;&#x8981;&#x53F3;&#x79FB;&#x7684;&#x524D;K&#x4E2A;&#x5143;&#x7D20;&#x7FFB;&#x8F6C;&#x4E00;&#x6B21;&#xFF0C;&#x7B2C;&#x4E09;&#x6B21;&#x5C06;&#x5269;&#x4F59;&#x7684;k-n-1&#x4E2A;&#x5143;&#x7D20;&#x7FFB;&#x8F6C;&#x4E00;&#x6B21;&#x3002;&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x6784;&#x5373;&#x4E3A;&#x76EE;&#x6807;&#x503C;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> k)</span> </span>{
+        <span class="hljs-keyword">int</span> n = nums.length;
+        k %= n;
+        reverse(nums, <span class="hljs-number">0</span>, n - <span class="hljs-number">1</span>);
+        reverse(nums, <span class="hljs-number">0</span>, k - <span class="hljs-number">1</span>);
+        reverse(nums, k, n - <span class="hljs-number">1</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reverse</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+        <span class="hljs-keyword">while</span> (start &lt; end) {
+            <span class="hljs-keyword">int</span> temp = nums[start];
+            nums[start++] = nums[end];
+            nums[end--] = temp;
+        }
+    }
+}</code></pre>
+<h2 id="&#x4F8B;4-&#x6C42;&#x4F17;&#x6570;ii">&#x4F8B;4 &#x6C42;&#x4F17;&#x6570;II</h2><p>&#x9898;&#x53F7;&#xFF1A;229&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-4.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x91C7;&#x7528;&#x6469;&#x5C14;&#x6295;&#x7968;&#x6CD5;&#xFF0C;&#x5177;&#x4F53;&#x5C31;&#x662F;&#x9047;&#x5230;&#x76F8;&#x7B49;&#x7684;&#x6570;&#xFF0C;&#x7EDF;&#x8BA1;&#x8BE5;&#x6570;&#x7684;&#x4E2A;&#x6570;&#x81EA;&#x52A8;&#x52A0;1&#xFF0C;&#x5426;&#x5219;&#x81EA;&#x52A8;&#x51CF;&#x4E00;&#xFF0C;&#x4E00;&#x65E6;&#x51CF;&#x5230;0&#x540E;&#xFF0C;&#x66F4;&#x6362;&#x5F53;&#x524D;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x5B57;&#x3002;&#x6469;&#x5C14;&#x6295;&#x7968;&#x6CD5;&#x9996;&#x6B21;&#x8FD0;&#x7528;&#x7684;&#x9898;&#x662F;&#x6C42;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x4E2D;&#x6570;&#x76EE;&#x8D85;&#x8FC7;&#x4E00;&#x534A;&#x7684;&#x6570;&#xFF08;&#x5177;&#x4F53;&#x53EF;&#x53C2;&#x8003;&#x9898;&#x76EE;&#xFF1A;&#x6C42;&#x4F17;&#x6570;&#xFF0C; &#x9898;&#x53F7;169, &#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;&#xFF09;&#x3002;&#x672C;&#x9898;&#x7A0D;&#x4F5C;&#x53D8;&#x6362;&#x5373;&#x53EF;&#xFF0C;&#x5F00;&#x542F;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x8BA1;&#x6570;&#x548C;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7684;&#x6570;&#x3002;&#x5F00;&#x542F;&#x4E24;&#x4E2A;&#x6570;&#x7684;&#x6570;&#x5B66;&#x610F;&#x4E49;&#x5728;&#x4E8E;&#xFF0C;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x6709;&#x4E24;&#x4E2A;&#x6570;&#x8D85;&#x8FC7;&#x6570;&#x7EC4;&#x7684;&#x4E09;&#x5206;&#x4E4B;&#x4E00;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Integer&gt; <span class="hljs-title">majorityElement</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        List&lt;Integer&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();  <span class="hljs-comment">//&#x6469;&#x5C14;&#x6295;&#x7968;&#x6CD5;</span>
+        <span class="hljs-keyword">int</span> count1 = <span class="hljs-number">0</span>, temp1 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> count2 = <span class="hljs-number">0</span>, temp2 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.length;i++) {
+            <span class="hljs-keyword">if</span>((count1 == <span class="hljs-number">0</span> || temp1 == nums[i]) &amp;&amp; temp2 != nums[i]) {
+                count1++;
+                temp1 = nums[i];
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(count2 == <span class="hljs-number">0</span> || temp2 == nums[i]) {
+                count2++;
+                temp2 = nums[i];
+            } <span class="hljs-keyword">else</span>{
+                count1--;
+                count2--;
+            }
+        }
+
+        count1 = <span class="hljs-number">0</span>;
+        count2 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.length;i++) {
+            <span class="hljs-keyword">if</span>(nums[i] == temp1)
+                count1++;
+            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(nums[i] == temp2)
+                count2++;
+        }
+        <span class="hljs-keyword">if</span>(count1 &gt; nums.length / <span class="hljs-number">3</span>)
+            result.add(temp1);
+        <span class="hljs-keyword">if</span>(temp1 != temp2 &amp;&amp; count2 &gt; nums.length / <span class="hljs-number">3</span>)
+            result.add(temp2);
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;5-&#x9664;&#x81EA;&#x8EAB;&#x4EE5;&#x5916;&#x6570;&#x7EC4;&#x7684;&#x4E58;&#x79EF;">&#x4F8B;5 &#x9664;&#x81EA;&#x8EAB;&#x4EE5;&#x5916;&#x6570;&#x7EC4;&#x7684;&#x4E58;&#x79EF;</h2><p>&#x9898;&#x53F7;&#xFF1A;238&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-5.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x4EE5;&#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x5DE6;&#x8FB9;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x4FDD;&#x5B58;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#xFF1B;&#x7136;&#x540E;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x53F3;&#x8FB9;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x4FDD;&#x5B58;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x7B2C;&#x4E00;&#x6570;&#x5B57;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x53D6;&#x8BE5;&#x6570;&#x7EC4;&#x5DE6;&#x8FB9;&#x7684;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#x548C;&#x53F3;&#x8FB9;&#x7684;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#x76F8;&#x4E58;&#x5373;&#x53EF;&#x3002;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x3002;</p><p>&#x8FDB;&#x9636;&#x5982;&#x4F55;&#x4F7F;&#x5F97;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(1)&#x5462;&#xFF1F;&#x5373;&#x91C7;&#x7528;&#x5E38;&#x6570;&#x7A7A;&#x95F4;&#x4FDD;&#x5B58;&#x5DE6;&#x8FB9;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#xFF0C;&#x548C;&#x53F3;&#x8FB9;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x91CC;&#x611F;&#x89C9;&#x91C7;&#x7528;&#x4E86;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x7684;&#x601D;&#x8DEF;&#x6765;&#x4E34;&#x65F6;&#x4FDD;&#x5B58;&#x5DE6;&#x53F3;&#x8FDE;&#x7EED;&#x4E58;&#x79EF;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] productExceptSelf(<span class="hljs-keyword">int</span>[] nums) {
+        <span class="hljs-keyword">int</span>[] result = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[nums.length];
+        <span class="hljs-keyword">int</span> left = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> right = <span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.length;i++) {
+            result[i] = left;
+            left *= nums[i];
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = nums.length - <span class="hljs-number">1</span>;i &gt;= <span class="hljs-number">0</span>;i--) {
+            result[i] *= right;
+            right *= nums[i];
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;6-&#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;">&#x4F8B;6 &#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;</h2><p>&#x9898;&#x53F7;&#xFF1A;442&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-6.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x91C7;&#x7528;&#x6570;&#x7EC4;&#x4E0B;&#x6807;&#x6765;&#x5224;&#x5B9A;&#x51FA;&#x73B0;&#x4E24;&#x6B21;&#x7684;&#x5143;&#x7D20;&#x3002;&#x9898;&#x76EE;&#x4E2D;&#x8868;&#x660E;1 &lt;= a[i] &lt;= n&#xFF0C;&#x90A3;&#x4E48;&#x51FA;&#x73B0;&#x4E24;&#x6B21;&#x7684;&#x5143;&#x7D20;i&#xFF0C;&#x5BF9;&#x5E94;&#x4E0B;&#x6807;i -1&#xFF0C;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x65F6;&#x4F7F;&#x5F97;a[i - 1] * -1&#xFF0C;&#x5F53;&#x518D;&#x6B21;&#x51FA;&#x73B0;a[i - 1]&#x5C0F;&#x4E8E;&#x96F6;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;i&#x5C31;&#x51FA;&#x73B0;&#x4E86;&#x4E24;&#x6B21;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Integer&gt; <span class="hljs-title">findDuplicates</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        List&lt;Integer&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.length;i++) {
+            <span class="hljs-keyword">int</span> j = Math.abs(nums[i]) - <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">if</span>(nums[j] &lt; <span class="hljs-number">0</span>)
+                result.add(j + <span class="hljs-number">1</span>);
+            <span class="hljs-keyword">else</span>
+                nums[j] *= -<span class="hljs-number">1</span>;
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;7-&#x6570;&#x7EC4;&#x62C6;&#x5206;i">&#x4F8B;7 &#x6570;&#x7EC4;&#x62C6;&#x5206;I</h2><p>&#x9898;&#x53F7;&#xFF1A;561&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-7.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x9898;&#x76EE;&#x4E2D;&#x6709;&#x8BF4;&#x660E;&#x5143;&#x7D20;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x4E14;&#x6BD4;&#x8F83;&#x5C0F;&#x3002;&#x89C2;&#x5BDF;&#x793A;&#x4F8B;&#x7684;&#x6570;&#x636E;&#x53D1;&#x73B0;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x6392;&#x5E8F;&#xFF0C;&#x4F9D;&#x6B21;&#x9009;&#x53D6;&#x4E24;&#x4E2A;&#x5143;&#x7D20;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x4F5C;&#x4E3A;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x5373;&#x53EF;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x53D6;&#x6570;&#x636E;&#x54C8;&#x5E0C;&#x7684;&#x601D;&#x8DEF;&#x6765;&#x5B8C;&#x6210;&#x6570;&#x636E;&#x7684;&#x6392;&#x5E8F;&#x64CD;&#x4F5C;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">arrayPairSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">int</span>[] temp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">20001</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; nums.length;i++) {
+            <span class="hljs-keyword">int</span> j = nums[i] + <span class="hljs-number">10000</span>;
+            temp[j]++;
+        }
+
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; temp.length;i++) {
+            <span class="hljs-keyword">if</span>(temp[i] &gt; <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">int</span> a = i - <span class="hljs-number">10000</span>;
+                temp[i]--;
+                <span class="hljs-keyword">while</span>(i &lt; temp.length &amp;&amp; temp[i] &lt;= <span class="hljs-number">0</span>) {
+                    i++;
+                }
+                <span class="hljs-comment">// if(i &lt; temp.length)</span>
+                <span class="hljs-comment">//     System.out.println(&quot;i = &quot;+i+&quot;, temp[i] = &quot;+temp[i]);</span>
+                <span class="hljs-keyword">if</span>(i &lt; temp.length) {
+                    result += a;
+                    temp[i]--;
+                }
+                <span class="hljs-keyword">if</span>(temp[i] &gt; <span class="hljs-number">0</span>)
+                    i--;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;8-&#x4F18;&#x7F8E;&#x7684;&#x6392;&#x5217;ii">&#x4F8B;8 &#x4F18;&#x7F8E;&#x7684;&#x6392;&#x5217;II</h2><p>&#x9898;&#x53F7;&#xFF1A;667&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-8.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x5BFB;&#x627E;&#x6570;&#x5B66;&#x89C4;&#x5F8B;&#x3002;&#x5148;&#x4ECE;1&#x5230;k&#x5B58;&#x50A8;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x4ECE;k+1&#x5F00;&#x59CB;&#x6BCF;&#x4E24;&#x4E2A;&#x6570;&#x5B58;&#x50A8;(n--, k++)&#x5373;&#x53EF;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] constructArray(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> k) {
+        <span class="hljs-keyword">int</span>[] result = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+        <span class="hljs-keyword">int</span> temp = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; n - k;i++)
+            result[i] = temp++;
+        <span class="hljs-keyword">int</span> count = n;
+        <span class="hljs-keyword">boolean</span> judge = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = n - k;i &lt; n;i++) {
+            <span class="hljs-keyword">if</span>(judge) {
+                result[i] = count--;
+                judge = <span class="hljs-keyword">false</span>;
+            } <span class="hljs-keyword">else</span> {
+                result[i] = temp++;
+                judge = <span class="hljs-keyword">true</span>;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;9-&#x6700;&#x591A;&#x80FD;&#x5B8C;&#x6210;&#x6392;&#x5E8F;&#x7684;&#x5757;-ii">&#x4F8B;9 &#x6700;&#x591A;&#x80FD;&#x5B8C;&#x6210;&#x6392;&#x5E8F;&#x7684;&#x5757; II</h2><p>&#x9898;&#x53F7;&#xFF1A;768&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x56F0;&#x96BE;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-9.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x8003;&#x5BDF;&#x53CC;&#x6307;&#x9488;&#x548C;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x601D;&#x60F3;&#x7684;&#x5E94;&#x7528;&#x3002;&#x53CC;&#x6307;&#x9488;&#xFF0C;&#x4ECE;&#x53F3;&#x8FB9;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x3002;&#x4ECE;&#x5DE6;&#x8FB9;&#x5F00;&#x59CB;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x5B58;&#x50A8;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;&#x5982;&#x679C;&#x5DE6;&#x8FB9;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5927;&#x503C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x53F3;&#x8FB9;&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5206;&#x5272;&#x4E3A;&#x4E00;&#x4E2A;&#x5757;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxChunksToSorted</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>{
+        <span class="hljs-keyword">int</span>[] right_min = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[arr.length];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = arr.length - <span class="hljs-number">1</span>;i &gt;= <span class="hljs-number">0</span>;i--) {
+            <span class="hljs-keyword">if</span>(i == arr.length - <span class="hljs-number">1</span>)
+                right_min[i] = arr[i];
+            <span class="hljs-keyword">else</span>
+                right_min[i] = Math.min(arr[i], right_min[i+<span class="hljs-number">1</span>]);
+        }
+
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> left_max = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; arr.length - <span class="hljs-number">1</span>;i++) {
+            <span class="hljs-keyword">if</span>(arr[left_max] &lt;= right_min[i + <span class="hljs-number">1</span>]) {
+                result++;
+                left_max = i + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">if</span>(arr[left_max] &lt; arr[i])
+                    left_max = i;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;10-&#x6700;&#x4F73;&#x89C2;&#x5149;&#x7EC4;&#x5408;">&#x4F8B;10 &#x6700;&#x4F73;&#x89C2;&#x5149;&#x7EC4;&#x5408;</h2><p>&#x9898;&#x53F7;&#xFF1A;1014&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-10.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x662F;&#x4E00;&#x4E2A;&#x53CC;&#x6307;&#x9488;&#x548C;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x601D;&#x60F3;&#x7684;&#x5E94;&#x7528;&#x3002;&#x53EF;&#x4EE5;&#x628A;&#x5F97;&#x5206;&#x62C6;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5DE6;&#x8FB9;&#x904D;&#x5386;&#xFF0C;&#x5BFB;&#x627E;max(A[i] + i)&#xFF1B;&#x53F3;&#x8FB9;&#x904D;&#x5386;&#xFF0C;&#x5BFB;&#x627E;max(A[j] - j)&#x3002;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4FDD;&#x5B58;&#x53F3;&#x8FB9;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x8BA9;&#x540E;&#x4ECE;&#x5DE6;&#x8FB9;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x4E0D;&#x65AD;&#x66F4;&#x65B0;&#x6700;&#x7EC8;&#x7684;&#x6700;&#x5927;&#x503C;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxScoreSightseeingPair</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span>[] right_max = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[A.length];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = A.length - <span class="hljs-number">1</span>;i &gt;= <span class="hljs-number">0</span>;i--) {
+            <span class="hljs-keyword">if</span>(i == A.length - <span class="hljs-number">1</span>)
+                right_max[i] = A[i] - i;
+            <span class="hljs-keyword">else</span>
+                right_max[i] = Math.max(A[i] - i, right_max[i+<span class="hljs-number">1</span>]);
+        }
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; A.length - <span class="hljs-number">1</span>;i++)
+            result = Math.max(result, A[i] + i + right_max[i+<span class="hljs-number">1</span>]);
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;11-&#x5230;&#x6700;&#x8FD1;&#x7684;&#x4EBA;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;">&#x4F8B;11 &#x5230;&#x6700;&#x8FD1;&#x7684;&#x4EBA;&#x7684;&#x6700;&#x5927;&#x8DDD;&#x79BB;</h2><p>&#x9898;&#x53F7;&#xFF1A;849&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x7B80;&#x5355;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-11.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x53CC;&#x6307;&#x9488;&#x7684;&#x601D;&#x60F3;&#x5E94;&#x7528;&#x3002;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x4ECE;&#x53F3;&#x8FB9;&#x4F9D;&#x6B21;&#x904D;&#x5386;&#xFF0C;&#x5B58;&#x50A8;&#x5230;&#x5F53;&#x524D;&#x5143;&#x7D20;&#x7684;&#x8FDE;&#x7EED;&#x96F6;&#x7684;&#x4E2A;&#x6570;&#xFF08;&#x6B64;&#x5904;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5C3E;&#x90E8;&#x5168;&#x4E3A;&#x96F6;&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF09;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4ECE;&#x5DE6;&#x8FB9;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x8BA1;&#x7B97;&#x5DE6;&#x8FB9;&#x8FDE;&#x7EED;&#x96F6;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x6700;&#x540E;&#x6BD4;&#x8F83;&#x5DE6;&#x8FB9;&#x548C;&#x53F3;&#x8FB9;&#x96F6;&#x4E2A;&#x6570;&#x7684;&#x5927;&#x5C0F;&#x5373;&#x53EF;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxDistToClosest</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] seats)</span> </span>{
+        <span class="hljs-keyword">int</span>[] right = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[seats.length];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = seats.length - <span class="hljs-number">1</span>;i &gt;= <span class="hljs-number">0</span>;i--) {
+            <span class="hljs-keyword">if</span>(i == seats.length - <span class="hljs-number">1</span>) {
+                right[i] = seats[i] == <span class="hljs-number">1</span> ? <span class="hljs-number">0</span> : <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(seats[i] == <span class="hljs-number">0</span>){
+                right[i] = <span class="hljs-number">1</span> + right[i+<span class="hljs-number">1</span>];
+            }
+        }
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>, left = seats.length;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; seats.length;i++) {
+            <span class="hljs-comment">// System.out.println(&quot;i = &quot;+i+&quot;, left = &quot;+left+&quot;, right = &quot;+right[i]+&quot;, result = &quot;+result);</span>
+            <span class="hljs-keyword">if</span>(seats[i] == <span class="hljs-number">1</span>)
+                left = <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">int</span> temp = left;
+                <span class="hljs-keyword">if</span>(right[i] &lt; left &amp;&amp; right[i] + i &lt; seats.length)
+                    temp = right[i];
+                result = Math.max(result, temp);
+                left++;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;12-&#x5206;&#x5272;&#x6570;&#x7EC4;">&#x4F8B;12 &#x5206;&#x5272;&#x6570;&#x7EC4;</h2><p>&#x9898;&#x53F7;&#xFF1A;915&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-12.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x540C;&#x6837;&#x662F;&#x53CC;&#x6307;&#x9488;&#x601D;&#x8DEF;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x91C7;&#x7528;&#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;&#x548C;&#x5DE6;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x503C;&#x7684;&#x601D;&#x60F3;&#x6765;&#x505A;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">partitionDisjoint</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span>[] right_min = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[A.length];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = A.length - <span class="hljs-number">1</span>;i &gt;= <span class="hljs-number">0</span>;i--) {
+            <span class="hljs-keyword">if</span>(i == A.length - <span class="hljs-number">1</span>)
+                right_min[i] = A[i];
+            <span class="hljs-keyword">else</span>
+                right_min[i] = Math.min(A[i], right_min[i+<span class="hljs-number">1</span>]);
+        }
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>, left_max = A[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">for</span>(;result &lt; A.length - <span class="hljs-number">1</span>;result++) {
+            left_max = Math.max(A[result], left_max);
+            <span class="hljs-keyword">if</span>(left_max &lt;= right_min[result + <span class="hljs-number">1</span>])
+                <span class="hljs-keyword">break</span>;
+        }
+
+        <span class="hljs-keyword">return</span> result + <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-comment">/* &#x5F53;&#x524D;&#x6700;&#x5927;&#x503C;&#x548C;&#x5DE6;&#x8FB9;&#x6700;&#x5927;&#x503C;
+    public int partitionDisjoint(int[] A) {
+        if (A == null || A.length == 0) {
+            return 0;
+        }
+
+        int leftMax = A[0];
+        int max = A[0];
+        int index = 0;
+
+        for (int i = 0; i &lt; A.length; i++) {
+            max = Math.max(max, A[i]);
+            if(A[i] &lt; leftMax) {
+                leftMax = max;
+                index = i;
+            }
+        }
+
+        return index + 1;
+    } */</span>
+}</code></pre>
+<h2 id="&#x4F8B;13-&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x7FFB;&#x8F6C;&#x5230;&#x5355;&#x8C03;&#x9012;&#x589E;">&#x4F8B;13 &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x7FFB;&#x8F6C;&#x5230;&#x5355;&#x8C03;&#x9012;&#x589E;</h2><p>&#x9898;&#x53F7;&#xFF1A;926&#xFF0C; &#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-13.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x8003;&#x5BDF;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x5B66;&#x601D;&#x7EF4;&#x3002;&#x7EDF;&#x8BA1;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x904D;&#x5386;&#x65F6;0&#x7684;&#x4E2A;&#x6570;&#x548C;1&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x4E00;&#x65E6;&#x96F6;&#x7684;&#x4E2A;&#x6570;&#x5927;&#x4E8E;1&#xFF0C;&#x7ED3;&#x679C;&#x81EA;&#x52A8;&#x589E;&#x52A0;1&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x540C;&#x65F6;&#x628A;0&#x548C;1&#x7684;&#x4E2A;&#x6570;&#x7F6E;&#x96F6;&#xFF0C;&#x4ECE;&#x65B0;&#x5F00;&#x59CB;&#x7EDF;&#x8BA1;&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-comment">/*
+    * &#x67D0;&#x4E00;&#x4F4D;&#x4E3A;1&#x65F6;&#xFF0C;&#x524D;&#x9762;&#x4E00;&#x4F4D;&#x662F;0&#x6216;&#x8005;1&#x90FD;&#x53EF;&#x4EE5;
+    * &#x67D0;&#x4E00;&#x4F4D;&#x4E3A;0&#x65F6;&#xFF0C;&#x524D;&#x9762;&#x4E00;&#x4F4D;&#x53EA;&#x80FD;&#x4E3A;0
+    */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minFlipsMonoIncr</span><span class="hljs-params">(String S)</span> </span>{
+        <span class="hljs-keyword">int</span> zero = <span class="hljs-number">0</span>, one = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> s: S.toCharArray()){
+            <span class="hljs-keyword">if</span>(s == <span class="hljs-string">&apos;0&apos;</span>)
+                zero++;
+            <span class="hljs-keyword">else</span>
+                one++;
+            <span class="hljs-keyword">if</span>(zero &gt; one) {
+                result += one;
+                zero = <span class="hljs-number">0</span>;
+                one = <span class="hljs-number">0</span>;
+            }
+        }
+        result += zero;
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h2 id="&#x4F8B;14-&#x4F7F;&#x6570;&#x7EC4;&#x552F;&#x4E00;&#x7684;&#x6700;&#x5C0F;&#x589E;&#x91CF;">&#x4F8B;14 &#x4F7F;&#x6570;&#x7EC4;&#x552F;&#x4E00;&#x7684;&#x6700;&#x5C0F;&#x589E;&#x91CF;</h2><p>&#x9898;&#x53F7;&#xFF1A;945&#xFF0C;&#x96BE;&#x5EA6;&#xFF1A;&#x4E2D;&#x7B49;</p><p>&#x9898;&#x76EE;&#x63CF;&#x8FF0;&#xFF1A;</p><p><img src="images/&#x6570;&#x7EC4;-4-14.png"></p><p>&#x89E3;&#x9898;&#x601D;&#x8DEF;&#xFF1A;</p><p>&#x6B64;&#x9898;&#x63D0;&#x793A;&#x8BF4;&#x660E;&#xFF0C;0 &lt;= A[i] &lt; 40000&#x3002;&#x53EF;&#x77E5;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x6570;&#x7EC4;&#x54C8;&#x5E0C;&#x7684;&#x601D;&#x60F3;&#x6765;&#x6C42;&#x89E3;&#x672C;&#x9898;&#xFF0C;&#x4EE5;&#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x3002;</p><pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minIncrementForUnique</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] A)</span> </span>{
+        <span class="hljs-keyword">int</span>[] value_A = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">41000</span>];
+        <span class="hljs-keyword">for</span>(Integer a: A)
+            value_A[a]++;
+        <span class="hljs-keyword">int</span> result = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i &lt; A.length;i++) {
+            <span class="hljs-keyword">if</span>(value_A[A[i]] == <span class="hljs-number">1</span>)
+                <span class="hljs-keyword">continue</span>;
+            <span class="hljs-keyword">int</span> temp = A[i];
+            <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">while</span>(value_A[temp] &gt; <span class="hljs-number">1</span>) {
+                value_A[temp]--;
+                <span class="hljs-keyword">while</span>(value_A[A[i]] &gt; <span class="hljs-number">0</span>) {
+                    count++;
+                    A[i]++;
+                }
+                value_A[A[i]]++;
+                result += count;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}</code></pre>
+<h1 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h1><ul><li><a href="https://www.cnblogs.com/liuzhen1995/p/11789339.html" target="_blank">LeetCode&#x5237;&#x9898;&#x603B;&#x7ED3;-&#x6570;&#x7EC4;&#x7BC7;&#xFF08;&#x4E0A;&#xFF09;</a>
+</li>
+<li><a href="https://www.cnblogs.com/liuzhen1995/p/11806842.html" target="_blank">LeetCode&#x5237;&#x9898;&#x603B;&#x7ED3;-&#x6570;&#x7EC4;&#x7BC7;&#xFF08;&#x4E2D;&#xFF09;</a>
+</li>
+<li><a href="https://www.cnblogs.com/liuzhen1995/p/11838623.html" target="_blank">LeetCode&#x5237;&#x9898;&#x603B;&#x7ED3;-&#x6570;&#x7EC4;&#x7BC7;&#xFF08;&#x756A;&#x5916;&#xFF09;</a>
+</li>
+<li><a href="https://www.cnblogs.com/liuzhen1995/p/11840387.html" target="_blank">LeetCode&#x5237;&#x9898;&#x603B;&#x7ED3;-&#x6570;&#x7EC4;&#x7BC7;&#xFF08;&#x4E0B;&#xFF09;</a>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: README">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="leetcode-02-数组实现.html" class="navigation navigation-next " aria-label="Next page: leetcode-02-数组实现">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"leetcode-01-数组类型","level":"3.1.6","depth":2,"next":{"title":"leetcode-02-数组实现","level":"3.1.7","depth":2,"path":"数据结构/01-数组和链表/leetcode-02-数组实现.md","ref":"数据结构/01-数组和链表/leetcode-02-数组实现.md","articles":[]},"previous":{"title":"README","level":"3.1.5","depth":2,"path":"数据结构/01-数组和链表/README.md","ref":"数据结构/01-数组和链表/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"okito","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"KaiTi, Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notebook","language":"zh-hans","gitbook":"3.2.1","description":""},"file":{"path":"数据结构/01-数组和链表/leetcode-01-数组类型.md","mtime":"2021-07-06T11:56:05.204Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2022-03-27T16:48:51.980Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

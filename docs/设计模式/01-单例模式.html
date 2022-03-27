@@ -1,0 +1,1561 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>01-单例模式 · notebook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="author" content="okito">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02-原型模式.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="01-单例模式.html">
+            
+                <a href="01-单例模式.html">
+            
+                    
+                    01-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-原型模式.html">
+            
+                <a href="02-原型模式.html">
+            
+                    
+                    02-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-生成器模式.html">
+            
+                <a href="03-生成器模式.html">
+            
+                    
+                    03-生成器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04-工厂方法模式.html">
+            
+                <a href="04-工厂方法模式.html">
+            
+                    
+                    04-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05-抽象工厂模式.html">
+            
+                <a href="05-抽象工厂模式.html">
+            
+                    
+                    05-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06-适配器模式.html">
+            
+                <a href="06-适配器模式.html">
+            
+                    
+                    06-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07-桥接模式.html">
+            
+                <a href="07-桥接模式.html">
+            
+                    
+                    07-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08-组合模式.html">
+            
+                <a href="08-组合模式.html">
+            
+                    
+                    08-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09-装饰器模式.html">
+            
+                <a href="09-装饰器模式.html">
+            
+                    
+                    09-装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../数据结构/01-数组和链表/">
+            
+                <a href="../数据结构/01-数组和链表/">
+            
+                    
+                    01-数组和链表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../数据结构/01-数组和链表/01-单链表.html">
+            
+                <a href="../数据结构/01-数组和链表/01-单链表.html">
+            
+                    
+                    01-单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../数据结构/01-数组和链表/02-循环链表.html">
+            
+                <a href="../数据结构/01-数组和链表/02-循环链表.html">
+            
+                    
+                    02-循环链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../数据结构/01-数组和链表/03-双链表.html">
+            
+                <a href="../数据结构/01-数组和链表/03-双链表.html">
+            
+                    
+                    03-双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../数据结构/01-数组和链表/04-跳表.html">
+            
+                <a href="../数据结构/01-数组和链表/04-跳表.html">
+            
+                    
+                    04-跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../数据结构/01-数组和链表/">
+            
+                <a href="../数据结构/01-数组和链表/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../数据结构/01-数组和链表/leetcode-01-数组类型.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-01-数组类型.html">
+            
+                    
+                    leetcode-01-数组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../数据结构/01-数组和链表/leetcode-02-数组实现.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-02-数组实现.html">
+            
+                    
+                    leetcode-02-数组实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../数据结构/01-数组和链表/leetcode-03-数组-LeetCode.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-03-数组-LeetCode.html">
+            
+                    
+                    leetcode-03-数组-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="../数据结构/01-数组和链表/leetcode-04-链表类型.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-04-链表类型.html">
+            
+                    
+                    leetcode-04-链表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="../数据结构/01-数组和链表/leetcode-05-链表-LeetCode.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-05-链表-LeetCode.html">
+            
+                    
+                    leetcode-05-链表-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="../数据结构/01-数组和链表/leetcode-06-循环链表题目.html">
+            
+                <a href="../数据结构/01-数组和链表/leetcode-06-循环链表题目.html">
+            
+                    
+                    leetcode-06-循环链表题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../数据结构/03-树/">
+            
+                <a href="../数据结构/03-树/">
+            
+                    
+                    03-树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../数据结构/03-树/01-二叉树.html">
+            
+                <a href="../数据结构/03-树/01-二叉树.html">
+            
+                    
+                    01-二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../数据结构/03-树/02-二叉查找树.html">
+            
+                <a href="../数据结构/03-树/02-二叉查找树.html">
+            
+                    
+                    02-二叉查找树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../数据结构/03-树/03-平衡二叉树.html">
+            
+                <a href="../数据结构/03-树/03-平衡二叉树.html">
+            
+                    
+                    03-平衡二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../数据结构/03-树/04-红黑树.html">
+            
+                <a href="../数据结构/03-树/04-红黑树.html">
+            
+                    
+                    04-红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../数据结构/03-树/05-线索二叉树.html">
+            
+                <a href="../数据结构/03-树/05-线索二叉树.html">
+            
+                    
+                    05-线索二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../数据结构/03-树/06-B树.html">
+            
+                <a href="../数据结构/03-树/06-B树.html">
+            
+                    
+                    06-B树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../数据结构/03-树/">
+            
+                <a href="../数据结构/03-树/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../数据结构/03-树/leetcode-01-树的遍历.html">
+            
+                <a href="../数据结构/03-树/leetcode-01-树的遍历.html">
+            
+                    
+                    leetcode-01-树的遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../数据结构/03-树/leetcode-02-树类型.html">
+            
+                <a href="../数据结构/03-树/leetcode-02-树类型.html">
+            
+                    
+                    leetcode-02-树类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../数据结构/03-树/leetcode-03-树类型实现.html">
+            
+                <a href="../数据结构/03-树/leetcode-03-树类型实现.html">
+            
+                    
+                    leetcode-03-树类型实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="../数据结构/03-树/leetcode-04-二叉树高频面试题.html">
+            
+                <a href="../数据结构/03-树/leetcode-04-二叉树高频面试题.html">
+            
+                    
+                    leetcode-04-二叉树高频面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="../数据结构/03-树/leetcode-05-二叉搜索树题目.html">
+            
+                <a href="../数据结构/03-树/leetcode-05-二叉搜索树题目.html">
+            
+                    
+                    leetcode-05-二叉搜索树题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.13" data-path="../数据结构/03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                <a href="../数据结构/03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                    
+                    leetcode-06-LeetCode（未整理）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../算法/排序/">
+            
+                <a href="../算法/排序/">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../算法/排序/01-冒泡排序.html">
+            
+                <a href="../算法/排序/01-冒泡排序.html">
+            
+                    
+                    01-冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../算法/排序/02-选择排序.html">
+            
+                <a href="../算法/排序/02-选择排序.html">
+            
+                    
+                    02-选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../算法/排序/03-插入排序.html">
+            
+                <a href="../算法/排序/03-插入排序.html">
+            
+                    
+                    03-插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../算法/排序/04-希尔排序.html">
+            
+                <a href="../算法/排序/04-希尔排序.html">
+            
+                    
+                    04-希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../算法/排序/05-归并排序.html">
+            
+                <a href="../算法/排序/05-归并排序.html">
+            
+                    
+                    05-归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../算法/排序/06-快速排序.html">
+            
+                <a href="../算法/排序/06-快速排序.html">
+            
+                    
+                    06-快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../算法/排序/07-堆排序.html">
+            
+                <a href="../算法/排序/07-堆排序.html">
+            
+                    
+                    07-堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../算法/排序/08-基数排序.html">
+            
+                <a href="../算法/排序/08-基数排序.html">
+            
+                    
+                    08-基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../算法/排序/09-计数排序.html">
+            
+                <a href="../算法/排序/09-计数排序.html">
+            
+                    
+                    09-计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="../算法/排序/10-桶排序.html">
+            
+                <a href="../算法/排序/10-桶排序.html">
+            
+                    
+                    10-桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.11" data-path="../算法/排序/">
+            
+                <a href="../算法/排序/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="../算法/排序/leetcode-01.html">
+            
+                <a href="../算法/排序/leetcode-01.html">
+            
+                    
+                    leetcode-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C++</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../C++/01-线程/">
+            
+                <a href="../C++/01-线程/">
+            
+                    
+                    01-线程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../C++/01-线程/01-thread.html">
+            
+                <a href="../C++/01-线程/01-thread.html">
+            
+                    
+                    01-thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../C++/01-线程/02-mutex.html">
+            
+                <a href="../C++/01-线程/02-mutex.html">
+            
+                    
+                    02-mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../C++/01-线程/03-future.html">
+            
+                <a href="../C++/01-线程/03-future.html">
+            
+                    
+                    03-future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../C++/01-线程/04-condition_variable.html">
+            
+                <a href="../C++/01-线程/04-condition_variable.html">
+            
+                    
+                    04-condition_variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../C++/01-线程/05-时间约束.html">
+            
+                <a href="../C++/01-线程/05-时间约束.html">
+            
+                    
+                    05-时间约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../C++/01-线程/06-线程池.html">
+            
+                <a href="../C++/01-线程/06-线程池.html">
+            
+                    
+                    06-线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../C++/01-线程/07-原子操作与内存模型.html">
+            
+                <a href="../C++/01-线程/07-原子操作与内存模型.html">
+            
+                    
+                    07-原子操作与内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../C++/01-线程/">
+            
+                <a href="../C++/01-线程/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../C++/02-新特性/">
+            
+                <a href="../C++/02-新特性/">
+            
+                    
+                    02-新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../C++/02-新特性/01-1-智能指针.html">
+            
+                <a href="../C++/02-新特性/01-1-智能指针.html">
+            
+                    
+                    01-1-智能指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../C++/02-新特性/01-2-普通指针.html">
+            
+                <a href="../C++/02-新特性/01-2-普通指针.html">
+            
+                    
+                    01-2-普通指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                <a href="../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                    
+                    02-右值引用和移动语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../C++/02-新特性/03-语言可用性的强化.html">
+            
+                <a href="../C++/02-新特性/03-语言可用性的强化.html">
+            
+                    
+                    03-语言可用性的强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../C++/02-新特性/04-新的类型.html">
+            
+                <a href="../C++/02-新特性/04-新的类型.html">
+            
+                    
+                    04-新的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../C++/02-新特性/">
+            
+                <a href="../C++/02-新特性/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../C++/02-新特性/常见技巧.html">
+            
+                <a href="../C++/02-新特性/常见技巧.html">
+            
+                    
+                    常见技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Go</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../Go/01-grpc/">
+            
+                <a href="../Go/01-grpc/">
+            
+                    
+                    01-grpc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../Go/01-grpc/4种调节模式.html">
+            
+                <a href="../Go/01-grpc/4种调节模式.html">
+            
+                    
+                    4种调节模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >01-单例模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 align="center" id="&#x76EE;&#x5F55;">&#x76EE;&#x5F55;</h1>
+
+
+
+<ul><li><a href="#1-&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">1. &#x5355;&#x4F8B;&#x6A21;&#x5F0F;</a>
+</li>
+<li><a href="#2-&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;">2. &#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</a>
+</li>
+<li><p><a href="#3-&#x5206;&#x7C7B;">3. &#x5206;&#x7C7B;</a></p><ul><li><p><a href="#31-&#x61D2;&#x6C49;&#x6A21;&#x5F0F;">3.1. &#x61D2;&#x6C49;&#x6A21;&#x5F0F;</a></p><ul><li><a href="#311-&#x666E;&#x901A;">3.1.1. &#x666E;&#x901A;</a>
+</li>
+<li><a href="#312-&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x5355;&#x4F8B;">3.1.2. &#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x5355;&#x4F8B;</a>
+</li>
+<li><a href="#313-&#x9759;&#x6001;&#x53D8;&#x91CF;">3.1.3. &#x9759;&#x6001;&#x53D8;&#x91CF;</a>
+</li></ul>
+</li>
+<li><p><a href="#32-&#x997F;&#x6C49;&#x6A21;&#x5F0F;">3.2. &#x997F;&#x6C49;&#x6A21;&#x5F0F;</a></p></li></ul>
+</li></ul>
+<hr><h1 id="1-&#x5355;&#x4F8B;&#x6A21;&#x5F0F;">1. &#x5355;&#x4F8B;&#x6A21;&#x5F0F;</h1><p>&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p><ul><li>&#x4FDD;&#x8BC1;&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;
+</li>
+<li>&#x4E3A;&#x8BE5;&#x5B9E;&#x4F8B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x8BBF;&#x95EE;&#x8282;&#x70B9;&#x3002;
+</li></ul>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p><ul><li><strong>&#x5C06;&#x9ED8;&#x8BA4;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8BBE;&#x4E3A;&#x79C1;&#x6709;</strong>&#xFF0C;&#x9632;&#x6B62;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x4F7F;&#x7528;&#x5355;&#x4F8B;&#x7C7B;&#x7684; <code>new</code> &#x8FD0;&#x7B97;&#x7B26;&#x3002;
+</li>
+<li>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#x4F5C;&#x4E3A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x4F1A; &#x201C;&#x5077;&#x5077;&#x201D; &#x8C03;&#x7528;&#x79C1;&#x6709;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x6B64;&#x540E;&#x6240;&#x6709;&#x5BF9;&#x4E8E;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x90FD;&#x5C06;&#x8FD4;&#x56DE;&#x8FD9;&#x4E00;&#x7F13;&#x5B58;&#x5BF9;&#x8C61;&#x3002;
+</li></ul>
+<p>&#x7279;&#x70B9;&#xFF1A;</p><h1 id="2-&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;">2. &#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</h1><ol><li>&#x5728;&#x7C7B;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x9759;&#x6001;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x5355;&#x4F8B;&#x5B9E;&#x4F8B;&#x3002;
+</li>
+<li>&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x516C;&#x6709;&#x9759;&#x6001;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5355;&#x4F8B;&#x5B9E;&#x4F8B;&#x3002;
+</li>
+<li>&#x5728;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4E2D;&#x5B9E;&#x73B0;&quot;&#x5EF6;&#x8FDF;&#x521D;&#x59CB;&#x5316;&quot;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x9996;&#x6B21;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x5B58;&#x50A8;&#x5728;&#x9759;&#x6001;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4E2D;&#x3002;&#x6B64;&#x540E;&#x8BE5;&#x65B9;&#x6CD5;&#x6BCF;&#x6B21;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x90FD;&#x8FD4;&#x56DE;&#x8BE5;&#x5B9E;&#x4F8B;&#x3002;
+</li>
+<li>&#x5C06;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x8BBE;&#x4E3A;&#x79C1;&#x6709;&#x3002;&#x7C7B;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x4ECD;&#x80FD;&#x8C03;&#x7528;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x8C03;&#x7528;&#x3002;
+</li>
+<li>&#x68C0;&#x67E5;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x5BF9;&#x5355;&#x4F8B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x66FF;&#x6362;&#x4E3A;&#x5BF9;&#x5176;&#x9759;&#x6001;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x3002;
+</li></ol>
+<h1 id="3-&#x5206;&#x7C7B;">3. &#x5206;&#x7C7B;</h1><p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;<strong>&#x61D2;&#x6C49;&#x5F0F;</strong>&#x548C;<strong>&#x997F;&#x6C49;&#x5F0F;</strong>&#xFF0C;&#x4E24;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;<strong>&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x7684;&#x65F6;&#x95F4;</strong>&#x4E0D;&#x540C;&#xFF1A;</p><ul><li><p>&#x61D2;&#x6C49;&#x5F0F;&#xFF1A;&#x6307;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x4E2D;&#xFF0C;&#x5B9E;&#x4F8B;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8BE5;&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x53BB;&#x521B;&#x5EFA;&#x5E76;&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;&#x3002;&#xFF08;&#x672C;&#x8EAB;&#x662F;&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x8981;&#x8003;&#x8651;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF09;</p><p>&#x61D2;&#x6C49;&#x5F0F;&#x662F;<strong>&#x4EE5;&#x65F6;&#x95F4;&#x6362;&#x7A7A;&#x95F4;</strong>&#xFF0C;&#x9002;&#x5E94;&#x4E8E;<strong>&#x8BBF;&#x95EE;&#x91CF;&#x8F83;&#x5C0F;</strong>&#x65F6;&#xFF1B;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x5185;&#x90E8;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x7684;&#x61D2;&#x6C49;&#x5355;&#x4F8B;&#xFF0C;&#x4EE3;&#x7801;&#x91CF;&#x5C11;&#x3002;</p></li>
+<li><p>&#x997F;&#x6C49;&#x5F0F;&#xFF1A;&#x6307;&#x7CFB;&#x7EDF;&#x4E00;&#x8FD0;&#x884C;&#xFF0C;&#x5C31;&#x521D;&#x59CB;&#x5316;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5373;&#x53EF;&#x3002;&#xFF08;&#x672C;&#x8EAB;&#x5C31;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x6CA1;&#x6709;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x95EE;&#x9898;&#xFF09;</p><p>&#x997F;&#x6C49;&#x5F0F;&#x662F;<strong>&#x4EE5;&#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4;</strong>&#xFF0C;&#x9002;&#x5E94;&#x4E8E;<strong>&#x8BBF;&#x95EE;&#x91CF;&#x8F83;&#x5927;</strong>&#x65F6;&#xFF0C;&#x6216;&#x8005;<strong>&#x7EBF;&#x7A0B;&#x6BD4;&#x8F83;&#x591A;</strong>&#x7684;&#x7684;&#x60C5;&#x51B5;&#x3002;</p></li></ul>
+<p><strong>&#x3010;&#x5907;&#x6CE8;&#x3011;</strong>&#xFF1A;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x6839;&#x636E;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#x53BB;&#x5224;&#x65AD;&#x5C5E;&#x4E8E;&#x54EA;&#x4E00;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x4FBF;&#x521D;&#x59CB;&#x5316;&#x5219;&#x662F;&#x997F;&#x6C49;&#x6A21;&#x5F0F;&#xFF08;&#x63D0;&#x524D;&#x51C6;&#x5907;&#x597D;&#x5403;&#x7684;&#xFF09;&#xFF0C;&#x8C03;&#x7528;&#x65F6;&#x624D;&#x5B9E;&#x4F8B;&#x5316;&#x5C31;&#x662F;&#x61D2;&#x6C49;&#x6A21;&#x5F0F;&#xFF08;&#x6BD4;&#x8F83;&#x61D2;&#xFF0C;&#x8981;&#x7528;&#x65F6;&#x624D;&#x5F00;&#x59CB;&#x51C6;&#x5907;&#xFF09;</p><p>&#x3010;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x3011;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x5176;&#x5B9E;&#x76F8;&#x5F53;&#x4E8E;&#x5168;&#x5C40;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x6CA1;&#x5FC5;&#x8981;&#x4E13;&#x95E8;&#x53BB; delete &#x5185;&#x5B58;&#xFF0C;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x56DE;&#x6536;&#x3002;</p><h2 id="31-&#x61D2;&#x6C49;&#x6A21;&#x5F0F;">3.1. &#x61D2;&#x6C49;&#x6A21;&#x5F0F;</h2><h3 id="311-&#x666E;&#x901A;">3.1.1. &#x666E;&#x901A;</h3><p><strong>&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;</strong>&#x3002;</p><p>&#x76F8;&#x540C;&#x7684;&#x7C7B;&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E2D;&#x4F1A;&#x51FA;&#x9519;&#x3002;&#x591A;&#x7EBF;&#x7A0B;&#x53EF;&#x80FD;&#x4F1A;&#x540C;&#x65F6;&#x8C03;&#x7528;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#x5E76;&#x83B7;&#x53D6;&#x591A;&#x4E2A;&#x5355;&#x4F8B;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</p><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;thread&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;chrono&gt;</span></span>
+
+<span class="hljs-comment">/**
+ * The Singleton class defines the `GetInstance` method that serves as an
+ * alternative to constructor and lets clients access the same instance of this
+ * class over and over.
+ */</span>
+<span class="hljs-keyword">class</span> Singleton {
+
+    <span class="hljs-comment">/**
+     * The Singleton&apos;s constructor should always be private to prevent direct
+     * construction calls with the `new` operator.
+     */</span>
+
+<span class="hljs-keyword">protected</span>:
+    Singleton(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> value)
+        : value_(value) {
+    }
+
+    <span class="hljs-keyword">static</span> Singleton *pinstance_;
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> value_;
+
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">/**
+     * Singletons should not be cloneable.
+     */</span>
+    Singleton(Singleton &amp;other) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-comment">/**
+     * Singletons should not be assignable.
+     */</span>
+    <span class="hljs-keyword">void</span> <span class="hljs-keyword">operator</span>=(<span class="hljs-keyword">const</span> Singleton &amp;) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-comment">/**
+     * This is the static method that controls the access to the singleton
+     * instance. On the first run, it creates a singleton object and places it
+     * into the static field. On subsequent runs, it returns the client existing
+     * object stored in the static field.
+     */</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> Singleton *<span class="hljs-title">GetInstance</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;value)</span></span>;
+    <span class="hljs-comment">/**
+     * Finally, any singleton should define some business logic, which can be
+     * executed on its instance.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SomeBusinessLogic</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">value</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>{
+        <span class="hljs-keyword">return</span> value_;
+    }
+};
+
+Singleton *Singleton::pinstance_ = <span class="hljs-literal">nullptr</span>;
+
+<span class="hljs-comment">/**
+ * Static methods should be defined outside the class.
+ */</span>
+Singleton *Singleton::GetInstance(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;value) {
+    <span class="hljs-comment">/**
+     * This is a safer way to create an instance. instance = new Singleton is
+     * dangeruous in case two instance threads wants to access at the same time
+     */</span>
+    <span class="hljs-keyword">if</span> (pinstance_ == <span class="hljs-literal">nullptr</span>) {
+        pinstance_ = <span class="hljs-keyword">new</span> (<span class="hljs-built_in">std</span>::nothrow) Singleton(value);
+    }
+    <span class="hljs-keyword">return</span> pinstance_;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ThreadFoo</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Following code emulates slow initialization.</span>
+    <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::milliseconds(<span class="hljs-number">1000</span>));
+    Singleton *singleton = Singleton::GetInstance(<span class="hljs-string">&quot;FOO&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; singleton-&gt;value() &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ThreadBar</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Following code emulates slow initialization.</span>
+    <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::milliseconds(<span class="hljs-number">1000</span>));
+    Singleton *singleton = Singleton::GetInstance(<span class="hljs-string">&quot;BAR&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; singleton-&gt;value() &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+}</code></pre>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;If you see the same value, then singleton was reused (yay!\n&quot;</span>
+              &lt;&lt; <span class="hljs-string">&quot;If you see different values, then 2 singletons were created (booo!!)\n\n&quot;</span>
+              &lt;&lt; <span class="hljs-string">&quot;RESULT:\n&quot;</span>;
+    ThreadFoo();
+    ThreadBar();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<p>&#x5728;&#x5355;&#x4E00;&#x7EBF;&#x7A0B;&#x4E2D;&#x53EF;&#x884C;&#x3002;</p><pre><code>If you see the same value, then singleton was reused (yay!
+If you see different values, then 2 singletons were created (booo!!)
+
+RESULT:
+FOO
+FOO</code></pre>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;If you see the same value, then singleton was reused (yay!\n&quot;</span>
+              &lt;&lt; <span class="hljs-string">&quot;If you see different values, then 2 singletons were created (booo!!)\n\n&quot;</span>
+              &lt;&lt; <span class="hljs-string">&quot;RESULT:\n&quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-function">thread <span class="hljs-title">t1</span><span class="hljs-params">(ThreadFoo)</span></span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-function">thread <span class="hljs-title">t2</span><span class="hljs-params">(ThreadBar)</span></span>;
+    t1.join();
+    t2.join();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<p>&#x5728;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E0B;&#x5931;&#x6548;&#x3002;</p><pre><code>If you see the same value, then singleton was reused (yay!
+If you see different values, then 2 singletons were created (booo!!)
+
+RESULT:
+FOO
+BAR</code></pre>
+<h3 id="312-&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x5355;&#x4F8B;">3.1.2. &#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x5355;&#x4F8B;</h3><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;thread&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mutex&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;chrono&gt;</span></span>
+
+<span class="hljs-comment">/**
+ * The Singleton class defines the `GetInstance` method that serves as an
+ * alternative to constructor and lets clients access the same instance of this
+ * class over and over.
+ */</span>
+<span class="hljs-keyword">class</span> Singleton {
+
+    <span class="hljs-comment">/**
+     * The Singleton&apos;s constructor/destructor should always be private to
+     * prevent direct construction/desctruction calls with the `new`/`delete`
+     * operator.
+     */</span>
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">static</span> Singleton *pinstance_;
+    <span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::mutex mutex_;
+
+<span class="hljs-keyword">protected</span>:
+    Singleton(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> value)
+        : value_(value) {
+    }
+    ~Singleton() {
+    }
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> value_;
+
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-comment">/**
+     * Singletons should not be cloneable.
+     */</span>
+    Singleton(Singleton &amp;other) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-comment">/**
+     * Singletons should not be assignable.
+     */</span>
+    <span class="hljs-keyword">void</span> <span class="hljs-keyword">operator</span>=(<span class="hljs-keyword">const</span> Singleton &amp;) = <span class="hljs-keyword">delete</span>;
+    <span class="hljs-comment">/**
+     * This is the static method that controls the access to the singleton
+     * instance. On the first run, it creates a singleton object and places it
+     * into the static field. On subsequent runs, it returns the client existing
+     * object stored in the static field.
+     */</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> Singleton *<span class="hljs-title">GetInstance</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;value)</span></span>;
+    <span class="hljs-comment">/**
+     * Finally, any singleton should define some business logic, which can be
+     * executed on its instance.
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SomeBusinessLogic</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> <span class="hljs-title">value</span><span class="hljs-params">()</span> <span class="hljs-keyword">const</span> </span>{
+        <span class="hljs-keyword">return</span> value_;
+    }
+};
+
+<span class="hljs-comment">/**
+ * Static methods should be defined outside the class.
+ */</span>
+
+Singleton *Singleton::pinstance_ = <span class="hljs-literal">nullptr</span>;
+<span class="hljs-built_in">std</span>::mutex Singleton::mutex_;
+
+<span class="hljs-comment">/**
+ * The first time we call GetInstance we will lock the storage location
+ *      and then we make sure again that the variable is null and then we
+ *      set the value. RU:
+ */</span>
+Singleton *Singleton::GetInstance(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;value) {
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A; if &#x5224;&#x65AD;&#x8BED;&#x53E5;&#x7684;&#x6280;&#x672F;&#x79F0;&#x4E3A;&#x53CC;&#x68C0;&#x9501;</span>
+    <span class="hljs-comment">// &#x597D;&#x5904;&#x662F;&#xFF0C;&#x53EA;&#x6709;&#x5224;&#x65AD;&#x6307;&#x9488;&#x4E3A;&#x7A7A;&#x7684;&#x65F6;&#x5019;&#x624D;&#x52A0;&#x9501;&#xFF0C;&#x907F;&#x514D;&#x6BCF;&#x6B21;&#x8C03;&#x7528; GetInstance &#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x52A0;&#x9501;&#xFF0C;&#x9501;&#x7684;&#x5F00;&#x9500;&#x6BD5;&#x7ADF;&#x8FD8;&#x662F;&#x6709;&#x70B9;&#x5927;&#x7684;&#x3002;</span>
+<span class="hljs-keyword">if</span> (pinstance_ == <span class="hljs-literal">nullptr</span>) {
+    <span class="hljs-built_in">std</span>::lock_guard&lt;<span class="hljs-built_in">std</span>::mutex&gt; lock(mutex_);
+    <span class="hljs-keyword">if</span> (pinstance_ == <span class="hljs-literal">nullptr</span>) {
+        pinstance_ = <span class="hljs-keyword">new</span> (<span class="hljs-built_in">std</span>::nothrow) Singleton(value);
+    }
+    }
+    <span class="hljs-keyword">return</span> pinstance_;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ThreadFoo</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Following code emulates slow initialization.</span>
+    <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::milliseconds(<span class="hljs-number">1000</span>));
+    Singleton *singleton = Singleton::GetInstance(<span class="hljs-string">&quot;FOO&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; singleton-&gt;value() &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ThreadBar</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// Following code emulates slow initialization.</span>
+    <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::milliseconds(<span class="hljs-number">1000</span>));
+    Singleton *singleton = Singleton::GetInstance(<span class="hljs-string">&quot;BAR&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; singleton-&gt;value() &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;If you see the same value, then singleton was reused (yay!\n&quot;</span>
+              &lt;&lt; <span class="hljs-string">&quot;If you see different values, then 2 singletons were created (booo!!)\n\n&quot;</span>
+              &lt;&lt; <span class="hljs-string">&quot;RESULT:\n&quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-function">thread <span class="hljs-title">t1</span><span class="hljs-params">(ThreadFoo)</span></span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-function">thread <span class="hljs-title">t2</span><span class="hljs-params">(ThreadBar)</span></span>;
+    t1.join();
+    t2.join();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<pre><code>If you see the same value, then singleton was reused (yay!
+If you see different values, then 2 singletons were created (booo!!)
+
+RESULT:
+BAR
+BAR</code></pre>
+<h3 id="313-&#x9759;&#x6001;&#x53D8;&#x91CF;">3.1.3. &#x9759;&#x6001;&#x53D8;&#x91CF;</h3><p>&#x4F7F;&#x7528; <strong>local static&#x53D8;&#x91CF;&#x7684;&#x61D2;&#x6C49;&#x5355;&#x4F8B;</strong>&#x3002;C++11 &#x4E2D;<strong>&#x5185;&#x90E8;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x91CC;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;</strong>&#xFF0C;&#x53EA;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x6B21;&#x5B9E;&#x4F8B;&#xFF0C;&#x56E0;&#x6B64;&#x662F;&#x97F3;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;</p><p>&#x53EA;&#x6709;&#x5F53;&#x8C03;&#x7528; <code>GetInstance</code> &#x65F6;&#xFF0C;local static &#x53D8;&#x91CF;&#x624D;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316;&#x3002;</p><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;chrono&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;thread&gt;</span></span>
+
+<span class="hljs-built_in">std</span>::<span class="hljs-function"><span class="hljs-built_in">string</span> &amp;<span class="hljs-title">GetInstance</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;value)</span> </span>{
+    <span class="hljs-keyword">static</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> str = value;
+    <span class="hljs-keyword">return</span> str;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ThreadFoo</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::milliseconds(<span class="hljs-number">1000</span>));
+    <span class="hljs-comment">// &#x274C; std::string singleton = GetInstance(&quot;FOO&quot;);</span>
+    <span class="hljs-comment">// std::string &amp;singleton = GetInstance(&quot;FOO&quot;);</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;singleton = GetInstance(<span class="hljs-string">&quot;FOO&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; singleton &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; &amp;singleton &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ThreadBar</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::this_thread::sleep_for(<span class="hljs-built_in">std</span>::chrono::milliseconds(<span class="hljs-number">1000</span>));
+    <span class="hljs-comment">// &#x274C; std::string singleton = GetInstance(&quot;BAR&quot;);</span>
+    <span class="hljs-comment">// std::string &amp;singleton = GetInstance(&quot;BAR&quot;);</span>
+    <span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp;singleton = GetInstance(<span class="hljs-string">&quot;BAR&quot;</span>);
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; singleton &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; &amp;singleton &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">std</span>::<span class="hljs-function">thread <span class="hljs-title">t1</span><span class="hljs-params">(ThreadFoo)</span></span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-function">thread <span class="hljs-title">t2</span><span class="hljs-params">(ThreadBar)</span></span>;
+    t1.join();
+    t2.join();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<pre><code>FOO
+0x56069f6d8180
+FOO
+0x56069f6d8180</code></pre>
+<p>&#x2757;&#x867D;&#x7136;&#x8F93;&#x5165;&#x7684;&#x90FD;&#x662F; &#x201C;BAR&#x201D;&#xFF0C;&#x4F46;&#x662F;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5F15;&#x7528;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x5DE6;&#x503C;&#x4E0D;&#x662F;&#x5F15;&#x7528;&#xFF0C;&#x5BFC;&#x81F4;&#x6BCF;&#x6B21;&#x90FD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x590D;&#x5236;&#x503C;&#xFF0C;<strong>&#x56E0;&#x6B64;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x662F;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x624D;&#x53EF;&#x4EE5;</strong>&#x3002;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6539;&#x53D8;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>const</code> &#x4FEE;&#x9970;&#x3002;</p><pre><code class="lang-cpp"><span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>         singleton &#x274C; &#x540C;&#x503C;&#x4F46;&#x4E0D;&#x540C;&#x5730;&#x5740;
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>       &amp; singleton &#x2705; &#x540C;&#x503C;&#x540C;&#x5730;&#x5740;&#xFF0C;&#x4F46;&#x9759;&#x6001;&#x503C;&#x540E;&#x7EED;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x6539;&#x53D8;
+<span class="hljs-keyword">const</span> <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> &amp; singleton &#x2705; &#x540C;&#x503C;&#x540C;&#x5730;&#x5740;&#xFF0C;&#x4E14;&#x9759;&#x6001;&#x503C;&#x4E0D;&#x4F1A;&#x88AB;&#x6539;&#x53D8;</code></pre>
+<h2 id="32-&#x997F;&#x6C49;&#x6A21;&#x5F0F;">3.2. &#x997F;&#x6C49;&#x6A21;&#x5F0F;</h2><p>&#x672C;&#x8EAB;&#x5C31;<strong>&#x7EBF;&#x7A0B;&#x5B89;&#x5168;</strong></p><pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-keyword">class</span> Singleton {
+<span class="hljs-keyword">public</span>:
+    <span class="hljs-function"><span class="hljs-keyword">static</span> Singleton *<span class="hljs-title">GetInstance</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-comment">// &#x91CA;&#x653E;&#x5355;&#x5B9E;&#x4F8B;&#xFF0C;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x65F6;&#x8C03;&#x7528;</span>
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteInstance</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Print</span><span class="hljs-params">()</span></span>;
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-comment">// &#x5C06;&#x5176;&#x6784;&#x9020;&#x548C;&#x6790;&#x6784;&#x6210;&#x4E3A;&#x79C1;&#x6709;&#x7684;, &#x7981;&#x6B62;&#x5916;&#x90E8;&#x6784;&#x9020;&#x548C;&#x6790;&#x6784;</span>
+    Singleton();
+    ~Singleton();
+    <span class="hljs-comment">// &#x5C06;&#x5176;&#x62F7;&#x8D1D;&#x6784;&#x9020;&#x548C;&#x8D4B;&#x503C;&#x6784;&#x9020;&#x6210;&#x4E3A;&#x79C1;&#x6709;&#x51FD;&#x6570;, &#x7981;&#x6B62;&#x5916;&#x90E8;&#x62F7;&#x8D1D;&#x548C;&#x8D4B;&#x503C;</span>
+    Singleton(<span class="hljs-keyword">const</span> Singleton &amp;signal);
+    <span class="hljs-keyword">const</span> Singleton &amp;<span class="hljs-keyword">operator</span>=(<span class="hljs-keyword">const</span> Singleton &amp;signal);
+
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">static</span> Singleton *pinstance_;
+};
+
+Singleton *Singleton::pinstance_ = <span class="hljs-keyword">new</span> (<span class="hljs-built_in">std</span>::nothrow) Singleton;
+
+Singleton *Singleton::GetInstance() {
+    <span class="hljs-keyword">return</span> pinstance_;
+}
+
+<span class="hljs-keyword">void</span> Singleton::deleteInstance() {
+    <span class="hljs-keyword">if</span> (pinstance_) {
+        <span class="hljs-keyword">delete</span> pinstance_;
+        pinstance_ = <span class="hljs-literal">nullptr</span>;
+    }
+}
+
+<span class="hljs-keyword">void</span> Singleton::Print() {
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;memory address: &quot;</span> &lt;&lt; <span class="hljs-keyword">this</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+}
+
+Singleton::Singleton() {
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;construct\n&quot;</span>;
+}
+
+Singleton::~Singleton() {
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;destruct\n&quot;</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+    Singleton *SingleInstance1 = Singleton::GetInstance();
+    Singleton *SingleInstance2 = Singleton::GetInstance();
+
+    SingleInstance1-&gt;Print();
+    SingleInstance2-&gt;Print();
+
+    <span class="hljs-comment">// &#x4E0D;&#x8FD9;&#x4E48;&#x505A;&#xFF0C;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x7CFB;&#x7EDF;&#x4E5F;&#x4F1A;&#x56DE;&#x6536;&#x5185;&#x5B58;</span>
+    Singleton::deleteInstance();
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<pre><code>construct
+memory address: 0x5576ac363eb0
+memory address: 0x5576ac363eb0
+destruct</code></pre>
+<p>&#x4ECE;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x77E5;&#xFF0C;&#x997F;&#x6C49;&#x5F0F;&#x5728;&#x7A0B;&#x5E8F;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x8EAB;&#x5C31;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;</p><p><strong>&#x95EE;&#x9898;</strong>&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;&#x4ECE;&#x7A0B;&#x5E8F;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x6784;&#x9020;&#x5C31;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF1F;&#xFF1F;&#xFF1F;</p><p><strong>&#x7C7B;&#x52A0;&#x8F7D;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x6309;&#x9700;&#x52A0;&#x8F7D;&#xFF0C;&#x4E14;&#x53EA;&#x52A0;&#x8F7D;&#x4E00;&#x6B21;</strong>&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x4E0A;&#x8FF0;&#x5355;&#x4F8B;&#x7C7B;&#x88AB;&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5E76;&#x4EA4;&#x7ED9;&#x81EA;&#x5DF1;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x4F9B;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5728;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x4E4B;&#x524D;&#x5C31;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x597D;&#x4E86;&#x3002;&#x518D;&#x52A0;&#x4E0A;&#xFF0C;&#x7531;&#x4E8E;&#x4E00;&#x4E2A;&#x7C7B;&#x5728;&#x6574;&#x4E2A;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x53EA;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&#x4E00;&#x6B21;&#xFF0C;&#x56E0;&#x6B64;<strong>&#x8BE5;&#x5355;&#x4F8B;&#x7C7B;&#x53EA;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;<strong>&#x7EBF;&#x7A0B;&#x6BCF;&#x6B21;&#x90FD;&#x53EA;&#x80FD;&#x4E5F;&#x5FC5;&#x5B9A;&#x53EA;&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x8FD9;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;&#x56E0;&#x6B64;&#x5C31;&#x8BF4;&#xFF0C;&#x997F;&#x6C49;&#x5F0F;&#x5355;&#x4F8B;&#x5929;&#x751F;&#x5C31;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02-原型模式.html" class="navigation navigation-next " aria-label="Next page: 02-原型模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"01-单例模式","level":"2.1","depth":1,"next":{"title":"02-原型模式","level":"2.2","depth":1,"path":"设计模式/02-原型模式.md","ref":"设计模式/02-原型模式.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"okito","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"KaiTi, Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notebook","language":"zh-hans","gitbook":"3.2.1","description":""},"file":{"path":"设计模式/01-单例模式.md","mtime":"2022-03-09T17:38:52.024Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2022-03-27T16:48:51.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
