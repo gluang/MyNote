@@ -1,0 +1,1341 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>排序 · notebook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.1">
+        <meta name="author" content="okito">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="01-冒泡排序.html" />
+    
+    
+    <link rel="prev" href="../../数据结构/03-树/leetcode-06-LeetCode（未整理）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计模式</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../设计模式/01-单例模式.html">
+            
+                <a href="../../设计模式/01-单例模式.html">
+            
+                    
+                    01-单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../设计模式/02-原型模式.html">
+            
+                <a href="../../设计模式/02-原型模式.html">
+            
+                    
+                    02-原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../设计模式/03-生成器模式.html">
+            
+                <a href="../../设计模式/03-生成器模式.html">
+            
+                    
+                    03-生成器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../设计模式/04-工厂方法模式.html">
+            
+                <a href="../../设计模式/04-工厂方法模式.html">
+            
+                    
+                    04-工厂方法模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../设计模式/05-抽象工厂模式.html">
+            
+                <a href="../../设计模式/05-抽象工厂模式.html">
+            
+                    
+                    05-抽象工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../设计模式/06-适配器模式.html">
+            
+                <a href="../../设计模式/06-适配器模式.html">
+            
+                    
+                    06-适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../设计模式/07-桥接模式.html">
+            
+                <a href="../../设计模式/07-桥接模式.html">
+            
+                    
+                    07-桥接模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../../设计模式/08-组合模式.html">
+            
+                <a href="../../设计模式/08-组合模式.html">
+            
+                    
+                    08-组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../../设计模式/09-装饰器模式.html">
+            
+                <a href="../../设计模式/09-装饰器模式.html">
+            
+                    
+                    09-装饰器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../../设计模式/">
+            
+                <a href="../../设计模式/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据结构</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../数据结构/01-数组和链表/">
+            
+                <a href="../../数据结构/01-数组和链表/">
+            
+                    
+                    01-数组和链表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../数据结构/01-数组和链表/01-单链表.html">
+            
+                <a href="../../数据结构/01-数组和链表/01-单链表.html">
+            
+                    
+                    01-单链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../数据结构/01-数组和链表/02-循环链表.html">
+            
+                <a href="../../数据结构/01-数组和链表/02-循环链表.html">
+            
+                    
+                    02-循环链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../数据结构/01-数组和链表/03-双链表.html">
+            
+                <a href="../../数据结构/01-数组和链表/03-双链表.html">
+            
+                    
+                    03-双链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../数据结构/01-数组和链表/04-跳表.html">
+            
+                <a href="../../数据结构/01-数组和链表/04-跳表.html">
+            
+                    
+                    04-跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../数据结构/01-数组和链表/">
+            
+                <a href="../../数据结构/01-数组和链表/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../数据结构/01-数组和链表/leetcode-01-数组类型.html">
+            
+                <a href="../../数据结构/01-数组和链表/leetcode-01-数组类型.html">
+            
+                    
+                    leetcode-01-数组类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../../数据结构/01-数组和链表/leetcode-02-数组实现.html">
+            
+                <a href="../../数据结构/01-数组和链表/leetcode-02-数组实现.html">
+            
+                    
+                    leetcode-02-数组实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../../数据结构/01-数组和链表/leetcode-03-数组-LeetCode.html">
+            
+                <a href="../../数据结构/01-数组和链表/leetcode-03-数组-LeetCode.html">
+            
+                    
+                    leetcode-03-数组-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="../../数据结构/01-数组和链表/leetcode-04-链表类型.html">
+            
+                <a href="../../数据结构/01-数组和链表/leetcode-04-链表类型.html">
+            
+                    
+                    leetcode-04-链表类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="../../数据结构/01-数组和链表/leetcode-05-链表-LeetCode.html">
+            
+                <a href="../../数据结构/01-数组和链表/leetcode-05-链表-LeetCode.html">
+            
+                    
+                    leetcode-05-链表-LeetCode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="../../数据结构/01-数组和链表/leetcode-06-循环链表题目.html">
+            
+                <a href="../../数据结构/01-数组和链表/leetcode-06-循环链表题目.html">
+            
+                    
+                    leetcode-06-循环链表题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../数据结构/03-树/">
+            
+                <a href="../../数据结构/03-树/">
+            
+                    
+                    03-树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../数据结构/03-树/01-二叉树.html">
+            
+                <a href="../../数据结构/03-树/01-二叉树.html">
+            
+                    
+                    01-二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../数据结构/03-树/02-二叉查找树.html">
+            
+                <a href="../../数据结构/03-树/02-二叉查找树.html">
+            
+                    
+                    02-二叉查找树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../数据结构/03-树/03-平衡二叉树.html">
+            
+                <a href="../../数据结构/03-树/03-平衡二叉树.html">
+            
+                    
+                    03-平衡二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../数据结构/03-树/04-红黑树.html">
+            
+                <a href="../../数据结构/03-树/04-红黑树.html">
+            
+                    
+                    04-红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../数据结构/03-树/05-线索二叉树.html">
+            
+                <a href="../../数据结构/03-树/05-线索二叉树.html">
+            
+                    
+                    05-线索二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../数据结构/03-树/06-B树.html">
+            
+                <a href="../../数据结构/03-树/06-B树.html">
+            
+                    
+                    06-B树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../数据结构/03-树/">
+            
+                <a href="../../数据结构/03-树/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../../数据结构/03-树/leetcode-01-树的遍历.html">
+            
+                <a href="../../数据结构/03-树/leetcode-01-树的遍历.html">
+            
+                    
+                    leetcode-01-树的遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../../数据结构/03-树/leetcode-02-树类型.html">
+            
+                <a href="../../数据结构/03-树/leetcode-02-树类型.html">
+            
+                    
+                    leetcode-02-树类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../../数据结构/03-树/leetcode-03-树类型实现.html">
+            
+                <a href="../../数据结构/03-树/leetcode-03-树类型实现.html">
+            
+                    
+                    leetcode-03-树类型实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="../../数据结构/03-树/leetcode-04-二叉树高频面试题.html">
+            
+                <a href="../../数据结构/03-树/leetcode-04-二叉树高频面试题.html">
+            
+                    
+                    leetcode-04-二叉树高频面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="../../数据结构/03-树/leetcode-05-二叉搜索树题目.html">
+            
+                <a href="../../数据结构/03-树/leetcode-05-二叉搜索树题目.html">
+            
+                    
+                    leetcode-05-二叉搜索树题目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.13" data-path="../../数据结构/03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                <a href="../../数据结构/03-树/leetcode-06-LeetCode（未整理）.html">
+            
+                    
+                    leetcode-06-LeetCode（未整理）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">算法</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="01-冒泡排序.html">
+            
+                <a href="01-冒泡排序.html">
+            
+                    
+                    01-冒泡排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="02-选择排序.html">
+            
+                <a href="02-选择排序.html">
+            
+                    
+                    02-选择排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="03-插入排序.html">
+            
+                <a href="03-插入排序.html">
+            
+                    
+                    03-插入排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="04-希尔排序.html">
+            
+                <a href="04-希尔排序.html">
+            
+                    
+                    04-希尔排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="05-归并排序.html">
+            
+                <a href="05-归并排序.html">
+            
+                    
+                    05-归并排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="06-快速排序.html">
+            
+                <a href="06-快速排序.html">
+            
+                    
+                    06-快速排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="07-堆排序.html">
+            
+                <a href="07-堆排序.html">
+            
+                    
+                    07-堆排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="08-基数排序.html">
+            
+                <a href="08-基数排序.html">
+            
+                    
+                    08-基数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="09-计数排序.html">
+            
+                <a href="09-计数排序.html">
+            
+                    
+                    09-计数排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.10" data-path="10-桶排序.html">
+            
+                <a href="10-桶排序.html">
+            
+                    
+                    10-桶排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.12" data-path="leetcode-01.html">
+            
+                <a href="leetcode-01.html">
+            
+                    
+                    leetcode-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">C++</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../C++/01-线程/">
+            
+                <a href="../../C++/01-线程/">
+            
+                    
+                    01-线程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../C++/01-线程/01-thread.html">
+            
+                <a href="../../C++/01-线程/01-thread.html">
+            
+                    
+                    01-thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../C++/01-线程/02-mutex.html">
+            
+                <a href="../../C++/01-线程/02-mutex.html">
+            
+                    
+                    02-mutex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../C++/01-线程/03-future.html">
+            
+                <a href="../../C++/01-线程/03-future.html">
+            
+                    
+                    03-future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../C++/01-线程/04-condition_variable.html">
+            
+                <a href="../../C++/01-线程/04-condition_variable.html">
+            
+                    
+                    04-condition_variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../C++/01-线程/05-时间约束.html">
+            
+                <a href="../../C++/01-线程/05-时间约束.html">
+            
+                    
+                    05-时间约束
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../C++/01-线程/06-线程池.html">
+            
+                <a href="../../C++/01-线程/06-线程池.html">
+            
+                    
+                    06-线程池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../C++/01-线程/07-原子操作与内存模型.html">
+            
+                <a href="../../C++/01-线程/07-原子操作与内存模型.html">
+            
+                    
+                    07-原子操作与内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.8" data-path="../../C++/01-线程/">
+            
+                <a href="../../C++/01-线程/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../C++/02-新特性/">
+            
+                <a href="../../C++/02-新特性/">
+            
+                    
+                    02-新特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../../C++/02-新特性/01-1-智能指针.html">
+            
+                <a href="../../C++/02-新特性/01-1-智能指针.html">
+            
+                    
+                    01-1-智能指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../../C++/02-新特性/01-2-普通指针.html">
+            
+                <a href="../../C++/02-新特性/01-2-普通指针.html">
+            
+                    
+                    01-2-普通指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                <a href="../../C++/02-新特性/02-右值引用和移动语义.html">
+            
+                    
+                    02-右值引用和移动语义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../../C++/02-新特性/03-语言可用性的强化.html">
+            
+                <a href="../../C++/02-新特性/03-语言可用性的强化.html">
+            
+                    
+                    03-语言可用性的强化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../../C++/02-新特性/04-新的类型.html">
+            
+                <a href="../../C++/02-新特性/04-新的类型.html">
+            
+                    
+                    04-新的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../../C++/02-新特性/">
+            
+                <a href="../../C++/02-新特性/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../../C++/02-新特性/常见技巧.html">
+            
+                <a href="../../C++/02-新特性/常见技巧.html">
+            
+                    
+                    常见技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Go</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../Go/01-grpc/">
+            
+                <a href="../../Go/01-grpc/">
+            
+                    
+                    01-grpc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../Go/01-grpc/4种调节模式.html">
+            
+                <a href="../../Go/01-grpc/4种调节模式.html">
+            
+                    
+                    4种调节模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >排序</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h1><p>&#x6211;&#x4EEC;&#x5728;&#x9009;&#x62E9;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x6839;&#x636E;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x7EF4;&#x5EA6;&#x6765;&#x8003;&#x8651;&#xFF1A;
+1. &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;
+2. &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF08;&#x5BF9;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x7684;&#x6D88;&#x8017;&#xFF09;
+3. &#x7B97;&#x6CD5;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#xFF08;&#x5982;&#x679C;&#x5F85;&#x6392;&#x5E8F;&#x7684;&#x5E8F;&#x5217;&#x4E2D;&#x5B58;&#x5728;&#x503C;&#x76F8;&#x7B49;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x7ECF;&#x8FC7;&#x6392;&#x5E8F;&#x4E4B;&#x540E;&#xFF0C;&#x76F8;&#x7B49;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x539F;&#x6709;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x4E0D;&#x53D8;&#xFF09;</p><p><strong>&#x7B97;&#x6CD5;&#x7A33;&#x5B9A;&#x6027;</strong>&#xFF1A;&#x5047;&#x8BBE;&#x5728;&#x6570;&#x5217;&#x4E2D;&#x5B58;&#x5728; a[i]=a[j] &#xFF0C;&#x82E5;&#x5728;&#x6392;&#x5E8F;&#x4E4B;&#x524D;&#xFF0C;a[i] &#x5728; a[j] &#x524D;&#x9762;&#xFF1B;&#x5E76;&#x4E14;&#x6392;&#x5E8F;&#x4E4B;&#x540E;&#xFF0C;a[i] &#x4ECD;&#x7136;&#x5728; a[j] &#x524D;&#x9762;&#x3002;&#x5219;&#x8FD9;&#x4E2A;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x662F;&#x7A33;&#x5B9A;&#x7684;</p><ol><li>&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF1A;&#x63D2;&#x5165;&#x6392;&#x5E8F; -&gt; &#x5E0C;&#x5C14;&#x6392;&#x5E8F;
+</li>
+<li>&#x9009;&#x62E9;&#x6392;&#x5E8F;&#xFF1A;&#x9009;&#x62E9;&#x6392;&#x5E8F; -&gt; &#x5806;&#x6392;&#x5E8F;
+</li>
+<li>&#x4EA4;&#x6362;&#x6392;&#x5E8F;&#xFF1A;&#x5192;&#x6CE1;&#x6392;&#x5E8F; -&gt; &#x5FEB;&#x901F;&#x6392;&#x5E8F;
+</li>
+<li>&#x5F52;&#x5E76;&#x6392;&#x5E8F;
+</li>
+<li>&#x57FA;&#x6570;&#x6392;&#x5E8F;&#x3001;&#x8BA1;&#x6570;&#x6392;&#x5E8F; -&gt; &#x6876;&#x6392;&#x5E8F;
+</li></ol>
+<p><strong>&#x5185;&#x90E8;&#x6392;&#x5E8F;</strong> &#x662F;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF08;&#x5360;&#x7528;&#x5E38;&#x6570;&#x5185;&#x5B58;&#xFF0C;&#x4E0D;&#x5360;&#x7528;&#x989D;&#x5916;&#x5185;&#x5B58;&#xFF09;</p><p><strong>&#x5916;&#x90E8;&#x6392;&#x5E8F;</strong> &#x662F;&#x56E0;&#x6392;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5F88;&#x5927;&#xFF0C;&#x4E00;&#x6B21;&#x4E0D;&#x80FD;&#x5BB9;&#x7EB3;&#x5168;&#x90E8;&#x7684;&#x6392;&#x5E8F;&#x8BB0;&#x5F55;&#xFF0C;&#x5728;&#x6392;&#x5E8F;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x5916;&#x5B58;&#xFF08;&#x5360;&#x7528;&#x989D;&#x5916;&#x5185;&#x5B58;&#xFF09;</p><table>
+<thead>
+<tr><th>&#x6392;&#x5E8F;&#x65B9;&#x6CD5;</th>
+<th>**&#x5E73;&#x5747;**&#x65F6;&#x95F4;</th>
+<th>&#x6700;**&#x574F;**&#x65F6;&#x95F4;</th>
+<th>&#x6700;**&#x597D;**&#x65F6;&#x95F4;</th>
+<th>&#x7A7A;&#x95F4;</th>
+<th>&#x7A33;&#x5B9A;&#x6027;</th>
+<th>&#x6392;&#x5E8F;&#x65B9;&#x5F0F;</th>
+</tr></thead><tbody>
+<tr><td>**&#x5192;&#x6CE1;&#x6392;&#x5E8F;**</td>
+<td>**O(n&lt;sup&gt;2&lt;/sup&gt;)**</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>&#x2705;</td>
+<td>&#x5185;&#x90E8;</td>
+</tr><tr><td>**&#x9009;&#x62E9;&#x6392;&#x5E8F;**</td>
+<td>**O(n&lt;sup&gt;2&lt;/sup&gt;)**</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(1)</td>
+<td>&#x274C;</td>
+<td>&#x5185;&#x90E8;</td>
+</tr><tr><td>**&#x63D2;&#x5165;&#x6392;&#x5E8F;**</td>
+<td>**O(n&lt;sup&gt;2&lt;/sup&gt;)**</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>&#x2705;</td>
+<td>&#x5185;&#x90E8;</td>
+</tr><tr><td>**&#x5E0C;&#x5C14;&#x6392;&#x5E8F;**</td>
+<td>`O(n * logn)`</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(n)</td>
+<td>O(1)</td>
+<td>&#x274C;</td>
+<td>&#x5185;&#x90E8;</td>
+</tr><tr><td>**&#x5F52;&#x5E76;&#x6392;&#x5E8F;**</td>
+<td>`O(n * logn)`</td>
+<td>O(n * logn)</td>
+<td>O(n * logn)</td>
+<td>O(n)</td>
+<td>&#x2705;</td>
+<td>&#x274C;&#x5916;&#x90E8;</td>
+</tr><tr><td>**&#x5FEB;&#x901F;&#x6392;&#x5E8F;**</td>
+<td>`O(n * logn)`</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(logn)</td>
+<td>O(logn)</td>
+<td>&#x274C;</td>
+<td>&#x5185;&#x90E8;</td>
+</tr><tr><td>**&#x5806;&#x6392;&#x5E8F;**</td>
+<td>`O(n * logn)`</td>
+<td>O(n * logn)</td>
+<td>O(n * logn)</td>
+<td>O(1)</td>
+<td>&#x274C;</td>
+<td>&#x5185;&#x90E8;</td>
+</tr><tr><td>**&#x8BA1;&#x6570;&#x6392;&#x5E8F;**</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>O(k)</td>
+<td>&#x2705;</td>
+<td>&#x274C;&#x5916;&#x90E8;</td>
+</tr><tr><td>**&#x57FA;&#x6570;&#x6392;&#x5E8F;**</td>
+<td>O(n * k)</td>
+<td>O(n * k)</td>
+<td>O(n * k)</td>
+<td>O(n + k)</td>
+<td>&#x2705;</td>
+<td>&#x274C;&#x5916;&#x90E8;</td>
+</tr><tr><td>**&#x6876;&#x6392;&#x5E8F;**</td>
+<td>O(n + k)</td>
+<td>O(n&lt;sup&gt;2&lt;/sup&gt;)</td>
+<td>O(n + k)</td>
+<td>O(n + k)</td>
+<td>&#x2705;</td>
+<td>&#x274C;&#x5916;&#x90E8;</td>
+</tr></tbody></table>
+
+<p>&#x89C4;&#x5F8B;&#xFF1A;
+1. O(n<sup>2</sup>)&#x3001;O(n * logn)&#x3001;O(n + k)
+2. &#x4E0D;&#x7A33;&#x5B9A;&#x6392;&#x5E8F;&#xFF1A;&#x9009;&#x62E9;&#x3001;&#x5E0C;&#x5C14;&#x3001;&#x5FEB;&#x6392;&#x3001;&#x5806;
+3. &#x5916;&#x90E8;&#x6392;&#x5E8F;&#xFF1A;&#x5F52;&#x5E76;&#x3001;&#x57FA;&#x6570;&#x3001;&#x8BA1;&#x6570;&#x3001;&#x6876;&#xFF08;&#x8FD9;&#x51E0;&#x4E2A;&#x90FD;&#x9700;&#x8981; new&#xFF0C;&#x5176;&#x4ED6;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#x5219;&#x4E0D;&#x7528;&#xFF09;
+4. &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF1A;&#x5FEB;&#x6392;&#x3001;&#x57FA;&#x6570;&#x3001;&#x8BA1;&#x6570;&#x3001;&#x6876;</p><h1 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h1><p>&#x89C4;&#x5B9A;&#xFF1A;</p><pre><code>arr
+len
+start
+end</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p><pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> a[] = {<span class="hljs-number">53</span>, <span class="hljs-number">3</span>, <span class="hljs-number">542</span>, <span class="hljs-number">748</span>, <span class="hljs-number">14</span>, <span class="hljs-number">214</span>, <span class="hljs-number">154</span>, <span class="hljs-number">63</span>, <span class="hljs-number">616</span>};
+    <span class="hljs-keyword">int</span> n = <span class="hljs-keyword">sizeof</span>(a) / <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>);
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x539F;&#x5148;&#x987A;&#x5E8F;&#xFF1A; &quot;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; a[i] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+
+
+    <span class="hljs-keyword">int</span> correct[] = {<span class="hljs-number">3</span>, <span class="hljs-number">14</span>, <span class="hljs-number">53</span>, <span class="hljs-number">63</span>, <span class="hljs-number">154</span>, <span class="hljs-number">214</span>, <span class="hljs-number">542</span>, <span class="hljs-number">616</span>, <span class="hljs-number">748</span>};
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6B63;&#x786E;&#x987A;&#x5E8F;&#xFF1A; &quot;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; correct[i] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+
+    quick_sort(a, n);
+
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-string">&quot;&#x6392;&#x5E8F;&#x987A;&#x5E8F;&#xFF1A; &quot;</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)
+        <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; a[i] &lt;&lt; <span class="hljs-string">&quot; &quot;</span>;
+    <span class="hljs-built_in">std</span>::<span class="hljs-built_in">cout</span> &lt;&lt; <span class="hljs-built_in">std</span>::<span class="hljs-built_in">endl</span>;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+<ul><li>&#x5192;&#x6CE1;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/01/bubble-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/bubble/cplus/BubbleSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>&#x3001;<a href="https://geekr.dev/posts/go-sorting-algorithm-bubble" target="_blank">Go &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x9009;&#x62E9;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/05/select-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/selection_sort/cplus/SelectSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>&#x3001;<a href="https://geekr.dev/posts/go-sorting-algorithm-selection" target="_blank">Go &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x63D2;&#x5165;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/03/insert-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/insert_sort/cplus/InsertSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>&#x3001;<a href="https://geekr.dev/posts/go-sorting-algorithm-insertion" target="_blank">Go &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x5FEB;&#x901F;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/02/quick-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/quick_sort/cplus/QuickSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>&#x3001;<a href="https://geekr.dev/posts/go-sorting-algorithm-quick" target="_blank">Go &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x5806;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/06/heap-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/heap_sort/cplus/HeapSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x5E0C;&#x5C14;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/04/shell-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/shell_sort/cplus/ShellSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/08/merge-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/merge_sort/cplus/MergeSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>&#x3001;<a href="https://geekr.dev/posts/go-sorting-algorithm-merge" target="_blank">Go &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x57FA;&#x6570;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/10/radix-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/radix_sort/cplus/RadixSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>
+</li>
+<li>&#x6876;&#x6392;&#x5E8F;&#xFF1A;<a href="http://wangkuiwu.github.io/2013/05/09/bucket-sort/" target="_blank">&#x539F;&#x7406;</a>&#x3001;<a href="https://github.com/wangkuiwu/datastructs_and_algorithm/blob/master/source/algrightm/sort/bucket_sort/cplus/BucketSort.cpp" target="_blank">C++ &#x5B9E;&#x73B0;</a>
+</li>
+<li><a href="https://mp.weixin.qq.com/s/fJEiPQ_iLvz0ecS9Cb2DJg" target="_blank">&#x5341;&#x5927;&#x7ECF;&#x5178;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;(&#x52A8;&#x6001;&#x6F14;&#x793A;+&#x4EE3;&#x7801;)</a>
+</li>
+<li><a href="https://blog.csdn.net/qq_19446965/article/details/81517552" target="_blank">&#x57FA;&#x6570;&#x6392;&#x5E8F;&#x3001;&#x8BA1;&#x6570;&#x6392;&#x5E8F;&#x548C;&#x6876;&#x6392;&#x5E8F;&#x7684;&#x533A;&#x522B;</a>
+</li>
+<li><a href="https://www.cxyxiaowu.com/2026.html" target="_blank">&#x5341;&#x5927;&#x7ECF;&#x5178;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x52A8;&#x753B;&#x4E0E;&#x89E3;&#x6790;</a>
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../数据结构/03-树/leetcode-06-LeetCode（未整理）.html" class="navigation navigation-prev " aria-label="Previous page: leetcode-06-LeetCode（未整理）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="01-冒泡排序.html" class="navigation navigation-next " aria-label="Next page: 01-冒泡排序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"排序","level":"4.1","depth":1,"next":{"title":"01-冒泡排序","level":"4.1.1","depth":2,"path":"算法/排序/01-冒泡排序.md","ref":"算法/排序/01-冒泡排序.md","articles":[]},"previous":{"title":"leetcode-06-LeetCode（未整理）","level":"3.2.13","depth":2,"path":"数据结构/03-树/leetcode-06-LeetCode（未整理）.md","ref":"数据结构/03-树/leetcode-06-LeetCode（未整理）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"okito","pdf":{"pageNumbers":true,"fontSize":16,"fontFamily":"KaiTi, Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"notebook","language":"zh-hans","gitbook":"3.2.1","description":""},"file":{"path":"算法/排序/README.md","mtime":"2022-03-18T11:58:10.099Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2022-03-27T16:48:51.980Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
