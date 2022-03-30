@@ -77,5 +77,7 @@
     * [常见技巧](C++/02-新特性/常见技巧.md)
 
 ### Go
-* [01-grpc](Go/01-grpc/README.md)
-    * [4种调节模式](Go/01-grpc/4种调节模式.md)
+
+### gRPC
+* [4种调节模式](gRPC/4种调节模式.md)
+* [README](gRPC/README.md)

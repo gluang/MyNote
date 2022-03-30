@@ -19,6 +19,7 @@ container:
 		-v ${PWD}/算法:/srv/gitbook/算法 \
 		-v ${PWD}/C++:/srv/gitbook/C++ \
 		-v ${PWD}/Go:/srv/gitbook/Go \
+		-v ${PWD}/gRPC:/srv/gitbook/gRPC \
 		-v ${PWD}/assets:/srv/gitbook/assets \
 		-v ${PWD}/docs:/srv/gitbook/_book \
 		-p 4000:4000 \
@@ -67,7 +68,7 @@ rm-container:
 ## gen-toc: 生成目录
 .PHONY: gen-toc
 gen-toc:
-	@/bin/bash script.sh generate_toc 设计模式 数据结构 算法 C++ Go
+	@/bin/bash script.sh generate_toc 设计模式 数据结构 算法 C++ Go gRPC
 
 ## help: 打印命令帮助信息
 .PHONY: help
